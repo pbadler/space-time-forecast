@@ -10,7 +10,7 @@ source("genetic_diversity_functions.R")
 
 
 ###
-### 1. Describe spatial pattern in abundances across a range of mean temperatures
+### 1. Simulate and describe spatial pattern in abundances at sites across a range of mean temperatures
 ###
 
 sim.yrs<-2000
@@ -32,33 +32,55 @@ G <- 1
 seedSurv = 0.5  # survival of ungerminated seeds (same for both genotypes)
 alpha = matrix(1,3,3)      # all competition coefficients (intra- and inter-) are equal for both genotypes
 
-source("genetic_diversity_experiment.R")
+source("genetic_diversity_sim_spatial.R")
 
 #CHECK: why zeros for least fit genotype's mean abundances at lowest temps but not highest?
 
+# plot spatial figures
+source("figures_spatial.R")
+
+###
+### 2. Simulate and describe temporal pattern in abundances at one site experiencing warming
+###
+
+baseline_yrs<-500  # number of yrs at baseline temperature
+warming_yrs <- 100  # number of yrs with warming occurring
+final_yrs <- 500  # number of yrs at steadty-state, warmed temperature
+sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
+
+Tstdev <- 1   # st dev of temperature (stationary)
+baseT <- -1 # initial temperature
+deltaT <- 4  # total change in temperature
+Tmean <- baseT + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
+                   rep(deltaT,final_yrs))
+
+# generate a temperature time series
+temperature = rnorm(sim_yrs,Tmean,Tstdev)  # generate temperature time series
+# plot(temperature,type="l")  # take a look
+
+# use same parameters from diploid model above 
+
+source("genetic_diversity_sim_temporal.R")
+
 # FIGURES
+par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0))
 
-myCols<-c("blue","darkgrey","red","black")
+# plot full time series
+plot(temporal_sim$N$Pop,type="l",xlab="Time",ylab="N")
 
-# plot fecundity as function of temperature for both phenotypes
-png("reactionnorms.png",height=3,width=4,res=300,units="in")
-  par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,1))
-  temp=seq(-8,8,0.01)
-  react.norms=getLambdas(temp,fec.Tmu,fec.Tsigma,fec.max)
-  matplot(temp,react.norms,type="l",xlab="Temperature",ylab="Germination rate",col=myCols,lty="solid")
-  text(fec.Tmu[1],0.9*fec.max[1],"AA",col="blue")
-  text(fec.Tmu[2],0.9*fec.max[2],"Aa",col="grey")
-  text(fec.Tmu[3],0.9*fec.max[3],"aa",col="red")
-dev.off()
+# plot temperature vs population growth during baseline period
+plot(temporal_sim$temperature[use_yrs],temporal_sim$pcgr$Pop[use_yrs],xlab="Temperature",
+     ylab="log Population growth rate")
+# add model fit
+xx <- seq(min(temporal_sim$temperature[use_yrs]),max(temporal_sim$temperature[use_yrs]),0.05)
+yy <- coef(temporal_model)[1] + coef(temporal_model)[2]*xx + coef(temporal_model)[3]*xx^2
+lines(xx,yy)
 
-# plot mean abundances vs mean temperature, along with spatial model "prediction"
-xx <- seq(-5,5,0.01)
-yy <- coef(spatial_model)[1] + coef(spatial_model)[2]*xx + coef(spatial_model)[3]*xx^2
-png("spatial_pattern.png",height=3.5,width=5,units="in",res=400)
-  par(mfrow=c(1,1),tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,1))
-  matplot(Tmean,simN.mix[,c(2:5)],xlab="Mean temperature",ylab="N",
-            type="l", col=myCols,
-            lty=c("solid"),lwd=c(1,1,1,2))
-  lines(xx,yy,lty="dashed",lwd=1)
-  #legend("topright",c("AA","Aa","aa","Pop"),fill=myCols,bty="n")
-dev.off()
+###
+### 3. Generate forecasts for the temporal simulation (part 2)
+###
+
+source("genetic_diversity_forecast.R")
+
+
+# plot time series with spatial and temporal predictions!
