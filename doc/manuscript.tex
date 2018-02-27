@@ -1,0 +1,147 @@
+%---------------------------------------------
+% This document is for pdflatex
+%---------------------------------------------
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amsfonts,amssymb,graphicx,setspace,authblk}
+\usepackage{float}
+\usepackage[running]{lineno}
+\usepackage[vmargin=1in,hmargin=1in]{geometry}
+
+\usepackage[authoryear]{natbib}
+
+\graphicspath{ {./../genetic-diversity/figures/} }
+
+\usepackage{enumitem}
+\setlist{topsep=.125em,itemsep=-0.15em,leftmargin=0.75cm}
+
+\usepackage{gensymb}
+
+\usepackage[compact]{titlesec} 
+
+\usepackage{bm,mathrsfs}
+
+\usepackage{ifpdf}
+\ifpdf
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{epstopdf}
+\else
+\DeclareGraphicsExtensions{.eps}
+\fi
+
+\renewcommand{\floatpagefraction}{0.98}
+\renewcommand{\topfraction}{0.99}
+\renewcommand{\textfraction}{0.05}
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%% Just for commenting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[usenames]{color}
+\newcommand{\new}{\textcolor{red}}
+\newcommand{\spe}{\textcolor{blue}}
+\newcommand{\comment}{\textcolor{black}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{equation} \begin{aligned}}
+\newcommand{\ea}{\end{aligned} \end{equation}}
+
+\def\X{\mathbf{X}}
+
+\floatstyle{boxed}
+\newfloat{Box}{tbph}{box}
+
+\title{Integrating spatial and temporal information to make ecological forecasts }
+
+\author[1]{Peter B. Adler\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
+\author[2]{Ethan White}
+\author[3]{others?}
+\affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
+\affil[2]{some shitty Florida joint}
+\affil[3]{??}
+
+\renewcommand\Authands{ and }
+
+% \date{Last compile: \today} 
+
+\sloppy
+
+\renewcommand{\baselinestretch}{1.25}
+
+\begin{document}
+
+\maketitle
+
+\linenumbers
+
+\section*{Abstract}
+
+stuff
+
+\textbf{\large{Keywords:}} Coexistence, competition, integral projection model, removal experiment, sagebrush steppe. 
+
+\section*{Introduction}
+
+Cheer lead for forecasting yada yada 
+
+Strengths and weaknesses of spatial approach
+
+Strengths of weaknesses of temporal approach
+
+Let's take the best of both worlds! Combine with weights that change over time. We might learn something interesting from the rate at which the weights change.
+
+\section*{Eco-evo case study}
+
+Consider an annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:RxnNorms}).
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.6 \textwidth]{reactionnorms.png}
+\caption{Reaction norms of the three genotypes.}
+\label{fig:RxnNorms}
+\end{figure}
+
+Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-loving genotype, warm sites will be dominated by the heat-loving genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:SpatialPattern}).
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.75 \textwidth]{spatial_pattern.png}
+\caption{The spatial pattern of individual genotypes and total population abundances at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from the ``spatial model."}
+\label{fig:SpatialPattern}
+\end{figure}
+
+
+%\newpage
+%\renewcommand{\refname}{Literature cited}
+%\bibliographystyle{Ecology}
+%\bibliography{RemovalRefs}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% APPENDICES !
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%\clearpage 
+%\newpage 
+%
+%\setcounter{page}{1}
+%\setcounter{equation}{0}
+%\setcounter{figure}{0}
+%\setcounter{section}{0}
+%\setcounter{table}{0}
+%
+%\centerline{\Large \textbf{Appendices}}
+%\centerline{Adler et al., ``Weak interspecific interactions''} 
+%
+%\vspace{0.4in} 
+%
+%\renewcommand{\theequation}{A-\arabic{equation}}
+%\renewcommand{\thetable}{A-\arabic{table}}
+%\renewcommand{\thefigure}{A-\arabic{figure}}
+%\renewcommand{\thesection}{\Alph{section}}
+
+\end{document}
+
