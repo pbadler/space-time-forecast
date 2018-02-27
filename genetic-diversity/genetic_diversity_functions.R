@@ -1,14 +1,14 @@
 
 
 # generate fecundity rates
-getLambdas = function(temperature,fec.Tmu,fec.Tsigma,fec.max){
+getLambdas = function(temperature,fec_Tmu,fec_Tsigma,fec_max){
     # temperature is a time series (vector) of T values
     # fec.Tmu is a vector of optimal temperatures (one value for each genotype)
     # fec.Tsigma is a vector of standard deviations for the temperature niche of each genotype
-    L <- matrix(NA,nrow=length(temperature),ncol=length(fec.Tmu))
-    for(i in 1:length(fec.Tmu)){
-      L[,i] <- dnorm(temperature,fec.Tmu[i],fec.Tsigma[i])
-      scalar <- fec.max[i]/dnorm(fec.Tmu[i],fec.Tmu[i],fec.Tsigma[i])
+    L <- matrix(NA,nrow=length(temperature),ncol=length(fec_Tmu))
+    for(i in 1:length(fec_Tmu)){
+      L[,i] <- dnorm(temperature,fec_Tmu[i],fec_Tsigma[i])
+      scalar <- fec_max[i]/dnorm(fec_Tmu[i],fec_Tmu[i],fec_Tsigma[i])
       L[,i] <- scalar*L[,i]
     }
     return(L)
@@ -61,7 +61,7 @@ diploid = function(N,seedSurv,G,seeds,phi){
   	return(list(SB=SB,Plants=Plants,SP=Fec))
 }
 
-processOutput <- function(N,burn.in,temperature){
+processOutput <- function(N,burn_in,temperature){
   # This functions take one simulation run and calculates per capita growth
   # rates for each genotype and for the whole population, 
   # then regresses the growth rates on the temperature time series
@@ -73,9 +73,9 @@ processOutput <- function(N,burn.in,temperature){
   totTime <- NROW(N)
   N<-as.data.frame(N)
   N$Pop <- rowSums(N)
-  means = colMeans(N[(burn.in+1):totTime,])
-  pcgr = log(N[(burn.in+1):totTime,]/N[burn.in:(totTime-1),])  # calculate genotype level per capita growth rate
-  temperature = temperature[(burn.in+1):totTime] # we index temperature at the start of the t to t+1 interval
+  means = colMeans(N[(burn_in+1):totTime,])
+  pcgr = log(N[(burn_in+1):totTime,]/N[burn_in:(totTime-1),])  # calculate genotype level per capita growth rate
+  temperature = temperature[(burn_in+1):totTime] # we index temperature at the start of the t to t+1 interval
     
   # do regressions
   regs <- data.frame("Genotype"=names(N),"Intercept"=numeric(NCOL(pcgr)),"Slope"=numeric(NCOL(pcgr)))

@@ -7,8 +7,8 @@ burn_in=baseline_yrs/2   # years to reach stochastic equilibrium
 # initialize
 N=Plants=Fec=matrix(0,sim_yrs,3)
 colnames(N)<-colnames(Plants)<-colnames(Fec)<-c("AA","Aa","aa")
-N[1,] = fec.max[1]/3
-lambdas = getLambdas(temperature,fec.Tmu,fec.Tsigma,fec.max)
+N[1,] = fec_max[1]/3
+lambdas = getLambdas(temperature,fec_Tmu,fec_Tsigma,fec_max)
 
 for(iYr in 2:(sim_yrs)){
   seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha,G)
