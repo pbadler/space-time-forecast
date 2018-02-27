@@ -14,20 +14,23 @@ for(iYr in 2:(sim_yrs)){
   seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha,G)
   phi <- getPhi(seeds)
   out <- diploid(N[iYr-1,],seedSurv,G,seeds,phi)
-  N[iYr,] <- out$SB
-  Plants[iYr,] <- out$Plants
-  Fec[iYr,] <- out$SP
+  N[iYr,] <- out$SB  # total seedbank
+  Plants[iYr,] <- out$Plants  # germinated plants
+  Fec[iYr,] <- out$SP # seed production
 }   # next i
 
-# calculate per capita growth rates
-temporal_sim<-processOutput(N,burn_in,temperature)
 
-# fit a "temporal" model describing mean abundance as a function of mean temperature
-# during the baseline period
-use_yrs <- burn_in:baseline_yrs
-temporal_model <- lm(temporal_sim$pcgr$Pop[use_yrs]~temporal_sim$temperature[use_yrs] + 
-                       I(temporal_sim$temperature[use_yrs]^2))
-# TO DO: replace this linear model with a Gompertz model
+# Fit a "temporal" model describing abundance as a function of annual temperature
+# during the baseline period. Assume Gompertz population growth.
+N <-rowSums(N)
+N_t0_baseline <- N[burn_in:(baseline_yrs-1)]
+N_t1_baseline <- N[(burn_in+1):baseline_yrs]
+r_baseline <- log(N_t1_baseline/N_t0_baseline)
+temperature_t1_baseline <- temperature[(burn_in+1):baseline_yrs]
+
+temporal_model <- lm(r_baseline ~ log(N_t0_baseline) + temperature_t1_baseline + 
+                       I(temperature_t1_baseline^2))
+
 
 
 

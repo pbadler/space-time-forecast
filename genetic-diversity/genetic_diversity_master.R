@@ -45,12 +45,12 @@ source("figures_spatial.R")
 
 baseline_yrs<-500  # number of yrs at baseline temperature
 warming_yrs <- 100  # number of yrs with warming occurring
-final_yrs <- 500  # number of yrs at steadty-state, warmed temperature
+final_yrs <- 1000  # number of yrs at steadty-state, warmed temperature
 sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
 
 Tstdev <- 1   # st dev of temperature (stationary)
 baseT <- -1 # initial temperature
-deltaT <- 4  # total change in temperature
+deltaT <- 5  # total change in temperature
 Tmean <- baseT + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
                    rep(deltaT,final_yrs))
 
@@ -63,18 +63,16 @@ temperature = rnorm(sim_yrs,Tmean,Tstdev)  # generate temperature time series
 source("genetic_diversity_sim_temporal.R")
 
 # FIGURES
-par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0))
+par(mfrow=c(1,3),tcl=-0.2,mgp=c(2,0.5,0))
 
 # plot full time series
-plot(temporal_sim$N$Pop,type="l",xlab="Time",ylab="N")
+plot(N,type="l",xlab="Time",ylab="N")
 
 # plot temperature vs population growth during baseline period
-plot(temporal_sim$temperature[use_yrs],temporal_sim$pcgr$Pop[use_yrs],xlab="Temperature",
-     ylab="log Population growth rate")
-# add model fit
-xx <- seq(min(temporal_sim$temperature[use_yrs]),max(temporal_sim$temperature[use_yrs]),0.05)
-yy <- coef(temporal_model)[1] + coef(temporal_model)[2]*xx + coef(temporal_model)[3]*xx^2
-lines(xx,yy)
+plot(temperature_t1_baseline,r_baseline,xlab="Temperature",ylab="log Population growth rate")
+
+# plot observed vs predicted population growth
+plot(r_baseline,predict(temporal_model),xlab="Observed", ylab= "Predicted")
 
 ###
 ### 3. Generate forecasts for the temporal simulation (part 2)
