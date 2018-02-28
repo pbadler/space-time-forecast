@@ -58,10 +58,11 @@
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
-\author[3]{others?}
+\author[3]{Michael Cortez?}
+\author[4]{others?}
 \affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
 \affil[2]{some shitty Florida joint}
-\affil[3]{??}
+
 
 \renewcommand\Authands{ and }
 
@@ -85,28 +86,28 @@ stuff
 
 \section*{Introduction}
 
-We love ecological forecasting yada yada. Common approaches use spatial patterns, temporal patterns, and process-level understanding (i.e., mechanistic models). Since we will never know all the mechanisms, we will inevitably need to rely on patterns. But they each have limitations.
+We love ecological forecasting yada yada. Common approaches use spatial patterns, temporal patterns, and process-level understanding (i.e., mechanistic models). Since we will never know all the mechanisms, we will inevitably need to rely on patterns. But they have limitations.
 
-Strengths and weaknesses of spatial approach...
+The spatial approach: Correlate mean environment with the mean of an ecological state variable or rate across many sites. Examples: population distribution or abundance as a function of climate (SDM refs), primary production as a function of mean precipitation (Lauenroth refs).  Strengths: broad spatial scales, data are available and analyses are straightforward. Weaknesses: many well-recognized issues involving assumptions. A less well-recognized issue is that these models are not dynamic; they provide no information about how quickly the system will move from the current state to the predicted, future state. These patterns have developed over very long time spans, so they are unlikely to provide much information about dynamic changes on the order of years to decades. In addition, transient dynamics could prevent the system from ever reaching the predicted steady state (Urban ref?). 
 
-Strengths of weaknesses of temporal approach...
+The temporal approach: Correlate interannual variation in an ecological response with interannual variation in the environment, typically at just one site (but see Kleinhesselink  and Adler 2018, others). Examples: population or vtial rate fluctuations as a function of weather, primary production as a function of precipitation (Lauenroth and Sala 1992). Strengths: focuses on temporal dynamics, can predict rates of change, easily validated. Weaknesses: typically limited spatial extent, ignores slower processes, such as evolutionary adaptation, or turnover in community composition, that could alter the underlying process at longer time scales.
 
-Let's take the best of both worlds! Combine spatial and temporal models with weights that change over time. We might learn something interesting from the rate at which the weights change...
+Our goal is to capitalize on the complementary strengths of the spatial and temporal approaches. The idea is to take predictions from a spatial and a temporal model and combine them with a weighted average. The model weights can change over time: we expect the temporal model to dominate in the short-term, and the spatial model to dominate in the long-term. How rapidly that transition occurs depends on the rate of those ``slow" processes such as evolution and species turnover. We might learn something interesting by studying the rate at which the model weights change.
 
 \section*{Eco-evo example}
 
-Consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
+Consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A; the full model description is provided in the Appendix, and all computer code is available on Github: \texttt{https://github.com/pbadler/space-time-forecast}). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
 
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=1 \textwidth]{spatial_model.png}
-\caption{(A) Reaction norms of the three genotypes. (B) The spatial pattern of individual genotypes and total population abundances at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from the ``spatial model." }
+\caption{(A) Reaction norms of the three genotypes. (B) The spatial pattern of individual genotypes and total population abundances at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from an empirical ``spatial model," a linear regression that describes mean population size as a function of mean temperature. }
 \label{fig:spatial_model}
 \end{figure}
 
-This spatial pattern is the outcome of steady-state conditions. But any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than normal year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that temperature. We refer to this as the temporal pattern. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
+This spatial pattern is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that same temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
-To demonstrate these dynamics, we simulated a population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype, and we fit a temporal model that predicts population growth as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then impose a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increases and the population recovers (Fig. \ref{fig:forecast} bottom). 
+To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We use the simulated data from this baseline period to fit an empirical model that assume no knowledge of the true underlying process. This empirical ``temporal model" predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then imposed a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increases and the population recovers (Fig. \ref{fig:forecast} bottom). 
 
 \begin{figure}[tbp]
 \centering
@@ -115,8 +116,8 @@ To demonstrate these dynamics, we simulated a population at a colder than averag
 \label{fig:temporal_model}
 \end{figure}
 
-The implications for forecasting are clear: In the initial stages of the warming trend, a temporal model fit to the original, baseline conditions should make better the best predictions about resulting population trends, but in the longer term, as evolutionary change occurs, a spatial model fit will begin to make better predictions. 
-To combine the spatial and temporal model into a single forecast, we fit a simple weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$. The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model.  The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}).
+The implications for forecasting are clear: In the initial stages of the warming trend, the temporal model fit to the original, baseline conditions should make better the best predictions about resulting population trends, but in the longer term, as evolutionary change occurs, the spatial model will begin to make better predictions. 
+To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix for full description of the approach). The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}).
 
 \begin{figure}[tbp]
 \centering
@@ -132,6 +133,7 @@ To combine the spatial and temporal model into a single forecast, we fit a simpl
 \label{fig:forecast_supp}
 \end{figure}
 
+Next steps? Play with parameters to show what controls the rate of transition from temporal to spatial model?
 
 %\newpage
 %\renewcommand{\refname}{Literature cited}
@@ -143,24 +145,57 @@ To combine the spatial and temporal model into a single forecast, we fit a simpl
 % APPENDICES !
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-%\clearpage 
-%\newpage 
-%
-%\setcounter{page}{1}
-%\setcounter{equation}{0}
-%\setcounter{figure}{0}
-%\setcounter{section}{0}
-%\setcounter{table}{0}
-%
-%\centerline{\Large \textbf{Appendices}}
-%\centerline{Adler et al., ``Weak interspecific interactions''} 
-%
-%\vspace{0.4in} 
-%
-%\renewcommand{\theequation}{A-\arabic{equation}}
-%\renewcommand{\thetable}{A-\arabic{table}}
-%\renewcommand{\thefigure}{A-\arabic{figure}}
-%\renewcommand{\thesection}{\Alph{section}}
+\clearpage 
+\newpage 
+
+\setcounter{page}{1}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{section}{0}
+\setcounter{table}{0}
+
+\centerline{\Large \textbf{Appendices}}
+
+\vspace{0.4in} 
+
+\renewcommand{\theequation}{A-\arabic{equation}}
+\renewcommand{\thetable}{A-\arabic{table}}
+\renewcommand{\thefigure}{A-\arabic{figure}}
+\renewcommand{\thesection}{\Alph{section}}
+
+\section*{Description of the eco-evolutionary annual plant model}
+
+Insert Cortez text
+
+\section*{Estimating model weights}
+
+Here is my home brew approach, presented in my typically terrible notation. There must be a better, more formal approach...Help?
+
+The spatial model, which we refer to as $S$, is a linear regression fit to ``observed" data on mean population size, $\bar{N}$ at a series of locations, $x$, which vary in mean temperature, $K$. In our case, the observed data are simulated by the model described in the previous section. We include a quadratic term to capture the unimodal relationship between  $\bar{N}$ and $K$:
+ \begin{equation}
+ \bar{N}_x = S(K_x) = \beta^S_0 +  \beta^S_1 K_x +\beta^S_2 {K_x}^2 + \varepsilon
+ \label{eqn:spatial_regression}
+ \end{equation}
+
+The temporal model, which we call $T$, starts with a time series of ``observed" population sizes, $\vec{N}$. Using data from a baseline period with a stationary distribution of annual temperature at one location, we fit the following regression, which predicts the (log) population growth rate as a function of population size and annual temperature at time $t$:
+ \begin{equation}
+ \ln(\frac{N_{t+1}}{N_t}) = T(N_t,K_t) = \beta^T_0 +  \beta^S_1 ln(N_t) +\beta^S_2 K_t + beta^S_3 {K_t}^2 +  \varepsilon
+ \label{eqn:temporal_regression}
+ \end{equation}
+ 
+The temporal model returns a per capita growth rate on the log scale. To predict population size at the next time step, we simply exponentiate the growth rate and multiply it by the current population size: $exp(T(N_t,K_t)) N_t$.
+
+The combined model is a weighted average of predictions from the spatial and temporal models, with the weights changing as a function of time, here expressed as the forecast horizon. The weights change as a function of the square root of the forecast horizon, to allow rapid shifts in the model weights. 
+\begin{equation}
+logit(\omega_t)=\beta^C_0 + \beta^C_1 \sqrt{t}
+\label{eqn:weights}
+\end{equation}
+\begin{equation}
+\hat{N}_{t+1} = \omega * exp(T(N_{t},K_t)) N_t + (1-\omega) * S(K_t) 
+\label{eqn:combined_model}
+\end{equation}
+
+I used the \texttt{optim} function to estimate the $\beta^C$'s that minimize the sum of squared errors, $(\hat{N}_{t+1} - N_{t+1})^2$
 
 \end{document}
 
