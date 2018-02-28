@@ -54,9 +54,9 @@
 \floatstyle{boxed}
 \newfloat{Box}{tbph}{box}
 
-\title{Integrating spatial and temporal information to make ecological forecasts }
+\title{Integrating spatial and temporal patterns in ecological forecasts }
 
-\author[1]{Peter B. Adler\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
+\author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
 \author[3]{others?}
 \affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
@@ -81,39 +81,56 @@
 
 stuff
 
-\textbf{\large{Keywords:}} Coexistence, competition, integral projection model, removal experiment, sagebrush steppe. 
+%\textbf{\large{Keywords:}} Coexistence, competition, integral projection model, removal experiment, sagebrush steppe. 
 
 \section*{Introduction}
 
-Cheer lead for forecasting yada yada 
+We love ecological forecasting yada yada. Common approaches use spatial patterns, temporal patterns, and process-level understanding (i.e., mechanistic models). Since we will never know all the mechanisms, we will inevitably need to rely on patterns. But they each have limitations.
 
-Strengths and weaknesses of spatial approach
+Strengths and weaknesses of spatial approach...
 
-Strengths of weaknesses of temporal approach
+Strengths of weaknesses of temporal approach...
 
-Let's take the best of both worlds! Combine with weights that change over time. We might learn something interesting from the rate at which the weights change.
+Let's take the best of both worlds! Combine spatial and temporal models with weights that change over time. We might learn something interesting from the rate at which the weights change...
 
-\section*{Eco-evo case study}
+\section*{Eco-evo example}
 
-Consider an annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:RxnNorms}).
-
-\begin{figure}[tbp]
-\centering
-\includegraphics[width=0.6 \textwidth]{reactionnorms.png}
-\caption{Reaction norms of the three genotypes.}
-\label{fig:RxnNorms}
-\end{figure}
-
-Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-loving homozygous genotype, warm sites will be dominated by the heat-loving homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:SpatialPattern}).
+Consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
 
 \begin{figure}[tbp]
 \centering
-\includegraphics[width=0.75 \textwidth]{spatial_pattern.png}
-\caption{The spatial pattern of individual genotypes and total population abundances at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from the ``spatial model."}
-\label{fig:SpatialPattern}
+\includegraphics[width=1 \textwidth]{spatial_model.png}
+\caption{(A) Reaction norms of the three genotypes. (B) The spatial pattern of individual genotypes and total population abundances at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from the ``spatial model." }
+\label{fig:spatial_model}
 \end{figure}
 
-This spatial pattern is the outcome of steady-state conditions. At any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-loving homozygous genotype, a warmer than normal year would cause a decrease in population size, even though the heat-loving homozygote might perform optimally at that temperature. If warmer than normal conditions persist for many years, then genotype frequencies will shift, and the heat-loving homozygote will compensate for the decreases of the cold-loving genotype. 
+This spatial pattern is the outcome of steady-state conditions. But any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than normal year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that temperature. We refer to this as the temporal pattern. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
+
+To demonstrate these dynamics, we simulated a population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype, and we fit a temporal model that predicts population growth as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then impose a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increases and the population recovers (Fig. \ref{fig:forecast} bottom). 
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.6 \textwidth] {temporal_model.png}
+\caption{The relationship between annual temperature and per capita growth rate at a location with a mean temperature that favors the cold-adapted genotype. Colors show population size, which also influences the population growth rate through density dependence.  }
+\label{fig:temporal_model}
+\end{figure}
+
+The implications for forecasting are clear: In the initial stages of the warming trend, a temporal model fit to the original, baseline conditions should make better the best predictions about resulting population trends, but in the longer term, as evolutionary change occurs, a spatial model fit will begin to make better predictions. 
+To combine the spatial and temporal model into a single forecast, we fit a simple weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$. The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model.  The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}).
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.7 \textwidth] {forecast.png}
+\caption{(Top) Simulated annual temperatures (grey) and expected temperature (black), which was used to make forecasts. (Bottom) Simulated population size and forecasts from the spatial, temporal and combined models.  }
+\label{fig:forecast}
+\end{figure}
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=0.7 \textwidth] {forecast_supplement.png}
+\caption{Simulated shifts in genotype abundances, and the model weighting term, $\omega$, during the warming phase and the following stationary temperature phase.}
+\label{fig:forecast_supp}
+\end{figure}
 
 
 %\newpage

@@ -22,6 +22,7 @@ for(iYr in 2:(sim_yrs)){
 
 # Fit a "temporal" model describing abundance as a function of annual temperature
 # during the baseline period. Assume Gompertz population growth.
+N_genotypes <- N
 N <-rowSums(N)
 N_t0_baseline <- N[burn_in:(baseline_yrs-1)]
 N_t1_baseline <- N[(burn_in+1):baseline_yrs]

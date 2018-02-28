@@ -8,6 +8,7 @@ setwd("C:/Repos/space-time-forecast/genetic-diversity")
 # load packages and functions
 source("genetic_diversity_functions.R")
 library("boot")
+library("latticeExtra")
 
 ###
 ### 1. Simulate and describe spatial pattern in abundances at sites across a range of mean temperatures
@@ -34,9 +35,6 @@ alpha = matrix(1,3,3)      # all competition coefficients (intra- and inter-) ar
 source("genetic_diversity_sim_spatial.R")
 
 #CHECK: why zeros for least fit genotype's mean abundances at lowest temps but not highest?
-
-# plot spatial figures
-source("figures_spatial.R")
 
 ###
 ### 2. Simulate and describe temporal pattern in abundances at one site experiencing warming
@@ -69,4 +67,4 @@ source("genetic_diversity_sim_temporal.R")
 source("genetic_diversity_forecast.R")
 
 # plot temporal figures
-source("figures_temporal.R")
+source("genetic_diversity_figures.R")
