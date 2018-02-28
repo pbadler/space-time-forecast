@@ -165,7 +165,53 @@ Next steps? Play with parameters to show what controls the rate of transition fr
 
 \section*{Description of the eco-evolutionary annual plant model}
 
-Insert Cortez text
+(from Michael Cortez)
+
+\noindent \textbf{Haploid Model:} Begin with a haploid model that describes the number of seeds present in a seed bank.  $N_{i,t}$ is the number of seeds of species $i$ at time $t$.  The model is
+\begin{align}\begin{split}
+N_{1,t+1} &= s_1 [1-g_1(E_t)]N_{1,t}+\frac{\lambda_1g_1(E_t)N_{1,t}}{1+ \alpha_{11}g_1(E_t)N_{1,t} + \alpha_{12}g_2(E_t)N_{2,t}}\\
+N_{2,t+1} &= s_2 [1-g_2(E_t)]N_{2,t}+\frac{\lambda_2g_2(E_t)N_{2,t}}{1+ \alpha_{21}g_1(E_t)N_{1,t} + \alpha_{22}g_2(E_t)N_{2,t}}
+\end{split}\end{align}
+where $g_{i}(E_t)$ is the probability of germination, $E_t$ is the environmental quality at time $t$, $s_i$ is the seed survival probability for species $i$, and $\lambda_i$ is the seed production rate per plant.  Below I refer to the $\alpha_{ij}$ as intra- and inter-specific competition coefficients.  \\
+
+\noindent \textbf{Diploid Model:} Consider a one-species diploid model.  The genotypes are denoted by $AA$, $Aa$, and $aa$.   The number of each genotypes at time $t$ is $N_{AA,t}$, $N_{Aa,t}$, and $N_{aa,t}$.  The germination rates for each genotype are $g_{AA}(E_t)$, $g_{Aa}(E_t)$, and $g_{aa}(E_t)$.  The seed survival probability and seed production rate for genotype $AA$ are $s_{AA}$ and $\lambda_{AA}$, respectively.  The analogous parameters for the other genotypes are similarly denoted.  The competition coefficients are denoted by $\alpha_{i,j}$, e.g., $\alpha_{AA,AA}$ or $\alpha_{AA,Aa}$.  Throughout we assume that gametes mix randomly in the population.  
+
+First consider the case where the competition coefficients are zero ($\alpha_{i,j}=0$).  Let $T$ denote the total number of gamete-pairs produced in a given year,
+\begin{equation}
+T = \lambda_{AA}N_{AA,t}g_{AA}(E_t)+ \lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)+\lambda_{aa}N_{aa,t}g_{aa}(E_t).
+\end{equation}
+The first term is the number of gamete-pairs produced by $AA$ individuals.  The second and third terms are the numbers of gamete-pairs produced by $Aa$ and $aa$ individuals, respectively. The proportion of $A$ gametes ($\phi_A$) and the proportion of $a$ gametes ($\phi_a$) are given by
+\begin{align}\begin{split}
+\phi_{A} &= \frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)+ \frac{1}{2}\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{T} \hspace{10pt} \text{and} \hspace{10pt} \phi_a = 1-\phi_{A}.
+\end{split}\end{align}
+Note that the $T$ in the denominator of $\phi_A$ shows up because we are computing proportions.  Combining all of these we get the dynamics for each genotype,
+\begin{align}\begin{split}
+N_{AA,t+1} &= s_{AA}[1-g_{AA}(E_t)]N_{AA,t} + \phi_A^2T\\
+N_{Aa,t+1} &= s_{Aa}[1-g_{Aa}(E_t)]N_{Aa,t} + \phi_A\phi_aT\\
+N_{aa,t+1} &= s_{aa}[1-g_{aa}(E_t)]N_{aa,t} + \phi_a^2T
+\end{split}\end{align}
+
+Now consider the case where the competition coefficients are non-zero ($\alpha_{i,j}\neq0$).  Including competition changes the way in which we compute $T$, $\phi_A$, and $\phi_a$.  Specifically, because the total number of seeds produced per year by each genotypes is reduced based on intra- and inter-specific competition, the total number of gamete-pairs becomes
+\begin{align}\begin{split}
+T &=  \frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)}{1+ \alpha_{AA,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{AA,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{AA,aa}g_{aa}(E_t)N_{aa,t}} \\ 
+&+ \frac{\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{1+ \alpha_{Aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{Aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{Aa,aa}g_{aa}(E_t)N_{aa,t}}\\
+&+\frac{\lambda_{aa}N_{aa,t}g_{aa}(E_t)}{1+ \alpha_{aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{aa,aa}g_{aa}(E_t)N_{aa,t}}.
+\label{eqn:defineT}
+\end{split}\end{align}
+The first line is the number of gamete-pairs produced by $AA$ individuals after accounting for the effects of competition.  The second and third lines are the numbers of gamete-pairs produced by $Aa$ and $aa$ individuals, respectively. The proportions of $A$ gametes and $a$ gametes are 
+\begin{align}\begin{split}
+\phi_A &= \frac{1}{T}\frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)}{1+ \alpha_{AA,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{AA,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{AA,aa}g_{aa}(E_t)N_{aa,t}} \\
+&+ \frac{1}{2T}\frac{\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{1+ \alpha_{Aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{Aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{Aa,aa}g_{aa}(E_t)N_{aa,t}}\\
+\phi_a &= 1- \phi_A
+\label{eqn:definePhi}
+\end{split}\end{align}
+Combining all of this results in the same model as above,
+\begin{align}\begin{split}
+N_{AA,t+1} &= s_{AA}[1-g_{AA}(E_t)]N_{AA,t} + \phi_A^2T\\
+N_{Aa,t+1} &= s_{Aa}[1-g_{Aa}(E_t)]N_{Aa,t} + 2 \phi_A\phi_aT\\
+N_{aa,t+1} &= s_{aa}[1-g_{aa}(E_t)]N_{aa,t} + \phi_a^2T,
+\end{split}\end{align}
+but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{eqn:defineT}) and (\ref{eqn:definePhi}) . 
 
 \section*{Estimating model weights}
 
