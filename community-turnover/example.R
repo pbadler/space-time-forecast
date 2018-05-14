@@ -71,7 +71,10 @@ for(t in 1:time_to_max){
 spxp_final <- spxp
 
 # figures
-par(mfrow=c(1,2),tcl=-0.1,mgp=c(2,0.5,0),mar=c(3,4,1,1))
-matplot(x=landscape[,3],y=spxp_ini,type="l",lty=1,xlab="Temperature",ylab="Biomass")
-matplot(x=landscape[,3],y=spxp_final,type="l",lty=1,xlab="Temperature",ylab="Biomass")
+par(mfrow=c(1,2),tcl=-0.1,mgp=c(2,0.5,0),mar=c(3,4,3,1))
+max_bio <- max(max(spxp_ini),spxp_final)
+matplot(x=landscape[,3],y=spxp_ini,type="l",lty=1,ylim=c(0,max_bio*1.1),xlab="Temperature",ylab="Biomass")
+mtext(side=3,"Initial",adj=0)
+matplot(x=landscape[,3]+temp_increase,y=spxp_final,type="l",lty=1,ylim=c(0,max_bio*1.02),xlab="Temperature",ylab="Biomass")
+mtext(side=3,"Final",adj=0)
 
