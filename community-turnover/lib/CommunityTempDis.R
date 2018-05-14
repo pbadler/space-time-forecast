@@ -1,0 +1,28 @@
+#
+#
+#	Help function to run community dynamics
+#	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu
+#	Co-authors (and project leaders): J. Alexander - jake.alexander@unil.ch & L. Pellissier - loic.pellissier@usys.ethz.ch
+
+# Translated from Matlab to R by Peter Adler - peter.adler@usu.edu
+
+CommunityTempDis <- function(spxp_ini, tr, seed_rain,temp,dt){
+#UNTITLED Summary of this function goes here
+#   Detailed explanation goes here
+  N <- dim(tr)[1]
+  
+  spxp_int <- seed_rain%*%spxp_ini
+  Biom <- colSums(spxp_int)
+   
+  # I suspect the 500's below need to be replaced by a variable
+  
+  growth_rate_temp <- (matrix(1,500,1)%*%t(tr[,2]))*(temp%*%matrix(1,1,N) - matrix(1,500,1)%*%t(tr[,1]))
+  growth_rate_intra <- (matrix(1,500,1)%*%t(tr[,4]))*spxp_ini
+  growth_rate_biom <- (matrix(1,500,1)%*%t(tr[,3]))*(Biom%*%matrix(1,1,N))
+   
+  spxp_final <- spxp_int + dt*spxp_int*(growth_rate_temp - growth_rate_intra - growth_rate_biom)
+   
+  spxp_final[spxp_final<10e-12] <- 0
+
+}
+
