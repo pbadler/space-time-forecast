@@ -34,16 +34,16 @@ spxp <- matrix(1,L_land, N)*(2/N)
 d <- d/dt
 
 # Generation of the species pool
-tr = SpeciesPoolGen(N, 4, 16.5, Gmin, Gmax, Lmin, Lmax, Cmin, Cmax)
-temp = matrix(landscape[,3],L_land,1)
+tr <- SpeciesPoolGen(N, 4, 16.5, Gmin, Gmax, Lmin, Lmax, Cmin, Cmax)
+temp <- matrix(landscape[,3],L_land,1)
 
-# dispersal matrix
-# original matlab code: seed_rain =  squareform(pdist(landscape(:,1:2)) < 2).*(d*dt*0.5);
-seed_rain <- as.matrix(dist(landscape[,1:2],diag=T,upper=T))*(d*dt*0.5)  # where does the < 2 go?
-indx <-  (diag(rep(1,dim(landscape)[1])) == 1)
-seed_rain[indx==T] <- 1-d*dt
+# dispersal matrix (seeds disperse only to nearest neighbor locations)
+seed_rain <- as.matrix(dist(landscape[,1:2],diag=T,upper=T))
+seed_rain[seed_rain > 1] <- 0
+seed_rain <- seed_rain*(d*dt*0.5)
+diag(seed_rain) <- 1-d*dt
 seed_rain[1,1] = 1-dt*d/2  
-seed_rain[dim(landscape)[1],dim(landscape)[1]] = 1-dt*d/2
+seed_rain[L_land,L_land] = 1-dt*d/2
 
 # Run of the initialisation of community
 for(t in 1:Tmax){
@@ -53,15 +53,15 @@ spxp_ini <- spxp
 
 # save the initial metacommunity
 dir.create("simulations/run_1")
-write.csv(spxp_ini,"simulations/run_1/spxp_ini.txt",row.names = F)
-write.csv(landscape,"simulations/run_1/landscape.txt",row.names = F)
-write.csv(tr,"simulations/run_1/tr.txt",row.names = F)
+write.csv(spxp_ini,"simulations/run_1/spxp_ini.csv",row.names = F)
+write.csv(landscape,"simulations/run_1/landscape.csv",row.names = F)
+write.csv(tr,"simulations/run_1/tr.csv",row.names = F)
 
 spxp_ini[spxp_ini < 10e-12] = 0 # apply extinction threshold
 
 spxp <- spxp_ini
 # From the initial situation, re-run community dynamic while temperature is increasing.
-temp <- landscape[,3]
+#temp <-  matrix(landscape[,3],L_land,1) # redundant?
 time_to_max <- 20000
 temp_increase <- 3
 for(t in 1:time_to_max){
@@ -70,5 +70,8 @@ for(t in 1:time_to_max){
 }
 spxp_final <- spxp
 
-
+# figures
+par(mfrow=c(1,2),tcl=-0.1,mgp=c(2,0.5,0),mar=c(3,4,1,1))
+matplot(x=landscape[,3],y=spxp_ini,type="l",lty=1,xlab="Temperature",ylab="Biomass")
+matplot(x=landscape[,3],y=spxp_final,type="l",lty=1,xlab="Temperature",ylab="Biomass")
 
