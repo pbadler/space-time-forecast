@@ -1,7 +1,7 @@
 %
 %
 %	Example script to run the model of Alexander et al. 2018 'Lags in the response of mountain plant communities to climate change' - Global Change Biology
-%	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu
+%	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu, https://github.com/LoicChr
 %
 
 

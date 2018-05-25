@@ -1,7 +1,7 @@
 #
 #
 #	Example script to run the model of Alexander et al. 2018 'Lags in the response of mountain plant communities to climate change' - Global Change Biology
-#	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu
+#	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu, https://github.com/LoicChr
 # Translated to R by Peter Adler - peter.adler@usu.edu
 
 rm(list=ls())
@@ -78,3 +78,5 @@ mtext(side=3,"Initial",adj=0)
 matplot(x=landscape[,3]+temp_increase,y=spxp_final,type="l",lty=1,ylim=c(0,max_bio*1.02),xlab="Temperature",ylab="Biomass")
 mtext(side=3,"Final",adj=0)
 
+# total biomass
+plot(x=landscape[,3],rowSums(spxp_ini))

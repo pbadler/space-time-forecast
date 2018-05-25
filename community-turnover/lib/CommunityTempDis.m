@@ -1,7 +1,7 @@
 %
 %
 %	Help function to run community dynamics
-%	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu
+%	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu, https://github.com/LoicChr
 %	Co-authors (and project leaders): J. Alexander - jake.alexander@unil.ch & L. Pellissier - loic.pellissier@usys.ethz.ch
 
 function spxp_final = CommunityTempDis(spxp_ini, tr, seed_rain,temp,dt)
