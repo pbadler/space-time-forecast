@@ -8,7 +8,7 @@ setwd("C:/repos/space-time-forecast/community-turnover")
 # load packages and functions
 source("lib/CommunityTempDis.R")
 source("lib/SpeciesPoolGen.R")
-#library("boot")
+library("boot")
 #library("latticeExtra")
 
 ###
@@ -28,81 +28,34 @@ deltaT <- 5  # total change in mean temperature
 burnin_yrs <- 2000
 baseline_yrs <- 1000  # number of yrs at baseline temperature
 warming_yrs <- 200  # number of yrs with warming occurring
-final_yrs <- 1000  # number of yrs at steady-state, warmed temperature
+final_yrs <- 500  # number of yrs at steady-state, warmed temperature
 sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of years
 
-# generate one set of temperature time series to use in all simulations
-temperature<-matrix(NA,sim_yrs,length(Tmean))
-for(iT in 1:length(Tmean)){
-  tmp_mean <- Tmean[iT] + c(rep(0,burnin_yrs+baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
-                          rep(deltaT,final_yrs))
-  temperature[,iT] = rnorm(sim_yrs,tmp_mean,Tstdev)  # generate temperature time series
-}  
-
 # parameters to generate species pool
-N <- 50      # number of species
+N <- 25      # number of species
 Gmax <- 0.5   # max growth rate 
 Gmin <- 0.2   # min growth rate
 Lmax <- 1.5   # max sensitivity to competition
 Lmin <- 0.7   # min sensitivity to competition 
 Cmax <- 0.2   # max additional sensitivity to conspecific competition
 Cmin <- 0.2   # min additional sensitivity to conspecific competition
-d <- 10^(-3)   # fraction of offspring dispersing from home site
+d <- 10^(-2)   # fraction of offspring dispersing from home site
 
 source("comm_turn_sim.R")
 
-# Baseline plots
-
-# mean temperature vs mean species biomass 
-matplot(Tmean,spxp_mean_baseline,type="l",xlab="Baseline temperature",ylab="Biomass")
-
-# mean temperature vs mean community biomass
-plot(x=Tmean,rowSums(spxp_mean_baseline),type="l",xlab="Baseline temperature",ylab="Biomass")
-
-# biomass over time for all species at one location
-matplot(burnin_yrs:(burnin_yrs+baseline_yrs),
-        spxp[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2,],
-        type="l",xlab="Time",ylab="Biomass")
-
-# temperature vs total biomass at one location
-plot(temperature[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2],
-     rowSums(spxp[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2,]),
-     type="p",xlab="Annual temperature",ylab="Biomass")
-
-# total biomass at each location over time
-matplot(1:sim_yrs,apply(spxp,MARGIN=c(1,2),FUN="sum"),type="l")
-
 
 ###
-### 2. Simulate and describe temporal pattern in abundances at one site experiencing warming
+### 2. Fit models and generate forecasts
 ###
 
-baseline_yrs<-500  # number of yrs at baseline temperature
-warming_yrs <- 100  # number of yrs with warming occurring
-final_yrs <- 200  # number of yrs at steady-state, warmed temperature
-sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
-
-Tstdev <- 1   # st dev of temperature (stationary)
-baseT <- -1 # initial temperature
-deltaT <- 5  # total change in temperature
-Tmean <- baseT + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
-                   rep(deltaT,final_yrs))
-
-# generate a temperature time series
-temperature = rnorm(sim_yrs,Tmean,Tstdev)  # generate temperature time series
-# plot(temperature,type="l")  # take a look
-
-# use same parameters from diploid model above 
-
-source("genetic_diversity_sim_temporal.R")
-
-
+source("comm_turn_forecast.R")
 
 ###
-### 3. Generate forecasts for the temporal simulation (part 2)
+### 3. Make figures
 ###
 
-source("genetic_diversity_forecast.R")
+source("comm_turn_figures.R")
 
-# plot temporal figures
-source("genetic_diversity_figures.R")
+
+
+

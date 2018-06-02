@@ -1,5 +1,13 @@
 # call this script from comm_turn_master.R
 
+# generate one set of temperature time series to use in all simulations
+temperature<-matrix(NA,sim_yrs,length(Tmean))
+for(iT in 1:length(Tmean)){
+  tmp_mean <- Tmean[iT] + c(rep(0,burnin_yrs+baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
+                            rep(deltaT,final_yrs))
+  temperature[,iT] = rnorm(sim_yrs,tmp_mean,Tstdev)  # generate temperature time series
+}
+
 # set up landscape
 landscape <- cbind(1:L_land , rep(1 ,L_land),Tmean)
 
