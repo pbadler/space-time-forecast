@@ -16,30 +16,31 @@ source("lib/SpeciesPoolGen.R")
 ###
 
 # length of landscape
-L_land <- 10
+L_land <- 20
 
 # temperature variables
 Tmin <- 0; Tmax <- 15  # baseline temperature range
 Tmean <-seq(Tmin,Tmax,length=L_land)   # baseline mean temperatures across the landscape
-Tstdev <- 0.1   # st dev of temperature (interannual variation, stationary)
+Tstdev <- 2   # st dev of temperature (interannual variation, stationary)
 deltaT <- 5  # total change in mean temperature
 
 # length of simulation
-baseline_yrs<-500  # number of yrs at baseline temperature
-warming_yrs <- 100  # number of yrs with warming occurring
-final_yrs <- 200  # number of yrs at steady-state, warmed temperature
-sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
+burnin_yrs <- 2000
+baseline_yrs <- 1000  # number of yrs at baseline temperature
+warming_yrs <- 200  # number of yrs with warming occurring
+final_yrs <- 1000  # number of yrs at steady-state, warmed temperature
+sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of years
 
 # generate one set of temperature time series to use in all simulations
 temperature<-matrix(NA,sim_yrs,length(Tmean))
 for(iT in 1:length(Tmean)){
-  tmp_mean <- Tmean[iT] + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
+  tmp_mean <- Tmean[iT] + c(rep(0,burnin_yrs+baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
                           rep(deltaT,final_yrs))
   temperature[,iT] = rnorm(sim_yrs,tmp_mean,Tstdev)  # generate temperature time series
 }  
 
 # parameters to generate species pool
-N <- 5      # number of species
+N <- 50      # number of species
 Gmax <- 0.5   # max growth rate 
 Gmin <- 0.2   # min growth rate
 Lmax <- 1.5   # max sensitivity to competition
@@ -49,6 +50,27 @@ Cmin <- 0.2   # min additional sensitivity to conspecific competition
 d <- 10^(-3)   # fraction of offspring dispersing from home site
 
 source("comm_turn_sim.R")
+
+# Baseline plots
+
+# mean temperature vs mean species biomass 
+matplot(Tmean,spxp_mean_baseline,type="l",xlab="Baseline temperature",ylab="Biomass")
+
+# mean temperature vs mean community biomass
+plot(x=Tmean,rowSums(spxp_mean_baseline),type="l",xlab="Baseline temperature",ylab="Biomass")
+
+# biomass over time for all species at one location
+matplot(burnin_yrs:(burnin_yrs+baseline_yrs),
+        spxp[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2,],
+        type="l",xlab="Time",ylab="Biomass")
+
+# temperature vs total biomass at one location
+plot(temperature[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2],
+     rowSums(spxp[burnin_yrs:(burnin_yrs+baseline_yrs),L_land/2,]),
+     type="p",xlab="Annual temperature",ylab="Biomass")
+
+# total biomass at each location over time
+matplot(1:sim_yrs,apply(spxp,MARGIN=c(1,2),FUN="sum"),type="l")
 
 
 ###
@@ -73,6 +95,7 @@ temperature = rnorm(sim_yrs,Tmean,Tstdev)  # generate temperature time series
 # use same parameters from diploid model above 
 
 source("genetic_diversity_sim_temporal.R")
+
 
 
 ###
