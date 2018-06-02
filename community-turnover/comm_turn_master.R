@@ -22,13 +22,13 @@ L_land <- 20
 Tmin <- 0; Tmax <- 15  # baseline temperature range
 Tmean <-seq(Tmin,Tmax,length=L_land)   # baseline mean temperatures across the landscape
 Tstdev <- 2   # st dev of temperature (interannual variation, stationary)
-deltaT <- 5  # total change in mean temperature
+deltaT <- 3  # total change in mean temperature
 
 # length of simulation
 burnin_yrs <- 2000
 baseline_yrs <- 1000  # number of yrs at baseline temperature
 warming_yrs <- 200  # number of yrs with warming occurring
-final_yrs <- 500  # number of yrs at steady-state, warmed temperature
+final_yrs <- 1000  # number of yrs at steady-state, warmed temperature
 sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of years
 
 # parameters to generate species pool

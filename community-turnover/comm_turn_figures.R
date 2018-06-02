@@ -30,7 +30,7 @@ png("figures/forecast.png",height=5,width=5,res=400,units="in")
   lines(my_expected_temp,lwd=2,col="black")
   
   par(mar=c(3,4,1,1))
-  plot(my_biomass,xlab="Time",ylab="N",type="l",col="darkgrey")
+  plot(my_biomass,xlab="Time",ylab="Biomass",type="l",col="darkgrey")
   abline(v=baseline_yrs,col="black",lty=3)
   lines(1:length(my_biomass),spatial_forecast,col="red",lwd=2)
   lines(1:length(my_biomass),temporal_forecast,col="blue",lwd=2)
