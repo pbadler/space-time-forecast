@@ -18,7 +18,7 @@ dt <- 0.025   # ????
 d <- d/dt
 
 # Generation of the species pool
-tr <- SpeciesPoolGen(N, Tmin-deltaT, Tmax+deltaT, Gmin, Gmax, Lmin, Lmax, Cmin, Cmax)
+tr <- SpeciesPoolGen(N, Tmin, Tmax+deltaT, Gmin, Gmax, Lmin, Lmax, Cmin, Cmax)
 
 # dispersal matrix (seeds disperse only to nearest neighbor locations)
 seed_rain <- as.matrix(dist(landscape[,1:2],diag=T,upper=T))

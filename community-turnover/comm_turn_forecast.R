@@ -10,7 +10,8 @@ spatial_model <- lm(y_spatial~x_spatial)
 site <- L_land/2   # focal site
 x_temporal <- temperature[burnin_yrs:(burnin_yrs+baseline_yrs),site]
 y_temporal <- rowSums(spxp[burnin_yrs:(burnin_yrs+baseline_yrs),site,])
-temporal_model <- lm(y_temporal~x_temporal)
+y_lag <- rowSums(spxp[(burnin_yrs-1):(burnin_yrs+baseline_yrs-1),site,])
+temporal_model <- lm(y_temporal ~ y_lag + x_temporal)
 
 # get mean temperatures for forecast period (after baseline_yrs)
 forecast_Tmean <- Tmean[site] + c(seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
@@ -20,7 +21,14 @@ forecast_Tmean <- Tmean[site] + c(seq(deltaT/warming_yrs,deltaT,deltaT/warming_y
 spatial_forecast <- coef(spatial_model)[1] + coef(spatial_model)[2]*forecast_Tmean 
 
 # make predictions from temporal model
-temporal_forecast <- coef(temporal_model)[1] + coef(temporal_model)[2]*forecast_Tmean 
+temporal_forecast <- rep(NA,length(forecast_Tmean)+1)
+temporal_forecast[1] <- y_temporal[length(y_temporal)] # initialize at biomass from last baseline year
+for(iTime in 1:length(forecast_Tmean)){
+   temporal_forecast[iTime+1] <- coef(temporal_model)[1] +coef(temporal_model)[2]*temporal_forecast[iTime] + 
+                                  coef(temporal_model)[3]*forecast_Tmean[iTime]
+}
+temporal_forecast <- temporal_forecast[2:length(temporal_forecast)]  # drop first ("observed") year
+
 
 # fit combined model
 y <- rowSums(spxp[(burnin_yrs+baseline_yrs+1):sim_yrs,site,])
