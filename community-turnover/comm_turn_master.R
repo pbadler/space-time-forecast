@@ -9,6 +9,7 @@ setwd("C:/repos/space-time-forecast/community-turnover")
 source("lib/CommunityTempDis.R")
 source("lib/SpeciesPoolGen.R")
 library("boot")
+library("scales")
 #library("latticeExtra")
 
 ###
@@ -16,7 +17,7 @@ library("boot")
 ###
 
 # length of landscape
-L_land <- 40
+L_land <- 20
 
 # temperature variables
 Tmin <- 0; Tmax <- 15  # baseline temperature range
@@ -32,7 +33,7 @@ final_yrs <- 2000  # number of yrs at steady-state, warmed temperature
 sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of years
 
 # parameters to generate species pool
-N <- 50      # number of species
+N <- 40      # number of species
 Gmax <- 0.5   #R max growth rate 
 Gmin <- 0.2   # min growth rate
 Lmax <- 1.5   # max sensitivity to competition
