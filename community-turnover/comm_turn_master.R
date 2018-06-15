@@ -32,7 +32,7 @@ final_yrs <- 2000  # number of yrs at steady-state, warmed temperature
 sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of years
 
 # parameters to generate species pool
-N <- 40      # number of species
+N <- 50      # number of species
 Gmax <- 0.5   #R max growth rate 
 Gmin <- 0.2   # min growth rate
 Lmax <- 1.5   # max sensitivity to competition
