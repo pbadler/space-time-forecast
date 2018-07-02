@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage[running]{lineno}
 \usepackage[vmargin=1in,hmargin=1in]{geometry}
+\usepackage[sc]{mathpazo} %Like Palatino with extensive math support
 
 \usepackage[authoryear]{natbib}
 
@@ -54,7 +55,7 @@
 \floatstyle{boxed}
 \newfloat{Box}{tbph}{box}
 
-\title{\textbf{Integrating spatial and temporal patterns in ecological forecasts }}
+\title{\textbf{Integrating spatial and temporal patterns \\ in ecological forecasts }}
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
@@ -201,7 +202,7 @@ We can forecast the effect of temperature increase on total biomass and the foca
 \renewcommand{\thefigure}{A-\arabic{figure}}
 \renewcommand{\thesection}{\Alph{section}}
 
-\section*{Description of the eco-evolutionary annual plant model}
+\section{Description of the eco-evolutionary annual plant model}
 
 (from Michael Cortez)
 
@@ -251,7 +252,7 @@ N_{aa,t+1} &= s_{aa}[1-g_{aa}(E_t)]N_{aa,t} + \phi_a^2T,
 \end{split}\end{align}
 but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{eqn:defineT}) and (\ref{eqn:definePhi}) . 
 
-\section*{Estimating model weights}
+\subsection{Estimating model weights}
 
 Here is my home brew approach, presented in my typically terrible notation. There must be a better, more formal approach...Help?
 
@@ -281,6 +282,15 @@ logit(\omega_t)=\beta^C_0 + \beta^C_1 \sqrt{t}
 
 I used the \texttt{optim} function to estimate the $\beta^C$'s that minimize the sum of squared errors, $(\hat{N}_{t+1} - N_{t+1})^2$
 
+\section{Description of the metacommunity model}
+
+[How much detail to include from Alexander et al?]
+
+-Describe spatial model
+
+-Describe temporal model
+
+-Model weights
 
 
 \end{document}
