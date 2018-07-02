@@ -8,7 +8,7 @@ myCols<-alpha(c("blue3","red3"),0.4)
 ###
 
 # plot spatial and temporal models
-png("figures/spatial_temporal_models.png",height=3.5,width=4,res=400,units="in")
+png("figures/community_models.png",height=3.5,width=4,res=400,units="in")
 
   par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,1))
   
@@ -50,7 +50,7 @@ my_obs_temp <- temperature[(burnin_yrs+1):sim_yrs,site]
 my_biomass <- rowSums(spxp[(burnin_yrs+1):sim_yrs,site,])
 my_biomass_spp <- spxp[(burnin_yrs+1):sim_yrs,site,my_species]
 
-png("figures/forecast.png",height=7.5,width=4,res=400,units="in")
+png("figures/community_forecast.png",height=7.5,width=4,res=400,units="in")
   
   layout(matrix(c(1,2,3),3,1),heights=c(0.1,0.4,0.4),widths=1)
   
