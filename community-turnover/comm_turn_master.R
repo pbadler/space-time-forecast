@@ -9,6 +9,7 @@ setwd("C:/repos/space-time-forecast/community-turnover")
 source("lib/CommunityTempDis.R")
 source("lib/SpeciesPoolGen.R")
 library("boot")
+library("scales")
 #library("latticeExtra")
 
 ###
@@ -16,7 +17,7 @@ library("boot")
 ###
 
 # length of landscape
-L_land <- 40
+L_land <- 20
 
 # temperature variables
 Tmin <- 0; Tmax <- 15  # baseline temperature range
