@@ -59,10 +59,11 @@
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
-\author[3]{Michael Cortez?}
-\author[4]{others?}
+\author[1]{Michael Cortez?}
+\author[3]{Heather Lynch?}
 \affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
 \affil[2]{some shitty Florida joint}
+
 
 
 \renewcommand\Authands{ and }
@@ -138,7 +139,7 @@ Next steps? Play with parameters to show what controls the rate of transition fr
 
 \subsection*{Community turnover example}
 
-In the previous example, evolutionary change was the slow process whose rate determined the shift in weight from the temporal to spatial forecast of the state of a population. The process of compositional turnover--change in the abundances and identities of species interacting at a site--can have a similar effect at the community level. We demonstrate this using a metacommunity model developed by Alexander et al. (ref). The model describes Lotka-Volterra competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient. Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. Sites are linked by dispersal: a specified fraction of offspring of each species leaves the site where they were produced and reaches all other sites with equal probability. 
+In the previous example, evolutionary change was the slow process that determined how quickly the combined model shifted from a temporal to spatial forecast. The process of compositional turnover--change in the abundances and identities of species interacting at a site--can have a similar effect at the community level. We demonstrate this using a metacommunity model developed by Alexander et al. (ref). The model describes Lotka-Volterra competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient. Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. Sites are linked by dispersal: a specified fraction of offspring of each species leaves the site where they were produced and reaches all other sites with equal probability. 
 
 As in our eco-evolutionary example, we simulate a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase and then a final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the same increase in mean temperature. We focus on two response variables: 1) total community biomass and 2) the biomass of one focal species that dominates the baseline period at the site in the middle of the gradient. 
 
@@ -264,7 +265,7 @@ The spatial model, which we refer to as $S$, is a linear regression fit to ``obs
 
 The temporal model, which we call $T$, starts with a time series of ``observed" population sizes, $\vec{N}$. Using data from a baseline period with a stationary distribution of annual temperature at one location, we fit the following regression, which predicts the (log) population growth rate as a function of population size and annual temperature at time $t$:
  \begin{equation}
- \ln(\frac{N_{t+1}}{N_t}) = T(N_t,K_t) = \beta^T_0 +  \beta^S_1 ln(N_t) +\beta^S_2 K_t + beta^S_3 {K_t}^2 +  \varepsilon
+ \ln(\frac{N_{t+1}}{N_t}) = T(N_t,K_t) = \beta^T_0 +  \beta^T_1 ln(N_t) +\beta^T_2 K_t + beta^T_3 {K_t}^2 +  \varepsilon
  \label{eqn:temporal_regression}
  \end{equation}
  
@@ -286,11 +287,12 @@ I used the \texttt{optim} function to estimate the $\beta^C$'s that minimize the
 
 [How much detail to include from Alexander et al?]
 
--Describe spatial model
-
--Describe temporal model
-
--Model weights
+The spatial model for total community biomass is a simple linear regression. The spatial model for the biomass of the focal species is a multiple regression with a quadratic term, identical to Eqn. \ref{eqn:spatial_regression}. The temporal model for total biomass, $M$, is:
+ \begin{equation}
+ \ln(M_{t+1} = T(M_{t},K_t) = \beta^T_0 +  \beta^T_1 M_t +\beta^T_2 K_t  +  \varepsilon .
+ \label{eqn:community_temporal_regression}
+ \end{equation}
+The temporal model for focal species biomass has the same functional form. The combined models are based on the same approach that we used in the eco-evolutionary example (eqn. \ref{eqn:combined_model}).
 
 
 \end{document}
