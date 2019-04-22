@@ -55,7 +55,7 @@
 \floatstyle{boxed}
 \newfloat{Box}{tbph}{box}
 
-\title{\textbf{ Short and long-term forecasts will require models incorporating different processes and covariates }}
+\title{\textbf{ Forecast time-scale determines which processes to model }}
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
@@ -63,8 +63,6 @@
 \author[3]{Heather Lynch?}
 \affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
 \affil[2]{some shitty Florida joint}
-
-
 
 \renewcommand\Authands{ and }
 
@@ -84,52 +82,70 @@
 
 stuff
 
-%\textbf{\large{Keywords:}} Coexistence, competition, integral projection model, removal experiment, sagebrush steppe. 
+\textbf{\large{Keywords:}} dispersal, ecological forecasting, eco-evolutionary dynamics, global change, selection
 
 \section*{Introduction}
 
-Recently, increased interest in ecological forecasting
-Primary goal is applied: inform decisions (Clark 2001, Dietze et al. 2017, Mouquet et al. 2017)
-Important secondary goal is to advance basic research (Houlahan et al. 2017)
-Emerging consensus that we need to do this
+A recent flurry of synthesis papers in high impact journals attests to surging interest in ecological forecasting. Many of the papers 
+argue that a commitment to ecological forecasting is necessary to guide the environmental policy and management
+decisions that will become increasingly critical under global change (Clark 2001, Mouquet et al. 2017, Dietze et al. 2018).
+A second argument is that rigorous testing of predictions will accelerate the process of basic research and discovery (Houlahan et al. 2017, Dietz 2017, Dietz et al. 2018).
+Taken together, these papers, along with a new textbook (Dietze 2017) represent an emerging consensus that forecasting should be a priority for ecological research.
 
-How to do it is not so clear
-Lots of different approaches
-Lots of argument about the virtues of process-based models and phenomenological, or correlative models (refs?)
-We often see basic research justified with the argument that improved process-level understanding will improve predictions, in fact we have made this
-argument ourselves (cite our own stuff?)
-It is easy to find examples of how extrapolation of linear relationships gets us in trouble (examples? refs?)
-But in many cases simple phenomenological models make surprisingly good predictions (examples? refs?) and they can avoid the parameter error often associated
-with complex process-based models
+No such consensus is available for exactly how to tackle this challenge.
+Ecologists rely on many different approaches and models for making predictions, and 
+frequently argue about the virtues of process-based vs. phenomenological models (refs?).
+We often justify investments in basic research by claiming that improved process-level understanding will improve predictions (e.g., Adler et al. 2012),
+and it is easy to find examples of how extrapolation of linear relationships leads to poor predictions under novel conditions (refs?).
+But in many cases simple phenomenological models make better predictions than complex process-based models with high parameter
+uncertainty (refs? Tredennick et al. 2017?).
 
-Pragmatism is the way forward: use the models that make the best predictions
-This requires making testable predictions
-Thus (Dietze et al 2017) emphasis on near-term forecasting (emphasize that we are on board?)
-Longer-term forecasts harder to test, hindcasts may be best bet (Williams refs? Blois?)
+The pragmatic solution to these debates is clear: we should forecast using the models that make the best predictions.
+Identifying these models requires rigorously testing predictions against observations. However, many common ecological predictions,
+such as a species' geographic range in the year 2100, are virtually impossible to test (but see paleo hindcasting refs,Williams refs? Blois?), 
+leading Dietze et al (2017) to call for greater emphasis on near-term forecasting. The assumption is that building 
+our capacity to make short-term forecasts will ultimately improve our long-term forecasts.
 
-What current literature and the argument for near term forecasting has not explicitly stated is that different models, incorporating different kinds of processes will
-work better for short vs long-term forecasts. We demonstrate this using simulation models. Our analyses show that: 
-1. For short-term forecasts, phenomenological time series approaches are hard to beat
-2. Long-term forecasts require understanding slow processes such as evolutionary and ecological selection as well as dispersal
-3. Different kinds of data reflect the operation of different processes:
-	longitudinal data capture autocorrelation and responses of current assemblage;
-	data across spatial gradients capture long-term outcome of selection and dispersal;
-	as the time-scale of the forecast increases, the importance of these processes shifts.
+Our goal is to consider a hypothesis that, in our view, has not been carefully considered by either the push for near-term forecasting or
+ongoing debates about competing modeling approaches. We expect that short and long-term forecasts will require models
+incorporating different kinds of processes and fit to different kinds of data sets. We demonstrate this idea using two simulation case studies, the first for an 
+eco-evolutionary scenario, the second concerned with feedbacks between community composition and ecosystem functioning.  
+Our analyses show that: 
+1. For short-term forecasts, phenomenological time-series approaches are hard to beat.
+2. Long-term forecasts require understanding slow processes such as evolutionary and ecological selection as well as dispersal.
+3. Different kinds of data reflect the operation of different processes: longitudinal data capture autocorrelation and responses of current assemblages, while 
+data spanning spatial gradients capture the long-term outcome of selection and dispersal.  As the time-scale of the forecast increases, the importance of these processes shifts.
 4. A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.
 
 \section*{Modeling approach}
 
-Simulate effects of environmental change on a system with known dynamics
-Assume fully mechanistic, process-based model is impossible
-Fit two phenomenological models, each representing processes operating at different time scales, and make forecasts with them
+In both of our case studies, we simulate the effects of a hypothetical temperature increase on a simple system with known dynamics.
+The ``truth'' is represented by a model that is fully mechanistic for at least one important process, but we assume that recovering 
+this true, process-based model would be impossible in practice (we return to this point in the Discussion). We begin each simulation
+under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. We then increase temperature progressively
+over a period of time, followed by a second period of stationary, now elevated, temperature. The objective is to forecast the response of the 
+system to temperature increase based on data gathered during the baseline period. 
 
-The spatial approach: Correlate mean environment with the mean of an ecological state variable or rate across many sites. Examples: population distribution or abundance as a function of climate (SDM refs), primary production as a function of mean precipitation (Lauenroth refs).  Strengths: broad spatial scales, data are available and analyses are straightforward. Weaknesses: many well-recognized issues involving assumptions. A less well-recognized issue is that these models are not dynamic; they provide no information about how quickly the system will move from the current state to the predicted, future state. These patterns have developed over very long time spans, so they are unlikely to provide much information about dynamic changes on the order of years to decades. In addition, transient dynamics could prevent the system from ever reaching the predicted steady state (Urban ref?). 
+We make two forecasts based on two different phenomenological models, each representing processes operating at different time scales. 
+The first phenomenological model represents what we call a "spatial approach." We correlate the mean environment with the mean of an ecological state or rate 
+ across many sites. This is the approach commonly used to predict population distribution or abundance as a function of climate (SDM refs) or
+ primary production as a function of mean precipitation (Lauenroth refs). The approach is attractive because it addresses broad spatial scales relevant to 
+ management, and because the necessary data are widely available and statistical analyses are straightforward. The approach also has well-known weaknesses.
+Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). A less well-recognized issue is that these models are not dynamic; 
+they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed 
+over long time spans, they are unlikely to provide much information about dynamic changes on the order of years to decades. Moreover, transient dynamics could 
+prevent the system from ever reaching the predicted steady state (Urban ref?). 
 
-The temporal approach: Correlate interannual variation in an ecological response with interannual variation in the environment, typically at just one site (but see Kleinhesselink  and Adler 2018, others). Examples: population or vtial rate fluctuations as a function of weather, primary production as a function of precipitation (Lauenroth and Sala 1992). Strengths: focuses on temporal dynamics, can predict rates of change, easily validated. Weaknesses: typically limited spatial extent, ignores slower processes, such as evolutionary adaptation, or turnover in community composition, that could alter the underlying process at longer time scales.
+The second model represents what we call a ``temporal approach.'' We correlate interannual variation in an ecological response with interannual variation in the environment, 
+typically at just one site. This approach is often used to study population or vital rate fluctuations as a function of weather, 
+or primary production as a function of precipitation (Lauenroth and Sala 1992). The advantages of this approach include is focus on temporal dynamics, meaning it 
+can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover 
+a limited spatial extent (but see Kleinhesselink  and Adler 2018, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, 
+that could alter the underlying process at longer time scales.
 
-We show that responses to environmental change reflect both kinds of processes but at different time scales. We demonstrate that  by taking predictions from a spatial and a temporal model and combine them with a weighted average. The model weights can change over time: we expect the temporal model to dominate in the short-term, and the spatial model to dominate in the long-term. How rapidly that transition occurs depends on the rate of those ``slow" processes such as evolution and species turnover. 
+We compare forecasts from both models to the true, simulated dynamics to show that responses to environmental change reflect both kinds of processes, but at different time scales. To quantify this pattern, we combine forecasts from the spatial and temporal approaches with a weighted average and then show how the optimal model weights change over time: we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics. How rapidly that transition occurs depends on the rate of  ``slow" processes such as evolution and species turnover. 
 
-\section*{Eco-evo example}
+\section*{Eco-evolutionary example}
 
 Consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A; the full model description is provided in the Appendix, and all computer code is available on Github: \texttt{https://github.com/pbadler/space-time-forecast}). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
 
