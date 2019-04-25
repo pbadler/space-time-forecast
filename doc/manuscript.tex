@@ -120,18 +120,18 @@ data spanning spatial gradients capture the long-term outcome of selection and d
 \section*{Modeling approach}
 
 In both of our case studies, we simulate the effects of a hypothetical temperature increase on a simple system with known dynamics.
-The ``truth'' is represented by a model that is fully mechanistic for at least one important process, but we assume that recovering 
+The ``truth'' is represented by a model that is mechanistic for at least one important process, but we assume that recovering 
 this true, process-based model would be impossible in practice (we return to this point in the Discussion). We begin each simulation
 under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. We then increase temperature progressively
 over a period of time, followed by a second period of stationary, now elevated, temperature. The objective is to forecast the response of the 
 system to temperature increase based on data gathered during the baseline period. 
 
 We make two forecasts based on two different phenomenological models, each representing processes operating at different time scales. 
-The first phenomenological model represents what we call a "spatial approach." We correlate the mean environment with the mean of an ecological state or rate 
+The first phenomenological model represents what we call a ``spatial approach.'' We correlate the mean environment with the mean of an ecological state or rate 
  across many sites. This is the approach commonly used to predict population distribution or abundance as a function of climate (SDM refs) or
  primary production as a function of mean precipitation (Lauenroth refs). The approach is attractive because it addresses broad spatial scales relevant to 
  management, and because the necessary data are widely available and statistical analyses are straightforward. The approach also has well-known weaknesses.
-Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). A less well-recognized issue is that these models are not dynamic; 
+Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). Another issue is that these models are not dynamic; 
 they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed 
 over long time spans, they are unlikely to provide much information about dynamic changes on the order of years to decades. Moreover, transient dynamics could 
 prevent the system from ever reaching the predicted steady state (Urban ref?). 
@@ -147,7 +147,7 @@ We compare forecasts from both models to the true, simulated dynamics to show th
 
 \section*{Eco-evolutionary example}
 
-Consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A; the full model description is provided in the Appendix, and all computer code is available on Github: \texttt{https://github.com/pbadler/space-time-forecast}). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
+Evolutionary adaptation is a key uncertainty in predicting how environmental change will impact a focal population at a given location (refs). To explore how this process influences dynamics and forecasts at different time scales, we consider a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:spatial_model}A; the full model description is provided in the Appendix, and all computer code is available on Github: \texttt{https://github.com/pbadler/space-time-forecast}). Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:spatial_model}B).
 
 \begin{figure}[tbp]
 \centering
@@ -156,9 +156,9 @@ Consider a hypothetical annual plant population in which fecundity is temperatur
 \label{fig:spatial_model}
 \end{figure}
 
-This spatial pattern is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that same temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
+The spatial pattern shown in Fig. \ref{fig:spatial_model} is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that same temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
-To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We use the simulated data from this baseline period to fit an empirical model that assume no knowledge of the true underlying process. This empirical ``temporal model" predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then imposed a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increases and the population recovers (Fig. \ref{fig:forecast} bottom). 
+To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We use the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical ``temporal model" predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then imposed a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increase and the population recovers (Fig. \ref{fig:forecast} bottom). 
 
 \begin{figure}[tbp]
 \centering
@@ -167,8 +167,9 @@ To demonstrate these dynamics, we simulated a diploid annual plant population at
 \label{fig:temporal_model}
 \end{figure}
 
-The implications for forecasting are clear: In the initial stages of the warming trend, the temporal model fit to the original, baseline conditions should make better the best predictions about resulting population trends, but in the longer term, as evolutionary change occurs, the spatial model will begin to make better predictions. 
-To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix for full description of the approach). The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}).
+The implications for forecasting are clear: In the initial stages of the warming trend, the temporal model fit to the original, baseline conditions should make better the best predictions 
+about resulting population trends, but in the longer term, as evolutionary change occurs, the spatial model ultimately makes better predictions. 
+To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix for full description of the approach). The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}). 
 
 \begin{figure}[tbp]
 \centering
@@ -183,6 +184,12 @@ To combine the spatial and temporal model into a single forecast, we fit a weigh
 \caption{Simulated shifts in genotype abundances, and the model weighting term, $\omega$, during the warming phase and the following stationary temperature phase.}
 \label{fig:forecast_supp}
 \end{figure}
+
+The combined model's predictions look impressively accurate, but that is because we used the full, simulated time series to fit the weighting term. 
+Unlike our spatial and temporal model forecasts, we did not generate out-of-sample predictions from the combined model; it merely provides 
+a convenient way to quantify how rapidly dynamics shift from from being dominated by interannual 
+variation to being dominated by steady-state equilibrium. To generate a true forecast from the combined model, we would need an independent 
+method to determine how the model weights shift over time.
 
 Next steps? Play with parameters to show what controls the rate of transition from temporal to spatial model?
 
