@@ -55,7 +55,7 @@
 \floatstyle{boxed}
 \newfloat{Box}{tbph}{box}
 
-\title{\textbf{ Forecast time-scale determines which processes to model }}
+\title{\textbf{ Matching forecast time-scale with ecological process }}
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
 \author[2]{Ethan White}
@@ -109,13 +109,15 @@ our capacity to make short-term forecasts will ultimately improve our long-term 
 Our goal is to consider a hypothesis that, in our view, has not been carefully considered by either the push for near-term forecasting or
 ongoing debates about competing modeling approaches. We expect that short and long-term forecasts will require models
 incorporating different kinds of processes and fit to different kinds of data sets. We demonstrate this idea using two simulation case studies, the first for an 
-eco-evolutionary scenario, the second concerned with feedbacks between community composition and ecosystem functioning.  
-Our analyses show that: 
-1. For short-term forecasts, phenomenological time-series approaches are hard to beat.
-2. Long-term forecasts require understanding slow processes such as evolutionary and ecological selection as well as dispersal.
-3. Different kinds of data reflect the operation of different processes: longitudinal data capture autocorrelation and responses of current assemblages, while 
-data spanning spatial gradients capture the long-term outcome of selection and dispersal.  As the time-scale of the forecast increases, the importance of these processes shifts.
-4. A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.
+eco-evolutionary scenario, the second concerned with feedbacks between community composition and ecosystem functioning. Our analyses show that: 
+\begin{enumerate}
+	\item For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require understanding slow 
+	processes such as evolutionary and ecological selection as well as dispersal.
+	\item Different kinds of data reflect the operation of different processes: longitudinal data capture autocorrelation and responses of current assemblages, while 
+	data spanning spatial gradients capture the long-term outcome of selection and dispersal.  Whether predictive models should be trained using longitudinal or
+	spatial data sets, or both, depends on the time-scale of the desired forecast.
+	\item A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.
+\end{enumerate}
 
 \section*{Modeling approach}
 
@@ -140,7 +142,7 @@ The second model represents what we call a ``temporal approach.'' We correlate i
 typically at just one site. This approach is often used to study population or vital rate fluctuations as a function of weather, 
 or primary production as a function of precipitation (Lauenroth and Sala 1992). The advantages of this approach include is focus on temporal dynamics, meaning it 
 can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover 
-a limited spatial extent (but see Kleinhesselink  and Adler 2018, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, 
+a limited spatial extent (but see Kleinhesselink and Adler 2018, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, 
 that could alter the underlying process at longer time scales.
 
 We compare forecasts from both models to the true, simulated dynamics to show that responses to environmental change reflect both kinds of processes, but at different time scales. To quantify this pattern, we combine forecasts from the spatial and temporal approaches with a weighted average and then show how the optimal model weights change over time: we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics. How rapidly that transition occurs depends on the rate of  ``slow" processes such as evolution and species turnover. 
@@ -158,7 +160,7 @@ Evolutionary adaptation is a key uncertainty in predicting how environmental cha
 
 The spatial pattern shown in Fig. \ref{fig:spatial_model} is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that same temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
-To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We use the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical ``temporal model" predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then imposed a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashes as the cold-adapted genotype decreases in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype begin to increase and the population recovers (Fig. \ref{fig:forecast} bottom). 
+To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We use the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical ``temporal model" predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:temporal_model}). We then imposed a period of warming, followed by a final period of higher, but stationary, temperature (Fig. \ref{fig:forecast} top). With the onset of warming, the population crashed as the cold-adapted genotype decreased in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype began to increase and the population recovered (Fig. \ref{fig:forecast} bottom). 
 
 \begin{figure}[tbp]
 \centering
@@ -169,7 +171,7 @@ To demonstrate these dynamics, we simulated a diploid annual plant population at
 
 The implications for forecasting are clear: In the initial stages of the warming trend, the temporal model fit to the original, baseline conditions should make better the best predictions 
 about resulting population trends, but in the longer term, as evolutionary change occurs, the spatial model ultimately makes better predictions. 
-To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix for full description of the approach). The temporal model accurately predicts the impact of the initial warming trend, but eventually becomes far too pessimistic, while the spatial model does not handle the initial trend but accurately predicts the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflects the temporal model, but then rapidly transitions to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occurs during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}). 
+To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix for full description of the approach). The temporal model accurately predicted the impact of the initial warming trend, but eventually became far too pessimistic, while the spatial model did not handle the initial trend but accurately predicted the eventual, new steady state (Fig. \ref{fig:forecast} bottom). The combined model initially reflected the temporal model, but then rapidly transitioned to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occured during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}). 
 
 \begin{figure}[tbp]
 \centering
@@ -189,18 +191,33 @@ The combined model's predictions look impressively accurate, but that is because
 Unlike our spatial and temporal model forecasts, we did not generate out-of-sample predictions from the combined model; it merely provides 
 a convenient way to quantify how rapidly dynamics shift from from being dominated by interannual 
 variation to being dominated by steady-state equilibrium. To generate a true forecast from the combined model, we would need an independent 
-method to determine how the model weights shift over time.
+method to predict how the model weights shift over time.
 
 Next steps? Play with parameters to show what controls the rate of transition from temporal to spatial model?
 
 \subsection*{Community turnover example}
 
-In the previous example, evolutionary change was the slow process that determined how quickly the combined model shifted from a temporal to spatial forecast. The process of compositional turnover--change in the abundances and identities of species interacting at a site--can have a similar effect at the level of communities and even ecosystems. 
-We demonstrate this using a metacommunity model developed by Alexander et al. (ref). The model describes Lotka-Volterra competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient. Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. Sites are linked by dispersal: a specified fraction of offspring of each species leaves the site where they were produced and reaches all other sites with equal probability. 
+In the previous example, evolutionary change was the slow process that determined how quickly the combined model shifted from a temporal to spatial forecast. 
+The process of compositional turnover--change in the abundances and identities of species interacting at a site--can have a similar effect at the level of 
+communities and even ecosystems. We demonstrate this using a metacommunity model developed by Alexander et al. (ref). The model describes Lotka-Volterra 
+competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient. Composition varies along the gradient because of a 
+trade-off between growth rate and cold tolerance: cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by 
+fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. 
+Sites are linked by dispersal: a specified fraction of each species' offspring leaves the site where they were produced and reaches all other sites with equal probability. 
 
-As in our eco-evolutionary example, we simulate a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase and then a final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the same increase in mean temperature. We focus on two response variables at one site in the middle of the gradient. : 1) total community biomass and 2) the biomass of one focal species that dominates the baseline period
+As in our eco-evolutionary example, we simulated a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase, and then a 
+final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the 
+same absolute increase in mean temperature. We focused on two response variables at one site in the middle of the gradient: 1) total community biomass and 
+2) the biomass of one focal species that dominated the baseline period.
 
-Dynamics during the baseline period reveal very strong spatial patterns across the mean temperature gradient contrasted by weak responses to interannual variation in temperature at one site. Individual species show classic ``Whittaker" patterns of abundances across the gradient (Fig. \ref{fig:community-composition}). Time-averaged total community biomass increases strongly with temperature, because the fast-growing species at the warm sites produce more biomass, while the average biomass of our focal species shows a classic unimodal pattern across the temperature gradient (Fig. \ref{fig:community-baseline}). These spatial patterns are the basis for our ``spatial models" of the temperature-biomass relationship. However, at our focal site in the center of the gradient, both total biomass and the biomass of the focal species are quite insensitive to interannnual variation in temperature (Fig. \ref{fig:community-baseline}). Our ``temporal models" estimate this weak temperature effect, along with strong effects of biomass in the previous year (e.g., lags). 
+Dynamics during the baseline period revealed very strong spatial patterns across the mean temperature gradient. 
+Individual species showed classic ``Whittaker" patterns of abundances across the gradient (Fig. \ref{fig:community-composition}), while time-averaged total community 
+biomass increased strongly with temperature, because the fast-growing species at the warm sites produced more biomass. 
+The average biomass of our focal species showed a unimodal pattern across the temperature gradient (Fig. \ref{fig:community-baseline}). 
+These spatial patterns are the basis for our ``spatial models" of the temperature-biomass relationship. 
+
+In contrast to the strong spatial patterns, population and community responses to interannual variation in temperature within sites were weak.
+At our focal site in the center of the gradient, both total biomass and the biomass of the focal species were quite insensitive to interannnual variation in temperature (Fig. \ref{fig:community-baseline}). Our ``temporal models" estimate this weak temperature effect, along with strong lag effects of biomass in the previous year. 
 
 \begin{figure}[tbp]
 \centering
@@ -216,7 +233,19 @@ Dynamics during the baseline period reveal very strong spatial patterns across t
 \label{fig:community-baseline}
 \end{figure}
  
-We can forecast the effect of temperature increase on total biomass and the focal species' biomass using the spatial models and the temporal models. For total biomass, the spatial and temporal models both predict immediate increases in biomass with warming, because all species respond positively to temperature increases. However, over time, as faster growing species increase in abundance at the focal site, biomass continues to increase, approaching the predictions of the spatial model (Fig. \ref{fig:community-forecasts} middle). The predictions of the spatial and temporal model for focal species biomass contrast more dramatically, with the temporal model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances follow the increase predicted by the temporal model, but as faster-growing species increase in abundance, the biomass of the focal species then decreases, eventually falling below its baseline level (Fig. \ref{fig:community-forecasts} bottom). Once again, we also fit a combined model as a weighted average of the spatial and temporal model, with the weights changing over time. For total biomass (the sum across all species), the weights for the combined model shift rapidly to favor the spatial model, whereas for focal species biomass, the weights shift more slowly towards the spatial model, as the biomass of the focal species decreases and its competitors' biomass increase (Fig. \ref{fig:community-weights}).
+We forecasted the effect of temperature increase on total biomass and the focal species' biomass using the spatial models and the temporal models. 
+For total biomass, the spatial and temporal models both predicted immediate increases in biomass with warming, because all species respond positively to temperature increases. 
+However, over time, as faster growing species increased in abundance at the focal site, biomass continued to increase, approaching the predictions of the spatial model 
+(Fig. \ref{fig:community-forecasts} middle). The predictions of the spatial and temporal model for focal species biomass contrasted more dramatically, with the temporal 
+model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances followed the increase predicted by the 
+temporal model, but as faster-growing species increased in abundance, the biomass of the focal species then decreased, eventually falling below its baseline level 
+(Fig. \ref{fig:community-forecasts} bottom). 
+
+As in the eco-evolutionary example, we also fit a combined model as a weighted average of the spatial and temporal model, with the weights changing over time. 
+For total biomass (the sum across all species), the weights for the combined model shifted rapidly to favor the spatial model, whereas for focal species biomass, 
+the weights shifted more slowly towards the spatial model, as the biomass of the focal species decreased and its competitors' biomass increased (Fig. \ref{fig:community-weights}). 
+Again, the combined model matches the simulated data because the weights were determined by fitting directly to those data. A true, combined forecast would require
+a method to determine the model weights \emph{a priori}.
 
 \begin{figure}[tbp]
 \centering
@@ -231,6 +260,72 @@ We can forecast the effect of temperature increase on total biomass and the foca
 \caption{Simulated changes in biomass of the focal species (black) and all other species (grey) at the focal site in the metacommunity model, and the weight given to the temporal model for total biomass (blue) and focal species biomass (red).  }
 \label{fig:community-weights}
 \end{figure}
+
+
+\subsection*{Discussion}
+
+Our simulations demonstrate three lessons:
+
+\emph{Lesson 1: For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require understanding slow 
+processes such as evolutionary and ecological selection as well as dispersal.} [Ethan, I am hoping you can fix and add to this paragraph, perhaps
+drawing from examples in other fields?] In the short-term, time-series approaches work well because lag effects are strong: the state of the system in the next 
+time step depends heavily on the current state. Furthermore, in the short-term we usually are not extrapolating far into novel conditions; the historical range of variation 
+may be a good guide when there has been little time for genotype frequencies or species composition to change. In contrast, farther we forecast into the future, 
+the weaker the influence of the current state, and the more likely that slow processes like selection and dispersal will alter genotype frequencies and
+species composition.
+		
+This lesson has implications for the emerging field of ecological forecasting. If we only focus on iterative, near-term forecasting, we are likely to find 
+that time-series approaches work well, and that consideration of slow processes like evolution, dispersal, and compositional turnover rarely improves
+forecast skill. Assuming that the same models will make good longer-term forecasts would be a mistake.
+
+We do not mean to undermine the call for an emphasis on near-term forecasting. Building capacity to make near-term forecasts is extremely important, not
+only because of the many critical applications (examples?) but because it is a necessary step to building a disciplinary culture and practice of ecological 
+forecasting (cite Dietze?). It is also feasible, because we have the data to validate forecasts at short time-scales. Rather, the point is that near-term forecasting
+alone is not enough. We also need to build capacity to make forecasts at time-scales where slow ecological processes cannot be ignored. The challenge 
+will be finding ways to validate long-term predictions. Possibilities include hindcasting with paleoecological and long-term historical data sets, use of model
+systems with short-generation times, and....simulations...? (or move this last bit to Lesson 3?).
+
+\emph{Lesson 2. Different kinds of data reflect the operation of different processes; the choice of data for model training should depend on the time-scale of the desired forecast}.
+Longitudinal data capture autocorrelation and responses of current assemblages, while data spanning spatial gradients capture the long-term outcome of 
+selection and dispersal. For short-term forecasts, building models using longitudinal data is clearly the best choice. As our simulations show, models fit to 
+steady-state, spatial patterns make terrible predictions in the short term. Conversely, models based on longitudinal data make poor predictions in the long-term,
+while the models fit to spatial patterns can perform well. Although the temporal and spatial models we fit are phenomenological, they capture different kinds
+ of underlying processes. The traditional debate about phenomenological vs. process-based models obscures the fact that, depending on the choice of the
+ training data, phenomenological models can represent different kinds of processes.
+ 
+ Why not simply build a process-based model? Perhaps something like the process-based models we used to generate the simulated time series in the first place? 
+ That kind of model could make good predictions at both short and long time-scales. Unfortunately, this approach is just not feasible in most cases.
+ The first challenge is simply determining the critical process. Take our eco-evolutionary example: should we simply assume that every annual plant species
+ has warm and cold-adapted genotypes? And that temperature adaptation will be the key trait driving the response to warming, as opposed to the effects of 
+ compositional turnover highlighted in our second example? Second, even if the key process is known in advance, fitting a mechanistic model presents its
+ own set of challenges. The model for our eco-evolutionary example requires, in order of increasing empirical difficulty, demographic rates for the full life
+ cycle, including density dependence, a quantitative mapping of genotype-by-environment interactions onto fitness, and dispersal kernels. The model for 
+ our community and ecosystem example requires demography, environment-dependent intra- and interspecific competition coefficients, and dispersal kernels.
+ We can think of empirical models that capture some of these features, but not all of them. Finally, even were it possible to fit such a model, the high number of 
+ parameters and associated parameter error might lead to poor predictive skill (refs?).
+ 
+Inevitably, models used for ecological forecasting will be partially if not entirely phenomenological. But that does not mean that they will not rely on process-based
+understanding in some way. The point of our simulations is that different processes should be considered for different forecast time-scales, and this can be done 
+by fitting phenomenological models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can
+improve the specification of phenomenological models.
+ 
+\emph{Lesson 3. A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.}
+Our simulated examples suggest the potential for a combined forecast, which weights predictions from spatial and temporal models, to 
+accurately forecast both short and long-term dynamics. But we cheated: our combined ``forecasts'' were fit to data, not generated prospectively
+using \emph{a priori} model weights. Finding a general solution for determining those weights poses a fascinating research problem whose 
+solution would lead to important applications in ecological forecasting. 
+
+We see a role for new theory and new empirical tests. On the theoretical side, what are the parameters that determine how quickly slow processes
+influence dynamics? We can play with our simulation models to provide some qualitative answers: the stronger the selection (at the level of genotype 
+or species), the shorter the lifespan of the focal organisms, and the greater the dispersal, the more rapid the shift from the temporal to the spatial model
+(should we actually DO these runs?). But providing general, analytical solutions would be difficult, even for our relatively simple models. 
+
+On the empirical side, the key problem is finding or creating data sets to estimate the weighting function. As described under Lesson 1,
+this requires data sets appropriate for validating long-term forecasts.
+(Move material from end of  Lesson 1 down here?). With enough case studies, we might be able to infer patterns
+that could guide applications in new systems.
+
+Anything else to add?
 
 %\newpage
 %\renewcommand{\refname}{Literature cited}
