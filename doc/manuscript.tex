@@ -195,8 +195,6 @@ a convenient way to quantify how rapidly dynamics shift from from being dominate
 variation to being dominated by steady-state equilibrium. To generate a true forecast from the combined model, we would need an independent 
 method to predict how the model weights shift over time.
 
-Next steps? Play with parameters to show what controls the rate of transition from temporal to spatial model?
-
 \subsection*{Community turnover example}
 
 In the previous example, evolutionary change was the slow process that determined how quickly the combined model shifted from a temporal to spatial forecast. 
@@ -318,9 +316,7 @@ using \emph{a priori} model weights. Finding a general solution for determining 
 solution would lead to important applications in ecological forecasting. 
 
 We see a role for new theory and new empirical tests. On the theoretical side, what are the parameters that determine how quickly slow processes
-influence dynamics? We can play with our simulation models to provide some qualitative answers: the stronger the selection (at the level of genotype 
-or species), the shorter the lifespan of the focal organisms, and the greater the dispersal, the more rapid the shift from the temporal to the spatial model
-(should we actually DO these runs?). But providing general, analytical solutions would be difficult, even for our relatively simple models. 
+influence dynamics? We can play with our simulation models to provide some qualitative answers. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal}). But other parameters have less straightforward effects. In the eco-evolutionary model, a potentially important parameter is the temperature tolerance of each genotype. We initially thought that increasing the temperature tolerance might accelerate shifts in genotype frequencies by increasing genotypic diversity within populations, but it had the opposite effect (Fig. \ref{fig:thermal_niche}), probably because it decreased the strength of selection. Other factors to consider  might include organism lifespans, and the magnitude of directional environmental change relative to interannaul variation. While simulation experiments are easy and informative, they cannot provide the generality of analytical theory. Unfortunately, deriving analytical solutions would be difficult, even for our relatively simple models. 
 
 On the empirical side, the key problem is finding or creating data sets to estimate the weighting function. As described under Lesson 1,
 this requires data sets appropriate for validating long-term forecasts.
@@ -448,6 +444,21 @@ The spatial model for total community biomass is a simple linear regression. The
  \end{equation}
 The temporal model for focal species biomass has the same functional form. The combined models are based on the same approach that we used in the eco-evolutionary example (eqn. \ref{eqn:combined_model}).
 
+\section{Supplementary Figures}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.7 \textwidth] {compare_Tsigmas.png}
+	\caption{In our eco-evolutionary model, the rate of change in the weight of the temporal forecast (y-axis) depends on the temperature tolerance of genotypes, given by $\sigma_T$ (larger values indicate wider thermal niches). }
+	\label{fig:thermal_niche}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.7 \textwidth] {compare_dispersal.png}
+	\caption{In our community turnover model, the rate of change in the weight of the temporal forecast (y-axis) depends on fraction of propagules dispersing each time step. }
+	\label{fig:dispersal}
+\end{figure}
 
 \end{document}
 
