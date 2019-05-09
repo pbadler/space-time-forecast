@@ -34,7 +34,7 @@ sim_yrs <- burnin_yrs+ baseline_yrs + warming_yrs + final_yrs # total number of 
 
 # parameters to generate species pool
 N <- 40      # number of species
-Gmax <- 0.5   #R max growth rate 
+Gmax <- 0.5   # max growth rate 
 Gmin <- 0.2   # min growth rate
 Lmax <- 1.5   # max sensitivity to competition
 Lmin <- 0.7   # min sensitivity to competition 
@@ -52,13 +52,20 @@ source("comm_turn_sim.R")
 source("comm_turn_forecast.R")
 
 ###
-### 3. Make figures
+### 3. Make first batch of figures
 ###
 
 if(file.exists("figures")==F) dir.create("figures")
 
-source("comm_turn_figures.R")
+source("comm_turn_figures_1.R")
 
+###
+### 4. Run dispersal and strength of selection experiments
+###
+
+source("comm_turn_expts.R")
+
+source("comm_turn_figures_2.R")
 
 
 

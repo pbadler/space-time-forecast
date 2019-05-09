@@ -26,7 +26,7 @@ for(iT in 1:length(Tmean)){
 
 # diploid model
 fec_Tmu = c(-1,0,1)  # optimal temperature for genotypes AA, Aa, and aa
-fec_Tsigma = rep(5,3)     # standard deviation in temperature response for genotypes AA, Aa, and aa
+fec_Tsigma = rep(10,3)     # standard deviation in temperature response for genotypes AA, Aa, and aa
 fec_max = c(100,100,100)  # fecundity for genotypes AA, Aa, and aa
 G <- 1
 seedSurv = 0.5  # survival of ungerminated seeds (same for both genotypes)
@@ -66,5 +66,18 @@ source("genetic_diversity_sim_temporal.R")
 
 source("genetic_diversity_forecast.R")
 
-# plot temporal figures
-source("genetic_diversity_figures.R")
+###
+### 4. Plot first set of figures
+###
+
+if(file.exists("figures")==F) dir.create("figures")
+
+source("genetic_diversity_figures_1.R")
+
+###
+### 5. Run niche width experiment
+###
+
+source("genetic_diversity_expt.R")
+
+source("genetic_diversity_figures_2.R")
