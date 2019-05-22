@@ -26,7 +26,7 @@ for(iT in 1:length(Tmean)){
 
 # diploid model
 fec_Tmu = c(-1,0,1)  # optimal temperature for genotypes AA, Aa, and aa
-fec_Tsigma = rep(5,3)     # standard deviation in temperature response for genotypes AA, Aa, and aa
+fec_Tsigma = rep(8,3)     # standard deviation in temperature response for genotypes AA, Aa, and aa
 fec_max = c(100,100,100)  # fecundity for genotypes AA, Aa, and aa
 G <- 1
 seedSurv = 0.5  # survival of ungerminated seeds (same for both genotypes)
