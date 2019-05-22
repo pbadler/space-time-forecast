@@ -3,37 +3,42 @@
 
 myCols<-alpha(c("blue3","red3"),0.4)
 
-###
-### Total biomass figures
-###
-
-# plot spatial and temporal models
-png("figures/community_models_species.png",height=3.5,width=4,res=400,units="in")
-
-  par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,1))
+# plot spatial and temporal patterns and models for the focal species
+png("figures/species_patterns_models.png",height=3.4,width=8,res=400,units="in")
   
-  # set up empty axes
-  plot(x=x_temporal,y_temporal_spp,type="n",xlab="Temperature",ylab="Biomass",
-       ylim=c(0,max(y_temporal_spp)*1.2))
-  abline(v=Tmean[site], lty=2,col="darkgray")  # show focal site
+  # panel A--spatila
+  par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0),oma=c(0,2,0,0),mar=c(3,1,3,1))
+  y <-spxp_mean_baseline[,colSums(spxp_mean_baseline)>0]
+  jet.colors <-colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan",
+                       "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"),bias=2.5)
+  tmp <- jet.colors(n=NCOL(y))
+  matplot(Tmean,y,type="l",xlab="Baseline temperature",ylab="Biomass",
+          ylim=c(0,max(y_temporal_spp)*1.1),lty=1,col=tmp)
+  
+  y_hat <-  coef(spatial_model_spp)[1] + coef(spatial_model_spp)[2]*x_spatial + coef(spatial_model_spp)[3]*x_spatial^2
+  lines(x_spatial,y_hat,col=tmp[1],lwd=1, lty="dotted")
+  abline(v=Tmean[site], lty=1,col="darkgray")
+  
+  mtext("(A)",side=3,line=0.5,adj=0)
+  mtext("Biomass",side=2,line=1,outer=T)
+
+  # panel B--temporal
+    # set up empty axes
+  plot(x=x_temporal,y_temporal_spp,type="n",xlab="Annual temperature",ylab="",
+       ylim=c(0,max(y_temporal_spp)*1.1))
+  #abline(v=Tmean[site], lty=1,col="darkgray")  # show focal site
   
   # focal species temporal
   xx <- seq(min(x_temporal),max(x_temporal),0.1)
-  points(x_temporal,y_temporal_spp,pch=1,col=myCols[2])
+  points(x_temporal,y_temporal_spp,pch=1,col=alpha(tmp[1],0.4))
   y_hat <- coef(temporal_model_spp)[1] + coef(temporal_model_spp)[2]*mean(y_temporal_spp) + coef(temporal_model_spp)[3]*xx
-  lines(xx,y_hat, col=myCols[2], lwd=2, lty="solid" ) # plot marginal effect of temperature for temporal model
+  lines(xx,y_hat, col=alpha(tmp[1],0.4), lwd=2, lty="dotted" ) # plot marginal effect of temperature for temporal model
   
-  # focal species spatial
-  points(x_spatial,y_spatial_spp,pch=16,col=myCols[1])
-  y_hat <-  coef(spatial_model_spp)[1] + coef(spatial_model_spp)[2]*x_spatial + coef(spatial_model_spp)[3]*x_spatial^2
-  lines(x_spatial,y_hat,col=myCols[1],lwd=1, lty="solid")
-  
-  legend("topleft",c("Spatial","Temporal"),
-         lty=c("solid","solid"),pch=c(16,1),lwd=c(1,1),
-         col=myCols,bty="n",cex=0.8)
+  mtext("(B)",side=3,line=0.5,adj=0)
 
 dev.off()
 
+# spatial and temporal models for total biomass
 png("figures/community_models_total.png",height=3.5,width=4,res=400,units="in")
 
   par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,1))
@@ -42,7 +47,7 @@ png("figures/community_models_total.png",height=3.5,width=4,res=400,units="in")
   plot(x=x_spatial,y_spatial,type="n",xlab="Temperature",ylab="Biomass")
   abline(v=Tmean[site], lty=2,col="darkgray")  # show focal site
   
-  # focal species temporal
+  # temporal
   xx <- seq(min(x_temporal),max(x_temporal),0.1)
   points(x_temporal,y_temporal,pch=1,col=myCols[2])
   y_hat <- coef(temporal_model)[1] + coef(temporal_model)[2]*mean(y_temporal) + coef(temporal_model)[3]*xx
@@ -162,18 +167,18 @@ png("figures/community_change_plus_weights_total.png",height=3.5,width=4.5,units
   
 dev.off()
 
-# mean temperature vs mean species biomass 
-png("figures/mean_biomass_spp_by_site.png",height=3.4,width=4,res=400,units="in")
-  
-  par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,4))
-  y <-spxp_mean_baseline[,colSums(spxp_mean_baseline)>0]
-  jet.colors <-colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan",
-                       "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"),bias=2.5)
-  tmp <- jet.colors(n=NCOL(y))
-  matplot(Tmean,y,type="l",xlab="Baseline temperature",ylab="Biomass",
-          lty=1,col=tmp)
-
-dev.off()
+# # mean temperature vs mean species biomass (old version) 
+# png("figures/mean_biomass_spp_by_site.png",height=3.4,width=4,res=400,units="in")
+#   
+#   par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,1,4))
+#   y <-spxp_mean_baseline[,colSums(spxp_mean_baseline)>0]
+#   jet.colors <-colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan",
+#                        "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"),bias=2.5)
+#   tmp <- jet.colors(n=NCOL(y))
+#   matplot(Tmean,y,type="l",xlab="Baseline temperature",ylab="Biomass",
+#           lty=1,col=tmp)
+#   
+# dev.off()
 
 # total biomass at each location over time
 # matplot(1:sim_yrs,apply(spxp,MARGIN=c(1,2),FUN="sum"),type="l")

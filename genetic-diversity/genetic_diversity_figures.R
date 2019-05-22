@@ -3,10 +3,10 @@
 
 myCols<-c("blue","darkgrey","red","black")
 
-# figure to show spatial relationships
-png("figures/spatial_model.png",height=3.5,width=7,res=400,units="in")
+# figure to show spatial and temporal relationships
+png("figures/spatial&temporal_model.png",height=10,width=4,res=400,units="in")
   
-  par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,2,1))
+  par(mfrow=c(3,1),tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,2,1),cex=1)
   
   # plot fecundity as function of temperature for all genotypes
   temp=seq(-7,7,0.01)
@@ -26,21 +26,20 @@ png("figures/spatial_model.png",height=3.5,width=7,res=400,units="in")
   lines(xx,yy,lty="dashed",lwd=1)
   #legend("topright",c("AA","Aa","aa","Pop"),fill=myCols,bty="n")
   mtext("(B)",side=3, line=0.5, adj=0)
+  
+  # plot population growth and density vs annual temperature
+  # first make colors based on N0 density
+  rr <- range(N_t0_baseline)
+  svals <- (N_t0_baseline-rr[1])/diff(rr)
+  f <- colorRamp(c("red", "blue"), 0.4)
+  density_colors <- alpha(rgb(f(svals)/255),0.6)
+  # now plot
+  plot(temperature_t1_baseline,r_baseline,xlab="Annual temperature",ylab="log Population growth rate",
+       col=density_colors,pch=16)
+  mtext("(C)",side=3, line=0.5, adj=0)
 
 dev.off()
 
-# plot temporal pattern: temperature vs population growth during baseline period
-png("figures/temporal_model.png",height=3.5,width=4,res=400,units="in")
-  
-  mytheme <- list(axis.components = list(left = list(tck=0.5), right = list(tck=0.5),
-                                         top = list(tck=0.5), bottom = list(tck=0.5)))
-  trellis.par.set(mytheme)
-  
-  print(levelplot(N_t0_baseline ~ temperature_t1_baseline + r_baseline, 
-            xlab="Temperature",ylab="log Population growth rate",
-            panel = panel.levelplot.points, col.regions = topo.colors(25)))
-
-dev.off()
 
 # plot forecast
 png("figures/forecast.png",height=5,width=5,res=400,units="in")

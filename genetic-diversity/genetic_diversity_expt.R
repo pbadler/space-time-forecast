@@ -5,7 +5,7 @@
 # an increased temperature niche of each genotype.
 
 fec_Tsigma_baseline <- fec_Tsigma # baseline temperature niche widths
-delta_fec_sigma <- c(0.5,1,2)  
+delta_fec_sigma <- c(0.5,1,1.5)  
 saved_weights <- matrix(NA,nrow=length(weight),ncol=length(delta_fec_sigma))
 saved_weights[,1] <- weight
 
@@ -24,9 +24,9 @@ for(iRun in 1:length(delta_fec_sigma)){
   source("genetic_diversity_sim_spatial.R")
   
   # simulate long-term run for focal population
-  baseline_yrs<-500  # number of yrs at baseline temperature
-  warming_yrs <- 100  # number of yrs with warming occurring
-  final_yrs <- 200  # number of yrs at steadty-state, warmed temperature
+  # baseline_yrs<-500  # number of yrs at baseline temperature
+  # warming_yrs <- 100  # number of yrs with warming occurring
+  # final_yrs <- 300  # number of yrs at steadty-state, warmed temperature
   sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
   Tmean <- baseT + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
                      rep(deltaT,final_yrs))

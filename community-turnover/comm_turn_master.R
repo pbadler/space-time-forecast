@@ -57,7 +57,7 @@ source("comm_turn_forecast.R")
 
 if(file.exists("figures")==F) dir.create("figures")
 
-source("comm_turn_figures_1.R")
+source("comm_turn_figures.R")
 
 ###
 ### 4. Run dispersal and strength of selection experiments
@@ -65,7 +65,6 @@ source("comm_turn_figures_1.R")
 
 source("comm_turn_expts.R")
 
-source("comm_turn_figures_2.R")
 
 
 

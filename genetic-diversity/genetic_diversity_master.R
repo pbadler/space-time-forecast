@@ -42,7 +42,7 @@ source("genetic_diversity_sim_spatial.R")
 
 baseline_yrs<-500  # number of yrs at baseline temperature
 warming_yrs <- 100  # number of yrs with warming occurring
-final_yrs <- 200  # number of yrs at steadty-state, warmed temperature
+final_yrs <- 300  # number of yrs at steadty-state, warmed temperature
 sim_yrs <- baseline_yrs + warming_yrs + final_yrs # total number of years
 
 Tstdev <- 1   # st dev of temperature (stationary)
@@ -72,7 +72,7 @@ source("genetic_diversity_forecast.R")
 
 if(file.exists("figures")==F) dir.create("figures")
 
-source("genetic_diversity_figures_1.R")
+source("genetic_diversity_figures.R")
 
 ###
 ### 5. Run niche width experiment
@@ -80,4 +80,4 @@ source("genetic_diversity_figures_1.R")
 
 source("genetic_diversity_expt.R")
 
-source("genetic_diversity_figures_2.R")
+source("final_figure.R")

@@ -77,8 +77,6 @@ for(iRun in 1:length(c_factor)){
 }
 # this seems to slow the rate of change; initial communities less diverse
 
-
-
-
-
-
+# write results to file
+colnames(saved_weights_c) <- d_vals
+write.csv(saved_weights_c,"simulations/saved_weights.csv",row.names=F)
