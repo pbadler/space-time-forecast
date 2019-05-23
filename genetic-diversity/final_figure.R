@@ -10,7 +10,7 @@ d_vals <- gsub("X","",d_vals)
 # Figure to compare rate of change in weights for different
 # widths of temperature niche
 myCols<-c("black","gray40","gray80")
-png("figures/compare_Tsigmas.png",height=3.5,width=8.5,res=400,units="in")
+png("figures/dispersal_niche_width.png",height=3.5,width=8.5,res=400,units="in")
   
   par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0),mar=c(3,4,2,1))
   

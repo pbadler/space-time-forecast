@@ -6,13 +6,13 @@ myCols<-alpha(c("blue3","red3"),0.4)
 # plot spatial and temporal patterns and models for the focal species
 png("figures/species_patterns_models.png",height=3.4,width=8,res=400,units="in")
   
-  # panel A--spatila
+  # panel A--spatial
   par(mfrow=c(1,2),tcl=-0.2,mgp=c(2,0.5,0),oma=c(0,2,0,0),mar=c(3,1,3,1))
   y <-spxp_mean_baseline[,colSums(spxp_mean_baseline)>0]
   jet.colors <-colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan",
                        "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"),bias=2.5)
   tmp <- jet.colors(n=NCOL(y))
-  matplot(Tmean,y,type="l",xlab="Baseline temperature",ylab="Biomass",
+  matplot(Tmean,y,type="l",xlab="Mean temperature",ylab="Biomass",
           ylim=c(0,max(y_temporal_spp)*1.1),lty=1,col=tmp)
   
   y_hat <-  coef(spatial_model_spp)[1] + coef(spatial_model_spp)[2]*x_spatial + coef(spatial_model_spp)[3]*x_spatial^2
