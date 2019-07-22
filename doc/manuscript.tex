@@ -124,21 +124,21 @@ eco-evolutionary scenario. Our analyses show that:
 
 \section*{Modeling approach}
 
-In both of our case studies, we simulate the effects of a hypothetical temperature increase on a simple system with known dynamics.
-The ``truth'' is represented by a model that is mechanistic for at least one important process, but we assume that recovering 
-this true, process-based model would be impossible in practice (we return to this point in the Discussion). We begin each simulation
+In two case studies, we simulate the effects of an increase in temperature on simple systems with known dynamics.
+The ``truth'' is represented by a model that is mechanistic for at least one important process, but treat the model as unknown when
+analyzing the data and assume that perfectly recovering this model would not be possible in practice. We begin each simulation
 under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. We then increase temperature progressively
 over a period of time, followed by a second period of stationary, now elevated, temperature. The objective is to forecast the response of the 
-system to temperature increase based on data gathered during the baseline period. 
+system to the temperature increase based on data gathered during the baseline period. 
 
-We make two forecasts based on two different phenomenological models, each representing processes operating at different time scales. 
+We make forecasts based on two phenomenological models, each representing processes operating at different time scales. 
 The first phenomenological model represents what we call a ``spatial approach.'' We correlate the mean environment with the mean of an ecological state or rate 
  across many sites. This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} or
  primary production as a function of mean precipitation \citep{Sala1988}. The approach is attractive because it addresses broad spatial scales relevant to 
  management, and because the necessary data are widely available and statistical analyses are straightforward. The approach also has well-known weaknesses.
 Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). Another issue is that these models are not dynamic; 
 they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed 
-over long time spans, they are unlikely to provide much information about dynamic changes on the order of years to decades. Moreover, transient dynamics could 
+over long time spans, they are may not provide good information about dynamic changes on the order of a few years. Moreover, transient dynamics could 
 prevent the system from ever reaching the predicted steady state \citep{Urban2012}. 
 
 The second model represents what we call a ``temporal approach.'' We correlate interannual variation in an ecological response with interannual variation in the environment, 
@@ -146,9 +146,9 @@ typically at just one site. This approach is often used to study population or v
 or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. The advantages of this approach include is focus on temporal dynamics, meaning it 
 can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover 
 a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, 
-that could alter the underlying process at longer time scales.
+that could alter the underlying process at longer time scales and improve forecastability \citep{clark_ecological_2001}.
 
-We compare forecasts from both models to the true, simulated dynamics to show that responses to environmental change reflect both kinds of processes, but at different time scales. To quantify this pattern, we combine forecasts from the spatial and temporal approaches with a weighted average and then show how the optimal model weights change over time: we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics. How rapidly that transition occurs depends on the rate of  ``slow" processes such as species turnover and evolution. 
+We compare forecasts from both models to the simulated dynamics to determine how well the two approaches to forecasting perform at different time scales. We also assess the potential for combining the information available in both spatial and temporal patters by combining forecasts from the spatial and temporal approaches using a weighted average and assess how the optimal model weights change over time. Based on the hypothesis that spatial patterns capture longer-term processes we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics, and that a combination of the two approaches will provide the best forecasts at transitional intermediate time scales.
 
 \subsection*{Community turnover example}
 
