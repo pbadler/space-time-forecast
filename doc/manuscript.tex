@@ -86,33 +86,53 @@ stuff
 
 \section*{Introduction}
 
-A recent flurry of synthesis papers in high impact journals attests to surging interest in ecological forecasting. Many of the papers 
-argue that a commitment to ecological forecasting is necessary to guide the environmental policy and management
-decisions that will become increasingly critical under global change \citep{clark_ecological_2001,mouquet_review:_2015,dietze_iterative_2018}.
-A second argument is that rigorous testing of predictions will accelerate the process of basic research and discovery 
+* Forecasting is important
+* Two different approaches to this time-series & space-for-time
+	* Not clear which is best
+	* Some limited comparisons
+* Which approach is best may depend on the time-horizon
+* Here we explore this possibility using simulation based approach
+
+Forecasting is increasingly recognized as important to the advancement and application of ecological research.
+Ecological forecasting is necessary to guide the environmental policy and management
+decisions that are increasingly critical under global change \citep{clark_ecological_2001,mouquet_review:_2015,dietze_iterative_2018}.
+In addition, evaluating the accuracy of ecological forecasts can provide rigorous tests of predictions from ecological models that can
+advance understanding of the processes governing ecological systems  
 \citep{houlahan_priority_2017,dietze_prediction_2017,dietze_iterative_2018}.
-Taken together, these papers, along with a new textbook \citep{dietze_ecological_2017} represent an emerging consensus that 
-forecasting should be a priority for ecological research.
+This combined value of advancing our fundamental understanding of ecology and applying that understanding to support management and decision making 
+makes that forecasting is an important priority for ecological research.
 
-No such consensus is available for exactly how to tackle this challenge.
-Ecologists rely on many different approaches and models for making predictions, and 
-frequently argue about the virtues of process-based vs. phenomenological models (refs?).
-We often justify investments in basic research by claiming that improved process-level understanding will improve predictions (e.g.,\citealt{Adler2012}),
-and it is easy to find examples of how extrapolation of linear relationships leads to poor predictions under novel conditions \citep{Fitzpatrick,Veloz2012}.
-But in many cases simple phenomenological models make better predictions than complex process-based models with high parameter
-uncertainty (refs? \citealt{tredennick_we_2017}?).
+Ecological models used for forecasting have traditionally been based on either time-series modeling or space-for-time substitutions.
+Time-series approaches use the historical behavior of a system to fit models that describe the temporal dynamics of that system and use those
+dynamic models to make predictions about what will happen in the future. This is a common approach for population based forecasts and includes both
+process based population models and data-driven models capturing empirical patterns in data (e.g., \citep{ward_complexity_2014}). Time-series models
+capture processes like birth, death, small scale dispersal events, and short-term responses to environmental conditions.
+Alternatively, space-for-time modeling approaches develop models of how and ecological property varies in across space in response to environmental
+conditions. These spatial relationships are assumed to also hold for changes at a site through time, and forecasts are made by forecasting future
+environmental conditions and determining the associated ecological response. Most forecasts for future species distributions and biodiversity
+are based on this type of approach, with a models built to describe the environmental conditions where species occur across space being applied to
+forecast environmental conditions to determine where they will occur in the future (e.g., citation). Space-for-time models capture processes like
+immigration, extinction, and responses to large changes in environmental conditions over long time periods. Despite both of these approaches being
+widely used there has been little comparison of how they compare for forecasting and understanding the dynamics of ecological systems \citep{harris_forecasting_2018}.
 
-The pragmatic solution to these debates is clear: we should forecast using the models that make the best predictions.
-Identifying these models requires rigorously testing predictions against observations. However, many common ecological predictions,
-such as a species' geographic range in the year 2100, are virtually impossible to test (but see \citealt{Maguire2015}), 
-leading \citep{dietze_iterative_2018} to call for greater emphasis on near-term forecasting. The assumption is that building 
-our capacity to make short-term forecasts will ultimately improve our long-term forecasts.
+Whether historical dynamics, contemporary spatial patterns, or a combination of the two will serve as the best source of information for forecasting
+may depend on how far into the future we are attempting to forecast \citep{harris_forecasting_2018}. This potential dependency on the "forecast horizon"; ()\textit{sensu} citation)
+results from lags in the response of ecological conditions to environmental change, changes in the importance of ecological processes with
+time scale \citep{levin_1992,rosenzweig_1995}, and differences between time-series and spatial gradients in the range of conditions present in the data.
+At short forecast horizons (days to years) processes driving individual demographics tend to dominate (similar to the time scales present in that
+historical data), conditions are likely to stay within the range of the historical data at a site, and the current state of the system is likely
+to capture the influence of unmeasured processes. As a result, for near-term forecasts time-series approaches may effectively capture the key dynamics
+and result in accurate forecasts. In contrast, at long forecast horizons (decades) an ecosystem is likely to experience conditions that have not been
+historically observed () and be responding to large scale processes large scale climate and land use change that are difficult to detect in even long
+ecological time-series. Therefore, for the kinds of long-term forecasts typically conducted in biodiversity and species-distribution modeling
+space-for-time based approaches may include important information about how ecosystems respond to major shifts in climate over long periods and as a
+results produce better long-term forecasts. Using different approaches for different time horizons is common in other areas of forecasting,
+including forecasts for environmental conditions where models for short-term changes (weather) differ substantially from those for long-term changes
+(climate).
 
-Our goal is to consider a hypothesis that, in our view, has not been carefully considered by either the push for near-term forecasting or
-ongoing debates about competing modeling approaches. We expect that short and long-term forecasts will require models
-incorporating different kinds of processes and fit to different kinds of data sets. We demonstrate this idea using two simulation case studies, the first 
-focused on how competitive interactions affect population dynamics of a focal species, the second for  an 
-eco-evolutionary scenario. Our analyses show that: 
+Here we investigate the possibility that the best approaches for building models for ecological forecasting may depend on the time horizon of the forecast
+and explore how time-series and space-for-time approaches might be combined to address mid-term ecological forecasting. We do this using two simulation case studies, one 
+focused on how competitive interactions affect population dynamics of a focal species and one eco-evolutionary scenario. Our analyses show that: 
 \begin{enumerate}
 	\item For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require understanding slow 
 	processes such as evolutionary and ecological selection as well as dispersal.
