@@ -149,10 +149,12 @@ a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others
 that could alter the underlying process at longer time scales.
 
 We compare forecasts from both models to the true, simulated dynamics to show that responses to environmental change reflect both kinds of processes, but at different time scales. To quantify this pattern, we combine forecasts from the spatial and temporal approaches with a weighted average and then show how the optimal model weights change over time: we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics. How rapidly that transition occurs depends on the rate of  ``slow" processes such as species turnover and evolution. 
+Code for simulating dynamics and reproducing the analyses in this paper is available on Github \texttt{https://github.com/pbadler/space-time-forecast}) and
+archived on Zenodo \texttt{https://zenodo.org}).
 
 \subsection*{Community turnover example}
 
-A common problem for conservation biologists and natural resource managers is anticipating the impact of environmental change on the abundance of 
+A common need for conservation biologists and natural resource managers is anticipating the impact of environmental change on the abundance of 
 endangered species, biological invaders, and harvested species. Although the managers may be primarily interested in just the focal species, 
 skillful prediction might require considering interactions with many other species, greatly complicating the problem. But at what forecast horizon do
 altered species interactions become impossible to ignore? We explored this question using a metacommunity model developed by \cite{alexander_lags_2018}. 
@@ -160,13 +162,13 @@ The model describes Lotka-Volterra competitive interactions among plants within 
 Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: 
 cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by 
 fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. 
-Sites are linked by dispersal: a specified fraction of each species' offspring leaves the site where they were produced and reaches all other sites with equal probability. All computer code is available on Github: \texttt{https://github.com/pbadler/space-time-forecast}).
+Sites are linked by dispersal: a specified fraction of each species' offspring leaves the site where they were produced and reaches all other sites with equal probability.
 
 We first simulated a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase, and then a 
 final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the 
 same absolute increase in mean temperature. We focused on the biomass dynamics of one focal species that dominated the baseline period.
 
-Dynamics during the baseline period revealed very strong spatial patterns across the mean temperature gradient. 
+During the baseline period there were strong spatial patterns across the mean temperature gradient. 
 Individual species, including our focal species, showed classic, unimodal ``Whittaker" patterns of abundances across the gradient (Fig. \ref{fig:species-patterns-models}A).
 These spatial patterns are the basis for our ``spatial model" of the temperature-biomass relationship for our focal species (Fig. \ref{fig:species-patterns-models}A). 
 In contrast to the strong spatial patterns, population and community responses to interannual variation in temperature within sites were weak.
@@ -180,20 +182,21 @@ models are described in Appendix \ref{models}.
 \label{fig:species-patterns-models}
 \end{figure}
 
-We forecasted the effect of temperature increase on the focal species' biomass at one location in the center of the temperature gradient 
-using the spatial models and the temporal models. 
-The predictions from the spatial and temporal model contrasted markedly, with the temporal 
-model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances followed the increase predicted by the 
-temporal model, but as faster-growing species colonized and increased in abundance at the study site, the biomass of the focal species then decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}). 
+We forecast the effect of a temperature increase on the focal species' biomass at one location in the center of the temperature gradient 
+using both spatial models and the temporal models. 
+The predictions from the spatial and temporal models contrasted markedly, with the temporal 
+model predicting a large increase in biomass and the spatial model predicting a decrease.Initially, the simulated abundances followed the increase predicted by the 
+temporal model, but as faster-growing species colonized and increased in abundance at the focal site, the biomass of the focal species decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}). 
 
 To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix \ref{models} for full description of the approach).
-This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}) 
-because the weights were determined by fitting directly to those data. Unlike our spatial and temporal model forecasts, 
+This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}), but 
+it works so effectively because the weights were determined by fitting directly to those data. Unlike our spatial and temporal model forecasts, 
 we did not generate out-of-sample predictions from the combined model; it merely provides 
-a convenient way to quantify how rapidly dynamics shift from from being dominated by the interannual 
-variations captured in the temporal model to being dominated by the steady-state equilibrium captured by the spatial model.
-The most rapid shifts in model weights occur during the period when warm-adapted, faster growing species are increasing most rapidly
-in abundance (Fig. \ref{fig:community-weights-spp}). A true, combined forecast would require a method to determine the model weights \emph{a priori}.
+a convenient way to quantify how rapidly dynamics shift from being dominated by interannual 
+variation captured in the temporal model to being dominated by the steady-state equilibrium captured by the spatial model.
+A true, combined forecast would require a method to determine the model weights \emph{a priori}.
+The most rapid shifts in the model weights occurred during the period when warm-adapted, faster growing species were increasing most rapidly
+in abundance (Fig. \ref{fig:community-weights-spp}).
 
 \begin{figure}[tbp]
 \centering
