@@ -245,58 +245,36 @@ To generate a true forecast from the combined model, we would need an independen
 
 \subsection*{Discussion}
 
-Our simulations demonstrate three lessons:
+Ecological forecasts are typically made using models fit to either time-series data or spatial data based on the concept of space-for-time substitutions.
+Our results demonstrate that forecasts based on these two approaches can lead to very different predictions for the future state of ecological systems.
+Which approach provides the most accurate forecasts depends on the time-horizon, or how far into the future we are attempting to forecast.
+For short-term forecasts, time-series approaches perform best, whereas longer-term forecasts are more accurately made using models from spatial data.
+This stems from differences between data types in the types and scales of processes they capture.
+Local time-series data capture demographic processes, autocorrelation (including lagged responses) and responses of current assemblages to small changes
+in environmental conditions. In addition, the state of the system a short period into the future depends heavily on the current state (i.e., the initial
+condition). Since short-term forecasts do not typically require extrapolating into novel conditions; the historical range of variation, incorporating lags
+and accurate initial conditions present in local time-series data is likely to be the most generally useful approach for forecasting.
+In contrast, data spanning spatial gradients captures the long-term outcome of slower processes including selection, dispersal, and responses to large
+changes in the environment. This makes models based on these data more likely to accurately predict long-term steady state outcomes of ecological change.
 
-\emph{Lesson 1: For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require understanding slow 
-processes such as evolutionary and ecological selection as well as dispersal.} [Ethan, I am hoping you can fix and add to this paragraph, perhaps
-drawing from examples in other fields?] In the short-term, time-series approaches work well because lag effects are strong: the state of the system in the next 
-time step depends heavily on the current state. Furthermore, in the short-term we usually are not extrapolating far into novel conditions; the historical range of variation 
-may be a good guide when there has been little time for genotype frequencies or species composition to change. In contrast, farther we forecast into the future, 
-the weaker the influence of the current state, and the more likely that slow processes like selection and dispersal will alter genotype frequencies and
-species composition.
-		
-This lesson has implications for the emerging field of ecological forecasting. If we only focus on iterative, near-term forecasting, we are likely to find 
-that time-series approaches work well, and that consideration of slow processes like evolution, dispersal, and compositional turnover rarely improves
-forecast skill. Assuming that the same models will make good longer-term forecasts would be a mistake.
-
-We do not mean to undermine the call for an emphasis on near-term forecasting. Building capacity to make near-term forecasts is extremely important, not
-only because of the many critical applications (examples?) but because it is a necessary step to building a disciplinary culture and practice of ecological 
-forecasting (cite Dietze?). It is also feasible, because we have the data to validate forecasts at short time-scales. Rather, the point is that near-term forecasting
-alone is not enough. We also need to build capacity to make forecasts at time-scales where slow ecological processes cannot be ignored. The challenge 
-will be finding ways to validate long-term predictions. 
-
-\emph{Lesson 2. Different kinds of data reflect the operation of different processes; the choice of data for model training should depend on the time-scale of the desired forecast}.
-Longitudinal data capture autocorrelation and responses of current assemblages, while data spanning spatial gradients capture the long-term outcome of 
-selection and dispersal. For short-term forecasts, building models using longitudinal data is clearly the best choice. As our simulations show, models fit to 
-steady-state, spatial patterns make terrible predictions in the short term. Conversely, models based on longitudinal data make poor predictions in the long-term,
-while the models fit to spatial patterns can perform well. Although the temporal and spatial models we fit are phenomenological, they capture different kinds
- of underlying processes. The traditional debate about phenomenological vs. process-based models obscures the fact that, depending on the choice of the
- training data, phenomenological models can represent different kinds of processes.
- 
- Why not simply build a process-based model? Perhaps something like the process-based models we used to generate the simulated time series in the first place? 
- That kind of model could make good predictions at both short and long time-scales. Unfortunately, this approach is just not feasible in most cases.
- The first challenge is simply determining the critical process. Take our eco-evolutionary example: should we simply assume that every annual plant species
- has warm and cold-adapted genotypes? And that temperature adaptation will be the key trait driving the response to warming, as opposed to the effects of 
- compositional turnover highlighted in our second example? Second, even if the key process is known in advance, fitting a mechanistic model presents its
- own set of challenges. The model for our eco-evolutionary example requires, in order of increasing empirical difficulty, demographic rates for the full life
- cycle, including density dependence, a quantitative mapping of genotype-by-environment interactions onto fitness, and dispersal kernels. The model for 
- our community and ecosystem example requires demography, environment-dependent intra- and interspecific competition coefficients, and dispersal kernels.
- We can think of empirical models that capture some of these features, but not all of them. Finally, even were it possible to fit such a model, the high number of 
- parameters and associated parameter error might lead to poor predictive skill (refs?).
- 
-Inevitably, models used for ecological forecasting will be partially if not entirely phenomenological. But that does not mean that they will not rely on process-based
-understanding in some way. The point of our simulations is that different processes should be considered for different forecast time-scales, and this can be done 
-by fitting phenomenological models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can
-improve the specification of phenomenological models.
- 
-\emph{Lesson 3. A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.}
-Our simulated examples suggest the potential for a combined forecast, which weights predictions from spatial and temporal models, to 
-accurately forecast both short and long-term dynamics. But we cheated: our combined ``forecasts'' were fit to data, not generated prospectively
-using \emph{a priori} model weights. Finding a general solution for determining those weights poses a fascinating research problem whose 
-solution would lead to important applications in ecological forecasting. 
-
-We see a role for new theory and new empirical tests. On the theoretical side, what are the parameters that determine how quickly slow processes
-influence dynamics? We can play with our simulation models to provide some qualitative answers. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal_niche_width}A). But other parameters have less straightforward effects. In the eco-evolutionary model, a potentially important parameter is the temperature tolerance of each genotype. We initially thought that increasing the temperature tolerance might accelerate shifts in genotype frequencies by increasing genotypic diversity within populations, but it had the opposite effect (Fig. \ref{fig:dispersal_niche_width}B), probably because it decreased the strength of selection, slowing the rate of change in genotype frequencies. Other factors to consider include organism lifespans and the magnitude of directional environmental change relative to interannaul variation. While simulation experiments are easy and informative, they cannot provide the generality of analytical theory. Unfortunately, deriving analytical solutions would be difficult, even for our relatively simple models. 
+These results suggest that near-term forecasts will likely be most effective when made using time-series models, a result backed by recent empirical
+analyses of biodiversity forecasts at time scales from one to ten years (Harris et al. 2018). For long-term forecasts our results suggest the use
+of models built on spatial data. However, determining what is "near-term" and what is "long-term" in this context is an open question, and
+many important forecasts in ecology will be needed at intermediate time horizons where neither approach will be
+fully sufficient. Our simulation results demonstrate that there are often extended transitional period where neither approach is effective on its own,
+but where a weighted combination of time-series and spatial models can produce highly accurate predictions. Unfortunately there is no clear
+way to determine how to weight these two approaches for different time horizons. Our combined ``forecasts'' used the performance of
+the forecasts on simulated data to select the weights. This approach cannot be used for actual forecasting because it is effectively an empirical
+quantification of the observed performance of the forecasts at different time horizons. Determining how to set these
+weights a priori could be pursued using both theoretical and empirical approaches. On the theoretical side, it should be possible to explore the influence
+of different parameters on how quickly slow processes (represented in spatial data) begin to influence dynamics. The effects of some parameters are intuitive:
+in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights
+(Fig. \ref{fig:dispersal_niche_width}A). Other factors to consider include organism lifespans, niche widths, and the magnitude of directional environmental
+change relative to interannual variation. From an empirical perspective, this challenge could be addressed by using synthetic analyses to estimate the
+weighting function. By evaluating both time-series and spatial models for large numbers of forecasts across a range of time-horizons it should be possible
+to develop rules of thumb for ensembling models encompassing different scales of processes. This requires data sets that can support the evaluation of
+long-term forecasts, which could include paleoecological data (e.g.,), long-term historical data sets (e.g., ), and the use of model systems with
+short-generation times (e.g., Petchy), With enough case studies, we might be able to infer patterns that could guide applications in new systems.
 
 \begin{figure}[tbp]
 	\centering
@@ -305,13 +283,32 @@ influence dynamics? We can play with our simulation models to provide some quali
 	\label{fig:dispersal_niche_width}
 \end{figure}
 
-On the empirical side, the key problem is finding or creating data sets to estimate the weighting function. As described under Lesson 1,
-this requires data sets appropriate for validating long-term forecasts.
-Possibilities include hindcasting with paleoecological and long-term historical data sets, use of model
-systems with short-generation times, and....more simulation studies...? . With enough case studies, we might be able to infer patterns
-that could guide applications in new systems.
+Instead of trying to weight distinct approaches an alternative approach is to build fully process based models of ecological systems  for forecasting.
+If it is possible to accurately characterize all of the processes governing a system then a model based on that understanding should make accurate
+predictions at all time-horizons. For example, if we had evaluated the exact process-based models that we used to generate the simulated time series,
+these models would have been able to accurately capture the full dynamics and forecasts for all time horizons. In concept, process based models should
+also be more robust for making predictions outside of historically observed conditions (or beyond the conditions observed across spatial gradients).
+This is particularly important for making predictions in a future that is predicted to be increasingly "non-analog", where combinations of environment
+and species interactions exist that have never occurred before (Williams et al.) Unfortunately, this approach is not currently feasible in most cases,
+because we lack a detailed knowledge of all of the complex and interacting processes influencing the dynamics of real ecological systems. Even if the
+general form of the models was understood estimating the high number of parameters and quantifying how they vary across
+ecosystems typically require more data than is currently available for even well studied systems. As a result, models used for ecological forecasting
+will include at least some phenomenological components. But that does not mean that these forecasts do not rely on process-based understanding in some way.
+The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting
+models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification
+of phenomenological models.
 
-Anything else to add?
+Another approach to addressing the joint importance of spatial and time-series data for making ecological forecasts is joint spatiotemporal modeling...
+
+These results have important implications for the emerging field of ecological forecasting. They suggest that evaluating both near-term and long-term
+forecasts is essential to fully understanding the best methods for forecasting and how well they perform. Our results further suggest that while
+single approaches may perform reasonably well at short and long time horizons, that intermediate time horizons may require a combination of information
+from spatial and temporal patterns. Related challenges with intermediate time horizons occur in other forecasting contexts. Weather forecasts based one
+type of models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Climate models provide accurate
+predictions for similar variables, but generally at decadal time-scales. Forecasting in between these two time scales has been challenging in meteorology
+and will likely be challenging in ecology as well. In combination that means that while the recent emphasis on near-term iterative forecasting (Dietze 
+et al. 2018), is important, we also need to build understanding and capacity for mkaing forecasts across the full range of scales of interest in
+ecology, from hours to decades. 
 
 \newpage
 \renewcommand{\refname}{Literature cited}
