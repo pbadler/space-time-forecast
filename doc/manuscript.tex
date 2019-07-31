@@ -100,6 +100,8 @@ dynamic models to make predictions about what will happen in the future. This is
 both process-based and data-driven models (e.g., \citep{ward_complexity_2014}). Whether process-based or
 data-driven, time-series models typically capture processes operating on interannual time-scales, such as birth, death, 
 small scale dispersal events, and short-term responses to environmental conditions.
+
+
 Space-for-time substitution approaches begin by describing how an ecological variable of interest, such as occupancy or productivity, 
 varies across sites experiencing different environmental conditions. These spatial relationships between environment and ecological 
 response are assumed to also hold for changes at a site through time. To make a forecast, we first predict the future
@@ -147,47 +149,28 @@ an eco-evolutionary scenario. Our analyses show that:
 \section*{Modeling approach}
 
 In two case studies, we simulate the effects of an increase in temperature on simple systems with known dynamics.
-The ``truth'' is represented by a model that is mechanistic for at least one important process, but treat the model as unknown when
-analyzing the data and assume that perfectly recovering this model would not be possible in practice. We begin each simulation
-under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. We then increase temperature progressively
-over a period of time, followed by a second period of stationary, now elevated, temperature. The objective is to forecast the response of the 
-system to the temperature increase based on data gathered during the baseline period. 
+The ``truth'' is represented by a model that is mechanistic for at least one important process, but we treat the model as unknown when
+analyzing the data and we assume that perfectly recovering this model would not be possible in practice. We begin each simulation
+under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. 
+We then increase temperature progressively over a period of time, followed by a second period of stationary, now elevated, temperature. 
+The objective is to forecast the response of the system to the temperature increase based on data gathered during the baseline period. 
 
 We make forecasts based on two phenomenological models, each representing processes operating at different time scales. 
-The first phenomenological model represents what we call a ``spatial approach.'' We correlate the mean environment with the mean of an ecological state or rate 
- across many sites. This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} or
- primary production as a function of mean precipitation \citep{Sala1988}. The approach is attractive because it addresses broad spatial scales relevant to 
- management, and because the necessary data are widely available and statistical analyses are straightforward. The approach also has well-known weaknesses.
-Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). Another issue is that these models are not dynamic; 
-they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed 
-over long time spans, they are may not provide good information about dynamic changes on the order of a few years. Moreover, transient dynamics could 
-prevent the system from ever reaching the predicted steady state \citep{Urban2012}. 
+The first phenomenological model represents the space-for-time substiution approach, which we call the ``spatial approach'' for brevity. 
+We correlate the mean environment with the mean of an ecological state or rate across many sites. 
+This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} 
+or primary production as a function of mean precipitation \citep{Sala1988}. The approach is attractive because it addresses broad spatial scales relevant to  management, and because the necessary data are widely available and the statistical analyses straightforward. The approach also has well-known weaknesses. Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). Another issue is that these models are not dynamic;  they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed  over long time spans, they may not provide good information about dynamic changes on the order of a few years. Moreover, transient dynamics could prevent the system from ever reaching the predicted steady state \citep{Urban2012}. 
 
-The second model represents what we call a ``temporal approach.'' We correlate interannual variation in an ecological response with interannual variation in the environment, 
-typically at just one site. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, 
-or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. The advantages of this approach include is focus on temporal dynamics, meaning it 
-can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover 
-a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, 
-that could alter the underlying process at longer time scales and improve forecastability \citep{clark_ecological_2001}.
+The second model represents the time-series or ``temporal approach.'' We correlate interannual variation in an ecological response with interannual variation in the environment at just one site. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. The advantages of this approach include its focus on temporal dynamics, meaning it can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, that could alter the underlying process at longer time scales \citep{clark_ecological_2001}.
 
-
-We compare forecasts from both models to the simulated dynamics to determine how well the two approaches to forecasting perform at different time scales. We also assess the potential for combining the information available in both spatial and temporal patters by combining forecasts from the spatial and temporal approaches using a weighted average and assess how the optimal model weights change over time. Based on the hypothesis that spatial patterns capture longer-term processes we expect the temporal model to best predict short-term dynamics, and the spatial model to best predict long-term dynamics, and that a combination of the two approaches will provide the best forecasts at transitional intermediate time scales.
+We compare forecasts from both models to the simulated dynamics to determine how well the two approaches perform at different forecast horizons. We also assess the potential for combining the information available in both spatial and temporal patterns by using a weighted average of the forecasts from the spatial and temporal approaches optimized to best match the (simulated) observations. We then study how the optimal model weights change over time. We expect the temporal model to best predict short-term dynamics, the spatial model to best predict long-term dynamics, and that a combination of the two approaches will provide the best forecasts at transitional intermediate time scales.
 
 \subsection*{Community turnover example}
 
-A common need for conservation biologists and natural resource managers is anticipating the impact of environmental change on the abundance of 
-endangered species, biological invaders, and harvested species. Although the managers may be primarily interested in just the focal species, 
-skillful prediction might require considering interactions with many other species, greatly complicating the problem. But at what forecast horizon do
-altered species interactions become impossible to ignore? We explored this question using a metacommunity model developed by \cite{alexander_lags_2018}. 
-The model describes Lotka-Volterra competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient.
-Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: 
-cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by 
-fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. 
-Sites are linked by dispersal: a specified fraction of each species' offspring leaves the site where they were produced and reaches all other sites with equal probability.
+Conservation biologists and natural resource managers often need to anticipate the impact of environmental change on the abundance of 
+endangered species, biological invaders, and harvested species. Although the managers may be primarily interested in just the focal species, skillful prediction might require considering interactions with many other species, greatly complicating the problem. But at what forecast horizon do altered species interactions become impossible to ignore? We explored this question using a metacommunity model developed by \cite{alexander_lags_2018}. The model describes Lotka-Volterra competitive interactions among plants within sites that are arrayed along an elevation and temperature gradient. Composition varies along the gradient because of a trade-off between growth rate and cold tolerance: cold sites are dominated by slow-growing species that can tolerate low temperatures, while warm sites are dominated by  fast-growing species that are cold intolerant. Multiple species can coexist within sites because all species experience stronger competition from conspecifics than from heterospecifics. Sites are linked by dispersal: a specified fraction of each species' offspring leaves the site where they were produced and reaches all other sites with equal probability.
 
-We first simulated a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase, and then a 
-final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the 
-same absolute increase in mean temperature. We focused on the biomass dynamics of one focal species that dominated the baseline period.
+We first simulated a baseline period with variable but stationary temperature, followed by a period of rapid temperature increase, and then a final period of stationary temperature. Interannual variation in temperature is the same at all sites, but mean temperature varies among sites. All sites experienced the same absolute increase in mean temperature. We focused on the biomass dynamics of one focal species that dominated the central site during the baseline period.
 
 During the baseline period there were strong spatial patterns across the mean temperature gradient. 
 Individual species, including our focal species, showed classic, unimodal ``Whittaker" patterns of abundances across the gradient (Fig. \ref{fig:species-patterns-models}A).
@@ -206,12 +189,12 @@ models are described in Appendix \ref{models}.
 We forecast the effect of a temperature increase on the focal species' biomass at one location in the center of the temperature gradient 
 using both spatial models and the temporal models. 
 The predictions from the spatial and temporal models contrasted markedly, with the temporal 
-model predicting a large increase in biomass and the spatial model predicting a decrease.Initially, the simulated abundances followed the increase predicted by the 
+model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances followed the increase predicted by the 
 temporal model, but as faster-growing species colonized and increased in abundance at the focal site, the biomass of the focal species decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}). 
 
 To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix \ref{models} for full description of the approach).
 This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}), but 
-it works so effectively because the weights were determined by fitting directly to those data. Unlike our spatial and temporal model forecasts, 
+the reason it works so well is that the weights were determined by fitting directly to the data. Unlike our spatial and temporal model forecasts, 
 we did not generate out-of-sample predictions from the combined model; it merely provides 
 a convenient way to quantify how rapidly dynamics shift from being dominated by interannual 
 variation captured in the temporal model to being dominated by the steady-state equilibrium captured by the spatial model.
@@ -250,9 +233,9 @@ We demonstrate this process with a hypothetical annual plant population in which
 \label{fig:evo_evo_spatial_temporal_models}
 \end{figure}
 
-The spatial pattern shown in Fig. \ref{fig:evo_evo_spatial_temporal_models}B is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that same temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
+The spatial pattern shown in Fig. \ref{fig:evo_evo_spatial_temporal_models}B is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
-To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We used the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical ``temporal model" (Appendix \ref{models}) predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:evo_evo_spatial_temporal_models}C). We then imposed a period of warming, followed by a final period of higher stationary temperature (Fig. \ref{fig:forecast} top).
+To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We used the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical temporal model (Appendix \ref{models}) predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:evo_evo_spatial_temporal_models}C). We then imposed a period of warming, followed by a final period of higher stationary temperature (Fig. \ref{fig:forecast} top).
 
 With the onset of warming, the population crashed as the cold-adapted genotype decreased in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype began to increase and the population recovered (Fig. \ref{fig:forecast} bottom). The temporal model accurately predicted the impact of the initial warming trend, but eventually became too pessimistic, while the spatial model did not handle the initial trend but accurately predicted the eventual, new steady state (Fig. \ref{fig:forecast} bottom).
 
