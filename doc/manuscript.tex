@@ -250,22 +250,12 @@ As in the community turnover example, we also fit a combined model as a weighted
 
 \subsection*{Discussion}
 
-Ecological forecasts are typically made using models fit to either time-series data or spatial data based on the concept of space-for-time substitutions.
-Our results demonstrate that forecasts based on these two approaches can lead to very different predictions for the future state of ecological systems.
-Which approach provides the most accurate forecasts depends on the time-horizon, or how far into the future we are attempting to forecast.
-For short-term forecasts, time-series approaches perform best, whereas longer-term forecasts are more accurately made using models from spatial data.
-This stems from differences between data types in the types and scales of processes they capture.
-Local time-series data capture demographic processes, autocorrelation (including lagged responses) and responses of current assemblages to small changes
-in environmental conditions. In addition, the state of the system a short period into the future depends heavily on the current state (i.e., the initial
-condition). Since short-term forecasts do not typically require extrapolating into novel conditions; the historical range of variation, incorporating lags
-and accurate initial conditions present in local time-series data is likely to be the most generally useful approach for forecasting.
-In contrast, data spanning spatial gradients captures the long-term outcome of slower processes including selection, dispersal, and responses to large
-changes in the environment. This makes models based on these data more likely to accurately predict long-term steady state outcomes of ecological change.
+Ecological forecasts are typically made using either a space-for-time substitution approach based on models fit to spatial data or using dynamic models fit to time-series data. Our results demonstrate that these two approaches can make very different predictions about the future state of ecological systems. Which approach provides the most accurate forecasts depends on the forecast-horizon. For short-term forecasts, time-series approaches perform best, whereas models based on spatial data made more accurate long-term forecasts. The change in model performance with increasing forecast horizon reflects differences in the types and scales of processes captured by spatial and temporal data sets. Local time-series data capture demographic processes, autocorrelation (including lagged responses) and responses of current assemblages to small changes in environmental conditions. In addition, the state of the system in the near future depends heavily on the current state (i.e., the initial condition). Since short-term forecasts do not typically require extrapolating into novel conditions, a model based on the historical range of variation and which incorporates lags and accurate initial conditions is likely to be the most generally useful approach for forecasting. The hypothesis that time-series models will be most effective for near-term forecasts is supported backed by recent empirical analyses of biodiversity forecasts at time scales from one to ten years \citep{harris_forecasting_2018}. In contrast, data sets spanning spatial gradients capture the long-term outcome of slower processes including ecological and evolutionary selection, dispersal, and responses to large changes in the environment. Models based on data covering spatial gradients may be a better choice for predicting long-term steady state outcomes of ecological change.
 
-These results suggest that near-term forecasts will likely be most effective when made using time-series models, a result backed by recent empirical
-analyses of biodiversity forecasts at time scales from one to ten years (Harris et al. 2018). For long-term forecasts our results suggest the use
-of models built on spatial data. However, determining what is "near-term" and what is "long-term" in this context is an open question, and
-many important forecasts in ecology will be needed at intermediate time horizons where neither approach will be
+The real challenge is determining what is ``near-term'' and what is ``long-term.'' Furthermore,
+many of the forecasts we need in ecology may fall in the intermediate time horizons where neither the time-series
+START HERE
+approach will be
 fully sufficient. Our simulation results demonstrate that there are often extended transitional period where neither approach is effective on its own,
 but where a weighted combination of time-series and spatial models can produce highly accurate predictions. Unfortunately there is no clear
 way to determine how to weight these two approaches for different time horizons. Our combined ``forecasts'' used the performance of
