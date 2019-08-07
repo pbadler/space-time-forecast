@@ -43,7 +43,7 @@
 \usepackage[usenames]{color}
 \newcommand{\new}{\textcolor{red}}
 \newcommand{\spe}{\textcolor{blue}}
-\newcommand{\comment}{\textcolor{black}}
+\newcommand{\comment}{\textcolor{red}}
 
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -94,25 +94,11 @@ model predictions \citep{houlahan_priority_2017,dietze_prediction_2017,dietze_it
 The combined benefits of informing policy and management and advancing basic research 
 makes forecasting an important priority for ecological research.
 
-The models used for ecological forecasting have traditionally been based on either time-series approaches or space-for-time substitutions.
-The time-series approach involves fitting models to long-term datasets to describe the temporal dynamics of a system.  We then use those
-dynamic models to make predictions about what will happen in the future. This is the common approach for population forecasts and includes 
-both process-based and data-driven models (e.g., \citep{ward_complexity_2014}). Whether process-based or
-data-driven, time-series models typically capture processes operating on interannual time-scales, such as birth, death, 
-small scale dispersal events, and short-term responses to environmental conditions.
+The models used for ecological forecasting have traditionally been based on either time-series approaches or space-for-time substitutions. The time-series approach involves fitting models to long-term datasets to describe the temporal dynamics of a system.  We then use those dynamic models to make predictions about what will happen in the future. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. Whether process-based or data-driven (e.g., \citep{ward_complexity_2014}), time-series models typically capture processes operating on interannual time-scales, such as birth, death, small scale dispersal events, and short-term responses to environmental conditions. However, models built using this approach typically cover a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, that could alter the underlying process at longer time scales \citep{clark_ecological_2001}. 
 
+Space-for-time substitution approaches begin by describing how an ecological variable of interest, such as occupancy or productivity,  varies across sites experiencing different environmental conditions. These spatial relationships between environment and ecological response are assumed to also hold for changes at a site through time. To make a forecast, we first predict the future environmental conditions and then determine the associated ecological response, based on the observed spatial relationship.  This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} or primary production as a function of mean precipitation \citep{Sala1988}. Space-for-time models capture processes operating over long time periods, such as immigration, extinction, and responses to large or prolonged environmental changes. however, these models provide no information about how quickly the system will move from the current state to the predicted, future state. Moreover, transient dynamics could prevent the system from ever reaching the predicted steady state \citep{Urban2012}. Although both time-series and space-for-time approaches are widely used, there has been little discussion of their advantages and disadvantages for guiding policy decisions or advancing our understanding of ecological dynamics \citep{harris_forecasting_2018} (but see Renwick et al ??). 
 
-Space-for-time substitution approaches begin by describing how an ecological variable of interest, such as occupancy or productivity, 
-varies across sites experiencing different environmental conditions. These spatial relationships between environment and ecological 
-response are assumed to also hold for changes at a site through time. To make a forecast, we first predict the future
-environmental conditions and then determinie the associated ecological response, based on the observed spatial relationship. 
-Most forecasts for future species distributions and biodiversity are based on this approach. 
-Space-for-time models capture processes operating over long time periods, such as
-immigration, extinction, and responses to large or prolonged environmental changes. Although both of these approaches are
-widely used, there has been little discussion of their advantages and disadvantages for guiding policy decisions or 
-advancing our understanding of ecological dynamics \citep{harris_forecasting_2018} (but see Renwick et al ??).
-
-Whether historical dynamics, contemporary spatial patterns, or spme combination of the two will serve as the best source of 
+Whether historical dynamics, contemporary spatial patterns, or some combination of the two will serve as the best source of 
 information for forecasting may depend on how far into the future we are attempting to forecast \citep{harris_forecasting_2018}. 
 This potential dependency on the "forecast horizon"; ()\textit{sensu} citation)
 reflects lags in the response of ecological conditions to environmental change, shifts in the importance of ecological processes with
@@ -133,7 +119,7 @@ in climate over long periods, producing better long-term forecasts than time-ser
 Using different modeling approaches for different forecast horizons is common in other disciplines.
 For example, meteorological models for short-term weather forecasts differ substantially in spatial
 and temporal resolution and extent from the global circulation models used to predict long-term changes
-in climate [IS THIS REALLY TRUE? REFERENCE?].
+in climate \comment{Great point, but this shows up in Conclusion too. I think it is better here? Also, do we need to fact check this?}.
 
 Here we use simulation models to 1) demonstrate that the best model-building approaches for ecological forecasting 
 depend on the time horizon of the forecast, and 2) explore how time-series and space-for-time approaches might be 
@@ -148,22 +134,17 @@ an eco-evolutionary scenario. Our analyses show that:
 
 \section*{Modeling approach}
 
-In two case studies, we simulate the effects of an increase in temperature on simple systems with known dynamics.
+In two case studies, we simulated the effects of an increase in temperature on simple systems with known dynamics.
 The ``truth'' is represented by a model that is mechanistic for at least one important process, but we treat the model as unknown when
-analyzing the data and we assume that perfectly recovering this model would not be possible in practice. We begin each simulation
+analyzing the data and we assumed that perfectly recovering this model would not be possible in practice. We began each simulation
 under stationary temperature, allowing the system to equilibrate; we call this the baseline phase. 
-We then increase temperature progressively over a period of time, followed by a second period of stationary, now elevated, temperature. 
-The objective is to forecast the response of the system to the temperature increase based on data gathered during the baseline period. 
+We then increased temperature progressively over a period of time, followed by a second period of stationary, now elevated, temperature. 
+The objective was to forecast the response of the system to the temperature increase based on data gathered during the baseline period. 
 
-We make forecasts based on two phenomenological models, each representing processes operating at different time scales. 
+We made forecasts based on two phenomenological models, each representing processes operating at different time scales. 
 The first phenomenological model represents the space-for-time substiution approach, which we call the ``spatial approach'' for brevity. 
-We correlate the mean environment with the mean of an ecological state or rate across many sites. 
-This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} 
-or primary production as a function of mean precipitation \citep{Sala1988}. The approach is attractive because it addresses broad spatial scales relevant to  management, and because the necessary data are widely available and the statistical analyses straightforward. The approach also has well-known weaknesses. Criticism often focuses on the assumption that current spatial patterns are in equilibrium with climate (refs?). Another issue is that these models are not dynamic;  they provide no information about how quickly the system will move from the current state to the predicted, future state. Because the patterns in the data have developed  over long time spans, they may not provide good information about dynamic changes on the order of a few years. Moreover, transient dynamics could prevent the system from ever reaching the predicted steady state \citep{Urban2012}. 
-
-The second model represents the time-series or ``temporal approach.'' We correlate interannual variation in an ecological response with interannual variation in the environment at just one site. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. The advantages of this approach include its focus on temporal dynamics, meaning it can predict rates of change, and validation of the resulting near-term predictions are straightforward. However, models built using this approach typically cover a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, that could alter the underlying process at longer time scales \citep{clark_ecological_2001}.
-
-We compare forecasts from both models to the simulated dynamics to determine how well the two approaches perform at different forecast horizons. We also assess the potential for combining the information available in both spatial and temporal patterns by using a weighted average of the forecasts from the spatial and temporal approaches optimized to best match the (simulated) observations. We then study how the optimal model weights change over time. We expect the temporal model to best predict short-term dynamics, the spatial model to best predict long-term dynamics, and that a combination of the two approaches will provide the best forecasts at transitional intermediate time scales.
+We correlated the mean environment with the mean of an ecological state or rate across many sites. The second model represents the time-series or ``temporal approach.'' We correlated interannual variation in an ecological response with interannual variation in the environment at just one site. 
+We compared forecasts from both models to the simulated dynamics to determine how well the two approaches perform at different forecast horizons. We also assessed the potential for combining the information available in both spatial and temporal patterns by using a weighted average of the forecasts from the spatial and temporal approaches optimized to best match the (simulated) observations. We then studied how the optimal model weights changed over time. We expected the temporal model to best predict short-term dynamics, the spatial model to best predict long-term dynamics, and that a combination of the two approaches would provide the best forecasts at transitional intermediate time scales.
 
 \subsection*{Community turnover example}
 
@@ -252,9 +233,7 @@ As in the community turnover example, we also fit a combined model as a weighted
 
 Ecological forecasts are typically made using either a space-for-time substitution approach based on models fit to spatial data or using dynamic models fit to time-series data. Our results demonstrate that these two approaches can make very different predictions about the future state of ecological systems. Which approach provides the most accurate forecasts depends on the forecast-horizon. For short-term forecasts, time-series approaches perform best, whereas models based on spatial data made more accurate long-term forecasts. The change in model performance with increasing forecast horizon reflects differences in the types and scales of processes captured by spatial and temporal data sets. Local time-series data capture demographic processes, autocorrelation (including lagged responses) and responses of current assemblages to small changes in environmental conditions. In addition, the state of the system in the near future depends heavily on the current state (i.e., the initial condition). Since short-term forecasts do not typically require extrapolating into novel conditions, a model based on the historical range of variation and which incorporates lags and accurate initial conditions is likely to be the most generally useful approach for forecasting. The hypothesis that time-series models will be most effective for near-term forecasts is supported backed by recent empirical analyses of biodiversity forecasts at time scales from one to ten years \citep{harris_forecasting_2018}. In contrast, data sets spanning spatial gradients capture the long-term outcome of slower processes including ecological and evolutionary selection, dispersal, and responses to large changes in the environment. Models based on data covering spatial gradients may be a better choice for predicting long-term steady state outcomes of ecological change.
 
-The challenge is determining what is ``near-term'' and what is ``long-term,'' and how to handle the many forecasts we need in ecology which fall in  intermediate time horizons. Our simulations demonstrate extended transitional periods during which neither the time-series or the spatial approach is effective on its own, but a weighted combination of the two can produce highly accurate predictions. Unfortunately, we currently have no way to determine how to weight these two approaches for different time horizons. Our combined models used weights fitted directly to the simulated data, which is impossible to do for actual forecasting when the future is unknown. We need new theory or empirical case studies in order to set these weights \emph{a priori}. Theory could explore the influence of different parameters on on the rate at which slow processes (represented in spatial data) begin to influence dynamics. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal_niche_width}A). Other factors to consider include organism lifespans, niche widths, and the magnitude of directional environmental change relative to historical interannual variation. Empirical research could address this challenge by accumulating enough case studies to infer patterns in the weight functions and guide applications in new systems. Developing  rules of thumb would require testing many forecasts from both time-series and spatial models across a range of time-horizons. It will require data sets that can support the evaluation of long-term forecasts, which could include paleoecological data (e.g.,), long-term historical data sets (e.g., ), and the use of model systems with short-generation times (e.g., Petchy), 
-
-START HERE
+The challenge is determining what is ``near-term'' and what is ``long-term,'' and how to handle the many forecasts we need in ecology which fall in  intermediate time horizons. Our simulations demonstrate extended transitional periods during which neither the time-series or the spatial approach is effective on its own, but a weighted combination of the two can produce highly accurate predictions. Unfortunately, we currently have no way to determine how to weight these two approaches for different time horizons. Our combined models used weights fitted directly to the simulated data, which is impossible to do for actual forecasting when the future is unknown. We need new theory or empirical case studies in order to set these weights \emph{a priori}. Theory could explore the influence of different parameters on the rate at which slow processes (represented in spatial data) begin to influence dynamics. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal_niche_width}A). Other factors to consider include organism lifespans, niche widths, and the magnitude of directional environmental change relative to historical interannual variation. Empirical research could address this challenge by accumulating enough case studies to infer patterns in the weight functions and guide applications in new systems. Developing  rules of thumb would require testing many forecasts from both time-series and spatial models across a range of time-horizons. This effort may require a novel integration of typically disparate approaches, such as analyses of paleoecological data (e.g.,), long-term historical data (e.g., ), and model systems with short-generation times (e.g., Petchy).
 
 \begin{figure}[tbp]
 	\centering
@@ -263,32 +242,14 @@ START HERE
 	\label{fig:dispersal_niche_width}
 \end{figure}
 
-Instead of trying to weight distinct approaches an alternative approach is to build fully process based models of ecological systems  for forecasting.
-If it is possible to accurately characterize all of the processes governing a system then a model based on that understanding should make accurate
-predictions at all time-horizons. For example, if we had evaluated the exact process-based models that we used to generate the simulated time series,
-these models would have been able to accurately capture the full dynamics and forecasts for all time horizons. In concept, process based models should
-also be more robust for making predictions outside of historically observed conditions (or beyond the conditions observed across spatial gradients).
-This is particularly important for making predictions in a future that is predicted to be increasingly "non-analog", where combinations of environment
-and species interactions exist that have never occurred before (Williams et al.) Unfortunately, this approach is not currently feasible in most cases,
-because we lack a detailed knowledge of all of the complex and interacting processes influencing the dynamics of real ecological systems. Even if the
-general form of the models was understood estimating the high number of parameters and quantifying how they vary across
-ecosystems typically require more data than is currently available for even well studied systems. As a result, models used for ecological forecasting
-will include at least some phenomenological components. But that does not mean that these forecasts do not rely on process-based understanding in some way.
-The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting
-models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification
-of phenomenological models.
+An alternative to a weighted combination of predictions from time-series and space-for-time models is to rely on fully process-based models.
+If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate
+predictions at all time-horizons. For example, rather than fitting phenomenological models to our simulated time-series, we could have fit the exact process-based models that we used to generate those time-series. Assuming reasonable estimates of the parameter, those models would have accurately predicted the dynamics at all forecast horizons. Process based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important for making predictions in a future with increasingly novel combinations of environment and species interactions (Williams et al.) Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models was understood, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well studied systems. As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that these forecasts do not rely on process-based understanding in some way. The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models.
 
-Another approach to addressing the joint importance of spatial and time-series data for making ecological forecasts is joint spatiotemporal modeling...
+Another approach to addressing the joint importance of spatial and time-series data for making ecological forecasts is joint spatiotemporal modeling...\comment{Ethan, what do you have in mind here?}
 
-These results have important implications for the emerging field of ecological forecasting. They suggest that evaluating both near-term and long-term
-forecasts is essential to fully understanding the best methods for forecasting and how well they perform. Our results further suggest that while
-single approaches may perform reasonably well at short and long time horizons, that intermediate time horizons may require a combination of information
-from spatial and temporal patterns. Related challenges with intermediate time horizons occur in other forecasting contexts. Weather forecasts based one
-type of models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Climate models provide accurate
-predictions for similar variables, but generally at decadal time-scales. Forecasting in between these two time scales has been challenging in meteorology
-and will likely be challenging in ecology as well. In combination that means that while the recent emphasis on near-term iterative forecasting (Dietze 
-et al. 2018), is important, we also need to build understanding and capacity for mkaing forecasts across the full range of scales of interest in
-ecology, from hours to decades. 
+Our results have important implications for the emerging field of ecological forecasting. First, they suggest that evaluating both near-term and long-term
+forecasts will be essential as research on forecasting methods accelerates. Second, while single approaches may perform reasonably well at either short or long forecast horizons, skillful predictions at intermediate time horizons may require a combination of information from spatial and temporal patterns. Intermediate time horizons pose challenges in other forecasting contexts as well. Weather forecasts based on regional-scale meteorological models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Global circulation models provide predictions for similar variables but at decadal time-scales \comment{PBA: Is this right? Are these models really different, or do they just differ in scake and resolution? I love this point, but should we move it out of last paragraph?}. Forecasting in between these two time scales has been challenging in meteorology and will likely be challenging in ecology as well. While the recent emphasis on near-term iterative forecasting (Dietze et al. 2018) is the logical and tractable starting point, we also need to build understanding and capacity for forecasting ecological dynamics across all temporal scales of interest.
 
 \newpage
 \renewcommand{\refname}{Literature cited}
