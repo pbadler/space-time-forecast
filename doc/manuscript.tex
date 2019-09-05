@@ -174,35 +174,29 @@ models are described in Appendix \ref{models}.
 \label{fig:species-patterns-models}
 \end{figure}
 
-We forecast the effect of a temperature increase on the focal species' biomass at one location in the center of the temperature gradient 
+We forecast the effect of a temperature increase (Fig. \ref{fig:community-forecast-species}A) on the focal species' biomass at one location in the center of the temperature gradient 
 using both spatial models and the temporal models. 
 The predictions from the spatial and temporal models contrasted markedly, with the temporal 
 model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances followed the increase predicted by the 
-temporal model, but as faster-growing species colonized and increased in abundance at the focal site, the biomass of the focal species decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}). 
+temporal model, but as faster-growing species colonized and increased in abundance at the focal site, the biomass of the focal species decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}B). 
 
 To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega \cdot T(N_{t-1},K_t) + (1-\omega) \cdot S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$, and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix \ref{models} for full description of the approach).
-This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}), but 
+This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}B), but 
 the reason it works so well is that the weights were determined by fitting directly to the data. Unlike our spatial and temporal model forecasts, 
 we did not generate out-of-sample predictions from the combined model; it merely provides 
 a convenient way to quantify how rapidly dynamics shift from being dominated by interannual 
-variation captured in the temporal model (time $t=0$ to $t \approx 1250$ in Fig. \ref{fig:community-forecast-species}) to being dominated by the steady-state equilibrium captured by the spatial model (time $t \geq 2500$).
+variation captured in the temporal model (time $t=0$ to $t \approx 1250$ in Fig. \ref{fig:community-forecast-species}B) to being dominated by the steady-state equilibrium captured by the spatial model (time $t \geq 2500$).
 A true, combined forecast would require a method to determine the model weights \emph{a priori}.
 The most rapid shifts in the model weights occurred during the period when warm-adapted, faster growing species were increasing most rapidly
-in abundance (Fig. \ref{fig:community-weights-spp}).
+in abundance (Fig. \ref{fig:community-forecast-species}C).
 
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=0.7 \textwidth] {community_forecast_species.png}
-\caption{(Top) Simulated annual temperatures (grey) and expected temperature (black), which was used to make forecasts, at the focal site. (Bottom) Simulated focal species biomass and forecasts from the spatial, temporal and combined models. }
+\caption{(A) Simulated annual temperatures (grey) and expected temperature (black), which was used to make forecasts, at the focal site. (B) Simulated focal species biomass and forecasts from the spatial, temporal and combined models at the focal site in the metacommunity model. (C) Simulated changes in biomass of the focal species (black) and all other species (grey), and the weight given to the temporal model for focal species biomass (blue). Year 1000 in each panel corresponds to the start of the temperature increase. }
 \label{fig:community-forecast-species}
 \end{figure}
 
-\begin{figure}[tbp]
-\centering
-\includegraphics[width=0.7 \textwidth] {community_change_plus_weights_spp.png}
-\caption{Simulated changes in biomass of the focal species (black) and all other species (grey) at the focal site in the metacommunity model, and the weight given to the temporal model for focal species biomass (blue). Year 1000 in this figure corresponds to the start of the temperature increase. }
-\label{fig:community-weights-spp}
-\end{figure}
 
 The compositional turnover affecting our focal species also influences total biomass, linking community and ecosystem dynamics. We repeated our focal species analysis 
 for total community biomass, and the results were similar: the temporal model initially made the best forecasts immediately following the onset of the temperature
@@ -217,7 +211,7 @@ We demonstrate this process with a hypothetical annual plant population in which
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=0.4 \textwidth]{spatial&temporal_model.png}
-\caption{(A) Reaction norms of the three genotypes. (B) The spatial pattern of individual genotypes (colors) and total population abundance (black) at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from an empirical ``spatial model," a linear regression that describes mean population size as a function of mean temperature. (C) The relationship between annual temperature and per capita growth rate at a location with a mean temperature that favors the cold-adapted genotype. Colors show population size (the blue to red gradient depicting low to high population density), which influences the population growth rate through density dependence. }
+\caption{(A) Reaction norms of the three genotypes. (B) The spatial pattern of individual genotypes (colors) and total population abundance (black) at sites arrayed across a gradient of mean annual temperature. The dashed line shows predictions from an empirical ``spatial model," a linear regression that describes mean population size as a function of mean temperature. (C) The relationship between annual temperature and per capita growth rate at a location with a mean temperature that favors the cold-adapted genotype. Colors show population size (the blue to red gradient depicting high to low population density), which influences the population growth rate through density dependence. }
 \label{fig:evo_evo_spatial_temporal_models}
 \end{figure}
 
@@ -245,7 +239,7 @@ The challenge is determining what is ``near-term'' and what is ``long-term,'' an
 \begin{figure}[tbp]
 	\centering
 	\includegraphics[width=0.7 \textwidth] {dispersal_niche_width.png}
-	\caption{(The rate of change in the weight of the temporal forecast (y-axis) depends on (A) the fraction of propagules dispersing in the community turnover example and (B) on the temperature tolerance of genotypes, given by $\sigma_T$ (larger values indicate wider thermal niches) in the eco-evolutionary example. Year 0 in these figures corresponds to the start of the temperature increase. }
+	\caption{The rate of change in the weight of the temporal forecast (y-axis) depends on (A) the fraction of propagules dispersing in the community turnover example and (B) on the temperature tolerance of genotypes, given by $\sigma_T$ (larger values indicate wider thermal niches) in the eco-evolutionary example. Year 0 in these figures corresponds to the start of the temperature increase. }
 	\label{fig:dispersal_niche_width}
 \end{figure}
 
