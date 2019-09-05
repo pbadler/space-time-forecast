@@ -58,11 +58,11 @@
 \title{\textbf{ Matching the forecast horizon with the relevant ecological processes }}
 
 \author[1]{Peter B. Adler}  %\thanks{Corresponding author. Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah Email: peter.adler@usu.edu}}
-\author[2]{Ethan White}
-\author[3]{Michael Cortez}
+\author[2]{Ethan P. White}
+\author[3]{Michael H. Cortez}
 \affil[1]{Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah}
-\affil[2]{some shitty Florida joint}
-\affil[3]{some shitty Florida joint}
+\affil[2]{Department of Wildlife Ecology and Conservation, University of Florida, Gainesville, Florida}
+\affil[3]{Department of Biological Science, Florida State University, Tallahasee, Florida}
 
 \renewcommand\Authands{ and }
 
@@ -94,18 +94,18 @@ model predictions \citep{houlahan_priority_2017,dietze_prediction_2017,dietze_it
 The combined benefits of informing policy and management and advancing basic research 
 makes forecasting an important priority for ecological research.
 
-The models used for ecological forecasting have traditionally been based on either time-series approaches or space-for-time substitutions. The time-series approach involves fitting models to long-term datasets to describe the temporal dynamics of a system.  We then use those dynamic models to make predictions about what will happen in the future. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. Whether process-based or data-driven (e.g., \citep{ward_complexity_2014}), time-series models typically capture processes operating on interannual time-scales, such as birth, death, small scale dispersal events, and short-term responses to environmental conditions. However, models built using this approach typically cover a limited spatial extent (but see \citealt{kleinhesselink_response_2018}, others), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, that could alter the underlying process at longer time scales \citep{clark_ecological_2001}. 
+The models used for ecological forecasting have traditionally been based on either time-series approaches or space-for-time substitutions. The time-series approach involves fitting models to long-term datasets to describe the temporal dynamics of a system.  We then use those dynamic models to make predictions about what will happen in the future. This approach is often used to study population or vital rate fluctuations as a function of weather \citep{dalgleish_climate_2011}, or primary production as a function of precipitation \citep{lauenroth_long-term_1992}. Whether process-based or data-driven (e.g., \citealt{ward_complexity_2014}), time-series models typically capture ``fast processes'' operating on interannual time-scales, such as birth, death, individual growth, small-scale dispersal events, and short-term responses to environmental conditions (Fig. \ref{fig:fast-slow-concept}). However, models built using this approach typically cover a limited spatial extent (but see \citealt{Hefley2017,kleinhesselink_response_2018}), and ignore slower processes, such as evolutionary adaptation or turnover in community composition, that could influence dynamics at longer time scales \citep{clark_ecological_2001}. 
 
-Space-for-time substitution approaches begin by describing how an ecological variable of interest, such as occupancy or productivity,  varies across sites experiencing different environmental conditions. These spatial relationships between environment and ecological response are assumed to also hold for changes at a site through time. To make a forecast, we first predict the future environmental conditions and then determine the associated ecological response, based on the observed spatial relationship.  This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} or primary production as a function of mean precipitation \citep{Sala1988}. Space-for-time models capture processes operating over long time periods, such as immigration, extinction, and responses to large or prolonged environmental changes. however, these models provide no information about how quickly the system will move from the current state to the predicted, future state. Moreover, transient dynamics could prevent the system from ever reaching the predicted steady state \citep{Urban2012}. Although both time-series and space-for-time approaches are widely used, there has been little discussion of their advantages and disadvantages for guiding policy decisions or advancing our understanding of ecological dynamics \citep{harris_forecasting_2018} (but see Renwick et al ??). 
+Space-for-time substitution approaches begin by describing how an ecological variable of interest, such as occupancy or productivity,  varies across sites experiencing different environmental conditions. These spatial relationships between environment and ecological response are assumed to also hold for changes at a site through time. To make a forecast, we first predict the future environmental conditions and then determine the associated ecological response, based on the observed spatial relationship.  This is the approach commonly used to predict population distribution or abundance as a function of climate \citep{elith_species_2009} or primary production as a function of mean precipitation \citep{Sala1988}. Space-for-time models capture the outcome of interactions between fast processes and slower processes operating over long time periods, such as immigration, extinction, and responses to large or prolonged environmental changes (Fig. \ref{fig:fast-slow-concept}). However, space-for-time models provide no information about how quickly the system will move from the current state to the predicted, future state. Moreover, transient dynamics could prevent the system from ever reaching the predicted steady state \citep{Urban2012}. Although both time-series and space-for-time approaches are widely used, there has Rebeen little discussion of their advantages and disadvantages for guiding policy decisions or advancing our understanding of ecological dynamics (\citealt{harris_forecasting_2018} but see \citealt{Renwick2018}). 
 
 Whether historical dynamics, contemporary spatial patterns, or some combination of the two will serve as the best source of 
 information for forecasting may depend on how far into the future we are attempting to forecast \citep{harris_forecasting_2018}. 
-This potential dependency on the "forecast horizon"; ()\textit{sensu} citation)
+This potential dependency on the ``forecast horizon'' (\textit{sensu} \citealt{Hyndman2018})
 reflects lags in the response of ecological conditions to environmental change, shifts in the importance of ecological processes with
 time scale \citep{levin_1992,rosenzweig_1995}, and differences between time-series and spatial gradients in the range of 
 environmental conditions represented in observed data.
 At short forecast horizons (days to years), dynamics will reflect the physiological and demographic responses of 
-the organisms present at a site more than than turnover of genotypes or species, 
+the organisms present at a site more than turnover of genotypes or species, 
 environmental conditions are likely to stay within the range of historical variation, 
 and the current state of the system is likely to capture the influence of unmeasured processes. As a result, 
 for near-term forecasts time-series approaches may capture the key dynamics and provide accurate predictions.
@@ -126,7 +126,7 @@ in climate over long periods, producing better long-term forecasts than time-ser
 Using different modeling approaches for different forecast horizons is common in other disciplines.
 For example, meteorological models for short-term weather forecasts differ substantially in spatial
 and temporal resolution and extent from the global circulation models used to predict long-term changes
-in climate \comment{Great point, but this shows up in Conclusion too. I think it is better here? Also, do we need to fact check this?}.
+in climate.
 
 Here we use simulation models to 1) demonstrate that the best model-building approaches for ecological forecasting 
 depend on the time horizon of the forecast, and 2) explore how time-series and space-for-time approaches might be 
@@ -134,9 +134,9 @@ combined to make better forecasts at intermediate time scales. We conduct two si
 focused on how interspecific interactions affect the population dynamics of a focal species, and the second focused on
 an eco-evolutionary scenario. Our analyses show that: 
 \begin{enumerate}
-	\item For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require understanding slow processes such as evolutionary and ecological selection as well as dispersal.
-	\item Different kinds of data reflect the operation of different processes: longitudinal data capture autocorrelation and responses of current assemblages, while data spanning spatial gradients capture the long-term outcome of selection and dispersal.  Whether predictive models should be trained using longitudinal or spatial data sets, or both, depends on the time-scale of the desired forecast.
-	\item A key challenge for future research is determining the rate at which slow processes first influence and ultimately dominate dynamics.
+	\item For short-term forecasts, phenomenological time-series approaches are hard to beat, whereas longer-term forecasts require accounting for the influence of slow processes such as evolutionary and ecological selection as well as dispersal.
+	\item Different kinds of data reflect the operation of different processes: longitudinal data capture autocorrelation and fast responses of current assemblages to interannual environmental variation, while data spanning spatial gradients capture the long-term outcome of interactions between fast and slow processes.  Whether predictive models should be trained using longitudinal or spatial data sets, or both, depends on the time-scale of the desired forecast.
+	\item A key challenge for future research is determining the rate at which slow processes begin to influence dynamics.
 \end{enumerate}
 
 \section*{Modeling approach}
@@ -180,12 +180,12 @@ The predictions from the spatial and temporal models contrasted markedly, with t
 model predicting a large increase in biomass and the spatial model predicting a decrease. Initially, the simulated abundances followed the increase predicted by the 
 temporal model, but as faster-growing species colonized and increased in abundance at the focal site, the biomass of the focal species decreased, eventually falling below its baseline level (Fig. \ref{fig:community-forecast-species}). 
 
-To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega * T(N_{t-1},K_t) + (1-\omega) * S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$ and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix \ref{models} for full description of the approach).
+To combine the spatial and temporal model into a single forecast, we fit a weighting parameter, $\omega$, which varies over time and is bounded between 0 and 1. At any time point, $t$, the combined population forecast is $\omega \cdot T(N_{t-1},K_t) + (1-\omega) \cdot S(K_t) $ where $T$ is the temporal model, which depends on population size, $N$, and expected temperature, $K$, and $S$ is the spatial model, which depends only on $K$ (see Appendix \ref{models} for full description of the approach).
 This combined model accurately predicts the simulated dynamics across the full forecast horizon (Fig. \ref{fig:community-forecast-species}), but 
 the reason it works so well is that the weights were determined by fitting directly to the data. Unlike our spatial and temporal model forecasts, 
 we did not generate out-of-sample predictions from the combined model; it merely provides 
 a convenient way to quantify how rapidly dynamics shift from being dominated by interannual 
-variation captured in the temporal model to being dominated by the steady-state equilibrium captured by the spatial model.
+variation captured in the temporal model (time $t=0$ to $t \approx 1250$ in Fig. \ref{fig:community-forecast-species}) to being dominated by the steady-state equilibrium captured by the spatial model (time $t \geq 2500$).
 A true, combined forecast would require a method to determine the model weights \emph{a priori}.
 The most rapid shifts in the model weights occurred during the period when warm-adapted, faster growing species were increasing most rapidly
 in abundance (Fig. \ref{fig:community-weights-spp}).
@@ -206,13 +206,13 @@ in abundance (Fig. \ref{fig:community-weights-spp}).
 
 The compositional turnover affecting our focal species also influences total biomass, linking community and ecosystem dynamics. We repeated our focal species analysis 
 for total community biomass, and the results were similar: the temporal model initially made the best forecasts immediately following the onset of the temperature
-increase, but as the identify and abundances of species at the study site changed, the model weights rapidly shifted to the spatial model (Figs. \ref{fig:community-models-total} to \ref{fig:community-weights-total}). 
+increase, but as the identity and abundances of species at the study site changed, the model weights rapidly shifted to the spatial model (Figs. \ref{fig:community-models-total} to \ref{fig:community-weights-total}). 
 
 \section*{Eco-evolutionary example}
 
 Evolutionary adaptation is a key uncertainty in predicting how environmental change will impact a focal population at a given location (refs). Like the shifts
 in species composition illustrated in the previous example, shifts in genotype frequencies can also influence dynamics and forecasts at different time scales.
-We demonstrate this process with a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:evo_evo_spatial_temporal_models}A). The full model description is provided in Appendix \ref{eco-evo}. Genotype frequencies will shift across a gradient of mean annual temperature: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:evo_evo_spatial_temporal_models}B).
+We demonstrate this process with a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:evo_evo_spatial_temporal_models}A). Our model describes how the local density of each genotype changes between years,  which depends on temperature and genotype densities in the previous year. Transient temporal dynamics are computed directly from the model; these dynamics define our temporal forecast. To create ``spatial data'', we simulated the equilibrium density of each genotype under different mean temperatures. The pattern of equilibrium densities across a gradient in mean annual temperature defines our spatial forecast: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:evo_evo_spatial_temporal_models}B). The full model description is provided in Appendix \ref{eco-evo}. 
 
 \begin{figure}[tbp]
 \centering
@@ -221,13 +221,13 @@ We demonstrate this process with a hypothetical annual plant population in which
 \label{fig:evo_evo_spatial_temporal_models}
 \end{figure}
 
-The spatial pattern shown in Fig. \ref{fig:evo_evo_spatial_temporal_models}B is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm. For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size, even though the heat-adapted homozygote might perform optimally at that temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
+The spatial pattern shown in Fig. \ref{fig:evo_evo_spatial_temporal_models}B is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm (Fig. \ref{fig:evo_evo_spatial_temporal_models}A). For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size due to decreases in fecundity (blue line in Fig. \ref{fig:evo_evo_spatial_temporal_models}A), even though the heat-adapted homozygote might perform optimally at that temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
 To demonstrate these dynamics, we simulated a diploid annual plant population at a colder than average site. During the baseline period, the population is dominated by the cold-adapted genotype. We used the simulated data from this baseline period to fit an empirical model that assumes no knowledge of the underlying eco-evolutionary process. This empirical temporal model (Appendix \ref{models}) predicts population growth rate as a function of annual temperature and population size (Fig. \ref{fig:evo_evo_spatial_temporal_models}C). We then imposed a period of warming, followed by a final period of higher stationary temperature (Fig. \ref{fig:forecast} top).
 
-With the onset of warming, the population crashed as the cold-adapted genotype decreased in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype began to increase and the population recovered (Fig. \ref{fig:forecast} bottom). The temporal model accurately predicted the impact of the initial warming trend, but eventually became too pessimistic, while the spatial model did not handle the initial trend but accurately predicted the eventual, new steady state (Fig. \ref{fig:forecast} bottom).
+With the onset of warming, the population crashed as the cold-adapted genotype decreased in abundance. Eventually, frequencies of the heterozygous genotype and the warm-adapted homozygous genotype began to increase and the population recovered (Fig. \ref{fig:forecast} bottom). The temporal model (solid blue line in Fig. \ref{fig:forecast}) accurately predicted the impact of the initial warming trend, but eventually became too pessimistic, while the spatial model (solid red line in Fig. \ref{fig:forecast}) did not handle the initial trend but accurately predicted the eventual, new steady state (Fig. \ref{fig:forecast} bottom).
 
-As in the community turnover example, we also fit a combined model as a weighted average of the spatial and temporal model, with the weights changing over time. The combined model initially reflected the temporal model, but then rapidly transitioned to reflect the spatial model. The rapid transition in the weighting term, $\omega$, occurred during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}). The combined model's predictions look impressively accurate, but, as in the community turnover example, that is because we used the full, simulated time series to fit the weighting term. To generate a true forecast from the combined model, we would need an independent method to predict how the model weights shift over time.
+As in the community turnover example, we also fit a combined model as a weighted average of the spatial and temporal model, with the weights changing over time. The combined model initially reflected the temporal model (decrease from $t=500$ to $t=600$), but then rapidly transitioned to reflect the spatial model ($t \geq 700$). The rapid transition in the weighting term, $\omega$, occurred during the period of most rapid change in genotype frequencies (Fig. \ref{fig:forecast_supp}). The combined model's predictions look impressively accurate, but, as in the community turnover example, that is because we used the full, simulated time series to fit the weighting term. To generate a true forecast from the combined model, we would need an independent method to predict how the model weights shift over time.
 
 \begin{figure}[tbp]
 \centering

@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
@@ -57,11 +57,24 @@ Harris, D.~J., S.~D. Taylor, and E.~P. White. 2018.
 \newblock Forecasting biodiversity in breeding birds using best practices.
 \newblock PeerJ, {\bf 6}:e4278.
 
+\bibitem[{Hefley et~al.(2017)Hefley, Hooten, Russell, Walsh, and
+  Powell}]{Hefley2017}
+Hefley, T.~J., M.~B. Hooten, R.~E. Russell, D.~P. Walsh, and J.~A. Powell.
+  2017.
+\newblock When mechanism matters: {Bayesian} forecasting using models of
+  ecological diffusion.
+\newblock Ecology Letters, {\bf 20}:640--650.
+
 \bibitem[{Houlahan et~al.(2017)Houlahan, McKinney, Anderson, and
   McGill}]{houlahan_priority_2017}
 Houlahan, J.~E., S.~T. McKinney, T.~M. Anderson, and B.~J. McGill. 2017.
 \newblock The priority of prediction in ecological understanding.
 \newblock Oikos, {\bf 126}:1--7.
+
+\bibitem[{Hyndman and Athanasopoulos(2018)}]{Hyndman2018}
+Hyndman, R. and G.~Athanasopoulos. 2018.
+\newblock Forecasting: {Principles} and {Practice}.
+\newblock OTexts.
 
 \bibitem[{Kleinhesselink and Adler(2018)}]{kleinhesselink_response_2018}
 Kleinhesselink, A.~R. and P.~B. Adler. 2018.
@@ -91,6 +104,14 @@ Mouquet, N., Y.~Lagadeuc, V.~Devictor, L.~Doyen, A.~Duputié, D.~Eveillard,
   W.~Thuiller, and M.~Loreau. 2015.
 \newblock {REVIEW}: {Predictive} ecology in a changing world.
 \newblock Journal of Applied Ecology, {\bf 52}:1293--1310.
+
+\bibitem[{Renwick et~al.(2018)Renwick, Curtis, Kleinhesselink, Schlaepfer,
+  Bradley, Aldridge, Poulter, and Adler}]{Renwick2018}
+Renwick, K.~M., C.~Curtis, A.~R. Kleinhesselink, D.~Schlaepfer, B.~A. Bradley,
+  C.~L. Aldridge, B.~Poulter, and P.~B. Adler. 2018.
+\newblock Multi-model comparison highlights consistency in predicted effect of
+  warming on a semi-arid shrub.
+\newblock Global Change Biology, {\bf 24}:424--438.
 
 \bibitem[{Rosenzweig et~al.(1995)}]{rosenzweig_1995}
 Rosenzweig, M.~L. et~al. 1995.
