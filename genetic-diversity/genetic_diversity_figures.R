@@ -12,9 +12,9 @@ png("figures/spatial&temporal_model.png",height=10,width=4,res=400,units="in")
   temp=seq(-7,7,0.01)
   react_norms=getLambdas(temp,fec_Tmu,fec_Tsigma,fec_max)
   matplot(temp,react_norms,type="l",xlab="Temperature",ylab="Germination rate",col=myCols,lty="solid")
-  text(fec_Tmu[1],0.9*fec_max[1],"AA",col=myCols[1])
-  text(fec_Tmu[2],0.9*fec_max[2],"Aa",col=myCols[2])
-  text(fec_Tmu[3],0.9*fec_max[3],"aa",col=myCols[3])
+  text(fec_Tmu[1]-0.4,0.95*fec_max[1],"AA",col=myCols[1])
+  text(fec_Tmu[2],0.95*fec_max[2],"Aa",col=myCols[2])
+  text(fec_Tmu[3]+0.4,0.95*fec_max[3],"aa",col=myCols[3])
   mtext("(A)",side=3, line=0.5, adj=0)
   
   # plot mean abundances vs mean temperature, along with spatial model "prediction"
@@ -32,7 +32,7 @@ png("figures/spatial&temporal_model.png",height=10,width=4,res=400,units="in")
   rr <- range(N_t0_baseline)
   svals <- (N_t0_baseline-rr[1])/diff(rr)
   f <- colorRamp(c("red", "blue"), 0.4)
-  density_colors <- alpha(rgb(f(svals)/255),0.6)
+  density_colors <- rgb(f(svals)/255, alpha=0.6)
   # now plot
   plot(temperature_t1_baseline,r_baseline,xlab="Annual temperature",ylab="log Population growth rate",
        col=density_colors,pch=16)

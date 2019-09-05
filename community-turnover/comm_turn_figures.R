@@ -70,25 +70,43 @@ my_obs_temp <- temperature[(burnin_yrs+1):sim_yrs,site]
 my_biomass <- rowSums(spxp[(burnin_yrs+1):sim_yrs,site,])
 my_biomass_spp <- spxp[(burnin_yrs+1):sim_yrs,site,my_species]
 
-png("figures/community_forecast_species.png",height=4.5,width=4,res=400,units="in")
+png("figures/community_forecast_species.png",height=7.5,width=4.5,res=400,units="in")
   
-  layout(matrix(c(1,2),2,1),heights=c(0.1,0.4),widths=1)
+  layout(matrix(c(1,2,3),3,1),heights=c(0.1,0.4,0.4),widths=1)
   
-  par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(1,4,1,1),oma=c(2,0,0,0),cex=0.8)
+  par(tcl=-0.2,mgp=c(2,0.5,0),mar=c(1,4,1,4),oma=c(2,0,0,0),cex=0.8)
   
+  # top panel: temperature 
   plot(my_obs_temp,xlab="",ylab="Temperature",type="l",col="darkgrey")
   abline(v=baseline_yrs,col="black",lty=3)
   lines(my_expected_temp,lwd=2,col="black")
-
-  # focal species
+  mtext(side=3," A",line=-1.1,adj=0,cex=0.8)
+  
+  # middle panel: focal species and forecasts
   plot(my_biomass_spp,xlab="",ylab="Focal species biomass",type="l",col="darkgrey")
   abline(v=baseline_yrs,col="black",lty=3)
   lines(1:length(my_biomass_spp),spatial_forecast_spp,col="red",lwd=2)
   lines(1:length(my_biomass_spp),temporal_forecast_spp,col="blue",lwd=2)
   lines(1:length(my_biomass_spp),combined_forecast_spp,col="purple",lwd=2,lty=2)
+  mtext(side=3," B",line=-1.1,adj=0,cex=0.8)
   
   legend("right",c("Observed","Spatial forecast","Temporal forecast","Combined forecast"),
          col=c("darkgrey","red","blue","purple"),lwd=c(1,2,2,2),lty=c(1,1,1,2),bty="n",cex=0.8)
+  
+  # bottom panel: weights and species
+  spp_colors <- rep("darkgrey",N)
+  spp_colors[my_species] <- "black"
+  matplot((burnin_yrs:sim_yrs)-burnin_yrs,spxp[burnin_yrs:sim_yrs,site,],
+          type="l",lty=1,xlab="Time",ylab="Biomass by species",col=spp_colors)
+  abline(v=baseline_yrs,lty=3)
+  # weights
+  par(new=T)
+  plot((burnin_yrs:sim_yrs)-burnin_yrs,c(rep(NA,baseline_yrs+1),weight_spp),type="l",lty=1,lwd=2,col="dodgerblue",
+       xlab=NA,ylab=NA,ylim=c(0,1),axes=F)
+  axis(side=4)
+  mtext(side=4,line=2,"Weight",cex=0.8)
+  mtext(side=3," C",line=-1.1,adj=0,cex=0.8)
+  
   
   mtext(side=1,"Time",outer=T,line=1,cex=0.8)
   
