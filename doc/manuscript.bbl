@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
@@ -50,6 +50,13 @@ Elith, J. and J.~R. Leathwick. 2009.
   across space and time.
 \newblock Annual Review of Ecology, Evolution, and Systematics, {\bf
   40}:677--697.
+
+\bibitem[{Good et~al.(2017)Good, McDonald, Barrick, Lenski, and
+  Desai}]{Good2017}
+Good, B.~H., M.~J. McDonald, J.~E. Barrick, R.~E. Lenski, and M.~M. Desai.
+  2017.
+\newblock The dynamics of molecular evolution over 60,000 generations.
+\newblock Nature, {\bf 551}:45.
 
 \bibitem[{Harris et~al.(2018)Harris, Taylor, and
   White}]{harris_forecasting_2018}
@@ -105,6 +112,14 @@ Mouquet, N., Y.~Lagadeuc, V.~Devictor, L.~Doyen, A.~Duputié, D.~Eveillard,
 \newblock {REVIEW}: {Predictive} ecology in a changing world.
 \newblock Journal of Applied Ecology, {\bf 52}:1293--1310.
 
+\bibitem[{Nice et~al.(2019)Nice, Forister, Harrison, Gompert, Fordyce, Thorne,
+  Waetjen, and Shapiro}]{Nice2019}
+Nice, C.~C., M.~L. Forister, J.~G. Harrison, Z.~Gompert, J.~A. Fordyce, J.~H.
+  Thorne, D.~P. Waetjen, and A.~M. Shapiro. 2019.
+\newblock Extreme heterogeneity of population response to climatic variation
+  and the limits of prediction.
+\newblock Global Change Biology, {\bf 25}:2127--2136.
+
 \bibitem[{Renwick et~al.(2018)Renwick, Curtis, Kleinhesselink, Schlaepfer,
   Bradley, Aldridge, Poulter, and Adler}]{Renwick2018}
 Renwick, K.~M., C.~Curtis, A.~R. Kleinhesselink, D.~Schlaepfer, B.~A. Bradley,
@@ -124,6 +139,14 @@ Sala, O.~E., W.~J. Parton, L.~A. Joyce, and W.~K. Lauenroth. 1988.
   {States}.
 \newblock Ecology, {\bf 69}:40--45.
 
+\bibitem[{Silvertown et~al.(2006)Silvertown, Poulton, Johnston, Edwards, Heard,
+  and Biss}]{Silvertown2006}
+Silvertown, J., P.~Poulton, E.~Johnston, G.~Edwards, M.~Heard, and P.~Biss.
+  2006.
+\newblock The {Park} {Grass} {Experiment} 1856-2006: {Its} contribution to
+  ecology.
+\newblock Journal of Ecology, {\bf 94}:814.
+
 \bibitem[{Urban et~al.(2012)Urban, Tewksbury, and Sheldon}]{Urban2012}
 Urban, M.~C., J.~J. Tewksbury, and K.~S. Sheldon. 2012.
 \newblock On a collision course: competition and dispersal differences create
@@ -137,5 +160,19 @@ Ward, E.~J., E.~E. Holmes, J.~T. Thorson, and B.~Collen. 2014.
 \newblock Complexity is costly: a meta-analysis of parametric and
   non-parametric methods for short-term population forecasting.
 \newblock Oikos, {\bf 123}:652--661.
+
+\bibitem[{Williams and Jackson(2007)}]{Williams2007}
+Williams, J.~W. and S.~T. Jackson. 2007.
+\newblock Novel climates, no-analog communities, and ecological surprises.
+\newblock Frontiers in Ecology and the Environment, {\bf 5}:475--482.
+
+\bibitem[{Worth et~al.(2014)Worth, Williamson, Sakaguchi, Nevill, and
+  Jordan}]{Worth2014}
+Worth, J. R.~P., G.~J. Williamson, S.~Sakaguchi, P.~G. Nevill, and G.~J.
+  Jordan. 2014.
+\newblock Environmental niche modelling fails to predict {Last} {Glacial}
+  {Maximum} refugia: niche shifts, microrefugia or incorrect palaeoclimate
+  estimates?
+\newblock Global Ecology and Biogeography, {\bf 23}:1186--1197.
 
 \end{thebibliography}

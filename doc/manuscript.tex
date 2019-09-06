@@ -232,9 +232,9 @@ As in the community turnover example, we also fit a combined model as a weighted
 
 \subsection*{Discussion}
 
-Ecological forecasts are typically made using either a space-for-time substitution approach based on models fit to spatial data or using dynamic models fit to time-series data. Our results demonstrate that these two approaches can make very different predictions about the future state of ecological systems. Which approach provides the most accurate forecasts depends on the forecast-horizon. For short-term forecasts, time-series approaches perform best, whereas models based on spatial data made more accurate long-term forecasts. The change in model performance with increasing forecast horizon reflects differences in the types and scales of processes captured by spatial and temporal data sets. Local time-series data capture demographic processes, autocorrelation (including lagged responses) and responses of current assemblages to small changes in environmental conditions. In addition, the state of the system in the near future depends heavily on the current state (i.e., the initial condition). Since short-term forecasts do not typically require extrapolating into novel conditions, a model based on the historical range of variation and which incorporates lags and accurate initial conditions is likely to be the most generally useful approach for forecasting. The hypothesis that time-series models will be most effective for near-term forecasts is supported backed by recent empirical analyses of biodiversity forecasts at time scales from one to ten years \citep{harris_forecasting_2018}. In contrast, data sets spanning spatial gradients capture the long-term outcome of slower processes including ecological and evolutionary selection, dispersal, and responses to large changes in the environment. Models based on data covering spatial gradients may be a better choice for predicting long-term steady state outcomes of ecological change.
+Ecological forecasts are typically made using either a space-for-time substitution approach based on models fit to spatial data or using dynamic models fit to time-series data. Our results demonstrate that these two approaches can make very different predictions about the future state of ecological systems. Which approach provides the most accurate forecasts depends on the forecast-horizon. In our simulations, time-series approaches performed best for short-term forecasts, whereas models based on spatial data made more accurate long-term forecasts. The change in model performance with increasing forecast horizon reflects differences in the types and scales of processes captured by spatial and temporal data sets. Local time-series data capture demographic processes, lagged effects, and responses of current assemblages to small changes in environmental conditions. In addition, the state of the system in the near future depends heavily on the current state. Since short-term forecasts do not typically require extrapolating into novel conditions, a model based on the historical range of variation which incorporates lags and accurate initial conditions is likely to be the most generally useful approach for forecasting. The hypothesis that time-series models will be most effective for near-term forecasts is supported by recent empirical analyses of biodiversity forecasts at time scales from one to ten years \citep{harris_forecasting_2018}. In contrast, datasets spanning spatial gradients capture the long-term outcome of interactions between fast processes and slower processes such as ecological and evolutionary selection, dispersal, and responses to large changes in the environment. Models based on data from spatial gradients may be a better choice for predicting long-term, steady-state outcomes of ecological change.
 
-The challenge is determining what is ``near-term'' and what is ``long-term,'' and how to handle the many forecasts we need in ecology which fall in  intermediate time horizons. Our simulations demonstrate extended transitional periods during which neither the time-series or the spatial approach is effective on its own, but a weighted combination of the two can produce highly accurate predictions. Unfortunately, we currently have no way to determine how to weight these two approaches for different time horizons. Our combined models used weights fitted directly to the simulated data, which is impossible to do for actual forecasting when the future is unknown. We need new theory or empirical case studies in order to set these weights \emph{a priori}. Theory could explore the influence of different parameters on the rate at which slow processes (represented in spatial data) begin to influence dynamics. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals causes a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal_niche_width}A). Other factors to consider include organism lifespans, niche widths, and the magnitude of directional environmental change relative to historical interannual variation. Empirical research could address this challenge by accumulating enough case studies to infer patterns in the weight functions and guide applications in new systems. Developing  rules of thumb would require testing many forecasts from both time-series and spatial models across a range of time-horizons. This effort may require a novel integration of typically disparate approaches, such as analyses of paleoecological data (e.g.,), long-term historical data (e.g., ), and model systems with short-generation times (e.g., Petchy).
+The challenge is determining what is ``near-term'' and what is ``long-term,'' and how to handle the many forecasts we need in ecology which fall in between. Our simulations demonstrate extended transitional periods during which neither the time-series or the spatial approach is effective on its own, but a weighted combination of the two can produce highly accurate predictions. Unfortunately, we currently have no way to determine how to weight these two approaches for different time horizons. Our combined models used weights fitted directly to the simulated data, which is impossible to do for actual forecasting when the future is unknown. We need new theory or empirical case studies in order to assign these weights \emph{a priori}. Theory could explore the influence of different parameters on the rate at which slow processes begin to influence dynamics. The effects of some parameters are intuitive: in the community turnover example, increasing the fraction of dispersing individuals caused a more rapid shift in species composition and in model weights (Fig. \ref{fig:dispersal_niche_width}A). Other factors to consider include organism lifespans, niche widths, and the magnitude of directional environmental change relative to historical interannual variation. Empirical research could address this challenge by accumulating enough case studies to infer patterns in the weighting functions and guide applications in new systems. Developing  rules of thumb would require testing many forecasts from both time-series and spatial models across a range of time-horizons. This effort may require a novel integration of typically disparate approaches, such as analyses of paleoecological data (e.g., \citealt{Worth2014}), long-term observational (e.g., \citealt{Nice2019}) or experimental data (e.g., \citealt{Silvertown2006}), and model systems with short-generation times (e.g., \citealt{Good2017}).
 
 \begin{figure}[tbp]
 	\centering
@@ -243,14 +243,12 @@ The challenge is determining what is ``near-term'' and what is ``long-term,'' an
 	\label{fig:dispersal_niche_width}
 \end{figure}
 
-An alternative to a weighted combination of predictions from time-series and space-for-time models is to rely on fully process-based models.
-If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate
-predictions at all time-horizons. For example, rather than fitting phenomenological models to our simulated time-series, we could have fit the exact process-based models that we used to generate those time-series. Assuming reasonable estimates of the parameter, those models would have accurately predicted the dynamics at all forecast horizons. Process based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important for making predictions in a future with increasingly novel combinations of environment and species interactions (Williams et al.) Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models was understood, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well studied systems. As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that these forecasts do not rely on process-based understanding in some way. The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting models to different kinds of data sets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models.
+An alternative to a weighted combination of predictions from time-series and space-for-time models is to rely on fully process-based models. If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate predictions at all time-horizons. For example, rather than fitting phenomenological models to our simulated time-series, we could have fit the exact process-based models that we used to generate those time-series. Assuming reasonable estimates of the parameter, those models would have accurately predicted the dynamics at all forecast horizons. Process-based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important for making predictions in a future with increasingly novel combinations of environment and species interactions \citep{Williams2007}. Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models was known, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well studied systems. As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that phenomenological forecast models do not benefit from process-based understanding. The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting models to different kinds of datasets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models.
 
-Another approach to addressing the joint importance of spatial and time-series data for making ecological forecasts is joint spatiotemporal modeling...\comment{Ethan, what do you have in mind here?}
+Another approach to addressing the joint importance of spatial and time-series data for making ecological forecasts is joint spatiotemporal modeling...\comment{Ethan, what do you have in mind here? Probably something more than just working with spatiotemporal datasets and accounting for autocorrelation. Mevin has lots of papers with some sort of mechanistic modeling of spatiotemoral processes like dispersal and colonization. Should we say that the datasets needed to train this kind of model are rare, but that might be changing with more and more remote sensing data that is extensive in space and time? }
 
 Our results have important implications for the emerging field of ecological forecasting. First, they suggest that evaluating both near-term and long-term
-forecasts will be essential as research on forecasting methods accelerates. Second, while single approaches may perform reasonably well at either short or long forecast horizons, skillful predictions at intermediate time horizons may require a combination of information from spatial and temporal patterns. Intermediate time horizons pose challenges in other forecasting contexts as well. Weather forecasts based on regional-scale meteorological models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Global circulation models provide predictions for similar variables but at decadal time-scales \comment{PBA: Is this right? Are these models really different, or do they just differ in scake and resolution? I love this point, but should we move it out of last paragraph?}. Forecasting in between these two time scales has been challenging in meteorology and will likely be challenging in ecology as well. While the recent emphasis on near-term iterative forecasting (Dietze et al. 2018) is the logical and tractable starting point, we also need to build understanding and capacity for forecasting ecological dynamics across all temporal scales of interest.
+forecasts will be essential as research on forecasting methods accelerates. Second, while single approaches may perform reasonably well at either short or long forecast horizons, skillful predictions at intermediate time horizons may require a combination of information from spatial and temporal patterns. Intermediate time horizons pose challenges in other forecasting contexts as well. Weather forecasts based on regional-scale meteorological models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Forecasting these intermediate scales has been challenging in meteorology and will likely be challenging in ecology as well. While the recent emphasis on near-term iterative forecasting \citep{dietze_iterative_2018} is the logical and tractable starting point, we also need to build understanding and capacity for forecasting ecological dynamics across all temporal scales of interest.
 
 \newpage
 \renewcommand{\refname}{Literature cited}
@@ -277,24 +275,25 @@ forecasts will be essential as research on forecasting methods accelerates. Seco
 
 \section{Spatial, temporal and combined models}\label{models}
 
-The spatial model, which we refer to as $S$, is a linear regression fit to ``observed" data on mean population size, $\bar{N}$ at a series of locations, $x$, which vary in mean temperature, $K$. In our case, the observed data are simulated by the model described in the previous section. For both examples in the main text, we include a quadratic term to capture the unimodal relationship between  $\bar{N}$ and $K$:
- \begin{equation}
- \bar{N}_x = S(K_x) = \beta^S_0 +  \beta^S_1 K_x +\beta^S_2 {K_x}^2 + \varepsilon
- \label{eqn:spatial_regression}
- \end{equation}
-For the total biomass example from the community turnover model (results in Appendix \ref{biomass}), we dropped the quadratic term.
+The two simulation models in the main text describe how population size, $N(x,t)$, at location $x$ changes over time ($t$). We assume that the temperature, $K(x,t)$, at each location can vary in time and space.    
 
-The temporal model, which we call $T$, starts with a time series of ``observed" population sizes, or total biomasses, $\vec{N}$ at one location. In the community turnover example, we use data from a baseline period with a stationary distribution of annual temperature at the focal location, we fit the following regression, which predicts biomass at time $t+1$ as a function of biomass and annual temperature at time $t$:
- \begin{equation}
- \ln(N_{t+1}) = T(N_t,K_t) = \beta^T_0 +  \beta^T_1 ln(N_t) +\beta^T_2 K_t  +  \varepsilon
- \label{eqn:temporal_regression_community}
- \end{equation}
- For the eco-evolutionary example, the response variable is the log of the population growth rate, and we include a quadratic effect of annual temperature:
-  \begin{equation}
-  \ln(\frac{N_{t+1}}{N_t}) = T(N_t,K_t) = \beta^T_0 +  \beta^T_1 ln(N_t) +\beta^T_2 K_t  +\beta^T_3 K_t^2 +  \varepsilon
-  \label{eqn:temporal_regression_ecoevo}
-  \end{equation}
- This version of the temporal model returns a per capita growth rate on the log scale. To predict population size at the next time step, we simply exponentiate the growth rate and multiply it by the current population size: $exp(T(N_t,K_t)) N_t$.
+The spatial model, which we refer to as $S$, is a quadratic regression of the mean long-term population density at a location ($\bar{N}(x)$) against the mean temperature at that location ($\bar{K}(x)$).  The quadratic term describes the unimodal relationship between $\bar{N}$ and $\bar{K}$. The spatial statistical model is
+\begin{equation}
+	\bar{N}(x) = S(\bar{K}(x)) = \beta^S_0 +  \beta^S_1 \bar{K}(x) +\beta^S_2 {\bar{K}(x)}^2 + \varepsilon
+	\label{eqn:spatial_regression}
+\end{equation}
+
+The temporal model, which we call $T$, starts with a time-series of ``observed" population sizes, or total biomasses, at one location, $N(t)$, for $t=1...n$ (the spatial index is suppressed because we only focus on one location at a time). In the community turnover example, we fit the following regression, which predicts biomass at time $t+1$ as a function of biomass ($N(t)$) and annual temperature ($K(t)$) at time $t$,
+\begin{equation}
+	\ln(N(t+1)) = T(N(t),K(t)) = \beta^T_0 +  \beta^T_1 ln(N(t)) +\beta^T_2 K(t)  +  \varepsilon
+	\label{eqn:temporal_regression_community}
+\end{equation}
+In the eco-evolutionary example, the response variable is the log of the population growth rate. The regression is 
+\begin{equation}
+	\ln(\frac{N(t+1)}{N(t)}) = T(N(t),K(t)) = \beta^T_0 +  \beta^T_1 ln(N(t)) +\beta^T_2 K(t)  +\beta^T_3 K(t)^2 +  \varepsilon
+	\label{eqn:temporal_regression_ecoevo}
+\end{equation}
+This version of the temporal model returns a per capita growth rate on the log scale. To predict population size at the next time step, we exponentiate the growth rate and multiply it by the current population size: $\exp(T(N(t),K(t))) N(t)$.
 
 The combined model is a weighted average of predictions from the spatial and temporal models, with the weights changing as a function of time, here expressed as the forecast horizon. The weights change as a function of the square root of the forecast horizon, to allow rapid shifts in the model weights. 
 \begin{equation}
@@ -303,16 +302,20 @@ logit(\omega_t)=\beta^C_0 + \beta^C_1 \sqrt{t}
 \end{equation}
 For the community turnover example, the predicted biomass from the combined model is:
 \begin{equation}
-\hat{N}_{t+1} = \omega *T(N_{t},K_t) + (1-\omega) * S(K_t) 
+\hat{N}(t+1)= \omega \cdot T(N(t),K(t)) + (1-\omega) \cdot S(K(t)) 
 \label{eqn:combined_model}
 \end{equation}
-For the eco-evolutionary example, the predicted population size from the combined model is:
+Again, we suppress the spatial subscript ($x$) here because we are focused on densities at just one location. For the eco-evolutionary example, the predicted population size from the combined model is:
 \begin{equation}
-\hat{N}_{t+1} = \omega * exp(T(N_{t},K_t)) N_t + (1-\omega) * S(K_t) 
-\label{eqn:combined_model}
+	\hat{N}(t+1) = \omega \cdot exp(T(N(t),K(t))) N(t) + (1-\omega) \cdot S(K(t)) 
+	\label{eqn:combined_model}
 \end{equation}
 
-We used the \texttt{optim} function to estimate the $\beta^C$s that minimize the sum of squared errors, $(\hat{N}_{t+1} - N_{t+1})^2$
+We used the \texttt{optim} function to estimate the $\beta^C$s that minimize the sum of squared errors, $(\hat{N}(t+1) - N(t+1))^2$.
+
+\section{Description of the metacommunity model}\label{metacomm}
+
+
 
 \section{Description of the eco-evolutionary annual plant model}\label{eco-evo}
 
@@ -322,47 +325,47 @@ We used the \texttt{optim} function to estimate the $\beta^C$s that minimize the
 
 \noindent \textbf{Haploid Model:} Begin with a haploid model that describes the number of seeds present in a seed bank.  $N_{i,t}$ is the number of seeds of species $i$ at time $t$.  The model is
 \begin{align}\begin{split}
-N_{1,t+1} &= s_1 [1-g_1(E_t)]N_{1,t}+\frac{\lambda_1g_1(E_t)N_{1,t}}{1+ \alpha_{11}g_1(E_t)N_{1,t} + \alpha_{12}g_2(E_t)N_{2,t}}\\
-N_{2,t+1} &= s_2 [1-g_2(E_t)]N_{2,t}+\frac{\lambda_2g_2(E_t)N_{2,t}}{1+ \alpha_{21}g_1(E_t)N_{1,t} + \alpha_{22}g_2(E_t)N_{2,t}}
+N_{1,t+1} &= s_1 [1-g_1(K(t))]N_{1,t}+\frac{\lambda_1g_1(K(t))N_{1,t}}{1+ \alpha_{11}g_1(K(t))N_{1,t} + \alpha_{12}g_2(K(t))N_{2,t}}\\
+N_{2,t+1} &= s_2 [1-g_2(K(t))]N_{2,t}+\frac{\lambda_2g_2(K(t))N_{2,t}}{1+ \alpha_{21}g_1(K(t))N_{1,t} + \alpha_{22}g_2(K(t))N_{2,t}}
 \end{split}\end{align}
-where $g_{i}(E_t)$ is the probability of germination, $E_t$ is the environmental quality at time $t$, $s_i$ is the seed survival probability for species $i$, and $\lambda_i$ is the seed production rate per plant.  Below I refer to the $\alpha_{ij}$ as intra- and inter-specific competition coefficients.  \\
+where $g_{i}(K(t))$ is the probability of germination, $K(t)$ is the temperature at time $t$, $s_i$ is the seed survival probability for species $i$, and $\lambda_i$ is the seed production rate per plant.  Below we refer to the $\alpha_{ij}$ as intra- and inter-specific competition coefficients.  
 
-\noindent \textbf{Diploid Model:} Consider a one-species diploid model.  The genotypes are denoted by $AA$, $Aa$, and $aa$.   The number of each genotypes at time $t$ is $N_{AA,t}$, $N_{Aa,t}$, and $N_{aa,t}$.  The germination rates for each genotype are $g_{AA}(E_t)$, $g_{Aa}(E_t)$, and $g_{aa}(E_t)$.  The seed survival probability and seed production rate for genotype $AA$ are $s_{AA}$ and $\lambda_{AA}$, respectively.  The analogous parameters for the other genotypes are similarly denoted.  The competition coefficients are denoted by $\alpha_{i,j}$, e.g., $\alpha_{AA,AA}$ or $\alpha_{AA,Aa}$.  Throughout we assume that gametes mix randomly in the population.  
+\noindent \textbf{Diploid Model:} Consider a one-species diploid model.  The genotypes are denoted by $AA$, $Aa$, and $aa$.   The number of each genotypes at time $t$ is $N_{AA}(t)$, $N_{Aa}(t)$, and $N_{aa}(t)$.  The germination rates for each genotype are $g_{AA}(K(t))$, $g_{Aa}(K(t))$, and $g_{aa}(K(t))$.  The seed survival probability and seed production rate for genotype $AA$ are $s_{AA}$ and $\lambda_{AA}$, respectively.  The analogous parameters for the other genotypes are similarly denoted.  The competition coefficients are denoted by $\alpha_{i,j}$, e.g., $\alpha_{AA,AA}$ or $\alpha_{AA,Aa}$.  Throughout we assume that gametes mix randomly in the population.  
 
 First consider the case where the competition coefficients are zero ($\alpha_{i,j}=0$).  Let $T$ denote the total number of gamete-pairs produced in a given year,
 \begin{equation}
-T = \lambda_{AA}N_{AA,t}g_{AA}(E_t)+ \lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)+\lambda_{aa}N_{aa,t}g_{aa}(E_t).
+T = \lambda_{AA}N_{AA}(t)g_{AA}(K(t))+ \lambda_{Aa}N_{Aa}(t)g_{Aa}(K(t))+\lambda_{aa}N_{aa}(t)g_{aa}(K(t)).
 \end{equation}
 The first term is the number of gamete-pairs produced by $AA$ individuals.  The second and third terms are the numbers of gamete-pairs produced by $Aa$ and $aa$ individuals, respectively. The proportion of $A$ gametes ($\phi_A$) and the proportion of $a$ gametes ($\phi_a$) are given by
 \begin{align}\begin{split}
-\phi_{A} &= \frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)+ \frac{1}{2}\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{T} \hspace{10pt} \text{and} \hspace{10pt} \phi_a = 1-\phi_{A}.
+\phi_{A} &= \frac{\lambda_{AA}N_{AA}(t)g_{AA}(K(t))+ \frac{1}{2}\lambda_{Aa}N_{Aa}(t)g_{Aa}(K(t))}{T} \hspace{10pt} \text{and} \hspace{10pt} \phi_a = 1-\phi_{A}.
 \end{split}\end{align}
 Note that the $T$ in the denominator of $\phi_A$ shows up because we are computing proportions.  Combining all of these we get the dynamics for each genotype,
 \begin{align}\begin{split}
-N_{AA,t+1} &= s_{AA}[1-g_{AA}(E_t)]N_{AA,t} + \phi_A^2T\\
-N_{Aa,t+1} &= s_{Aa}[1-g_{Aa}(E_t)]N_{Aa,t} + \phi_A\phi_aT\\
-N_{aa,t+1} &= s_{aa}[1-g_{aa}(E_t)]N_{aa,t} + \phi_a^2T
+N_{AA}(t+1) &= s_{AA}[1-g_{AA}(K(t))]N_{AA}(t) + \phi_A^2T\\
+N_{Aa}(t+1) &= s_{Aa}[1-g_{Aa}(K(t))]N_{Aa}(t) + \phi_A\phi_aT\\
+N_{aa}(t+1) &= s_{aa}[1-g_{aa}(K(t))]N_{aa}(t) + \phi_a^2T
 \end{split}\end{align}
 
 Now consider the case where the competition coefficients are non-zero ($\alpha_{i,j}\neq0$).  Including competition changes the way in which we compute $T$, $\phi_A$, and $\phi_a$.  Specifically, because the total number of seeds produced per year by each genotypes is reduced based on intra- and inter-specific competition, the total number of gamete-pairs becomes
 \begin{align}\begin{split}
-T &=  \frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)}{1+ \alpha_{AA,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{AA,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{AA,aa}g_{aa}(E_t)N_{aa,t}} \\ 
-&+ \frac{\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{1+ \alpha_{Aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{Aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{Aa,aa}g_{aa}(E_t)N_{aa,t}}\\
-&+\frac{\lambda_{aa}N_{aa,t}g_{aa}(E_t)}{1+ \alpha_{aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{aa,aa}g_{aa}(E_t)N_{aa,t}}.
+T &=  \frac{\lambda_{AA}N_{AA}(t)g_{AA}(K(t))}{1+ \alpha_{AA,AA}g_{AA}(K(t))N_{AA}(t) + \alpha_{AA,Aa}g_{Aa}(K(t))N_{Aa}(t)+ \alpha_{AA,aa}g_{aa}(K(t))N_{aa}(t)} \\ 
+&+ \frac{\lambda_{Aa}N_{Aa}(t)g_{Aa}(K(t))}{1+ \alpha_{Aa,AA}g_{AA}(K(t))N_{AA}(t) + \alpha_{Aa,Aa}g_{Aa}(K(t))N_{Aa}(t)+ \alpha_{Aa,aa}g_{aa}(K(t))N_{aa}(t)}\\
+&+\frac{\lambda_{aa}N_{aa}(t)g_{aa}(K(t))}{1+ \alpha_{aa,AA}g_{AA}(K(t))N_{AA}(t) + \alpha_{aa,Aa}g_{Aa}(K(t))N_{Aa}(t)+ \alpha_{aa,aa}g_{aa}(K(t))N_{aa}(t)}.
 \label{eqn:defineT}
 \end{split}\end{align}
 The first line is the number of gamete-pairs produced by $AA$ individuals after accounting for the effects of competition.  The second and third lines are the numbers of gamete-pairs produced by $Aa$ and $aa$ individuals, respectively. The proportions of $A$ gametes and $a$ gametes are 
 \begin{align}\begin{split}
-\phi_A &= \frac{1}{T}\frac{\lambda_{AA}N_{AA,t}g_{AA}(E_t)}{1+ \alpha_{AA,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{AA,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{AA,aa}g_{aa}(E_t)N_{aa,t}} \\
-&+ \frac{1}{2T}\frac{\lambda_{Aa}N_{Aa,t}g_{Aa}(E_t)}{1+ \alpha_{Aa,AA}g_{AA}(E_t)N_{AA,t} + \alpha_{Aa,Aa}g_{Aa}(E_t)N_{Aa,t}+ \alpha_{Aa,aa}g_{aa}(E_t)N_{aa,t}}\\
+\phi_A &= \frac{1}{T}\frac{\lambda_{AA}N_{AA}(t)g_{AA}(K(t))}{1+ \alpha_{AA,AA}g_{AA}(K(t))N_{AA}(t) + \alpha_{AA,Aa}g_{Aa}(K(t))N_{Aa}(t)+ \alpha_{AA,aa}g_{aa}(K(t))N_{aa}(t)} \\
+&+ \frac{1}{2T}\frac{\lambda_{Aa}N_{Aa}(t)g_{Aa}(K(t))}{1+ \alpha_{Aa,AA}g_{AA}(K(t))N_{AA}(t) + \alpha_{Aa,Aa}g_{Aa}(K(t))N_{Aa}(t)+ \alpha_{Aa,aa}g_{aa}(K(t))N_{aa}(t)}\\
 \phi_a &= 1- \phi_A
 \label{eqn:definePhi}
 \end{split}\end{align}
 Combining all of this results in the same model as above,
 \begin{align}\begin{split}
-N_{AA,t+1} &= s_{AA}[1-g_{AA}(E_t)]N_{AA,t} + \phi_A^2T\\
-N_{Aa,t+1} &= s_{Aa}[1-g_{Aa}(E_t)]N_{Aa,t} + 2 \phi_A\phi_aT\\
-N_{aa,t+1} &= s_{aa}[1-g_{aa}(E_t)]N_{aa,t} + \phi_a^2T,
+N_{AA}(t+1) &= s_{AA}[1-g_{AA}(K(t))]N_{AA}(t) + \phi_A^2T\\
+N_{Aa}(t+1) &= s_{Aa}[1-g_{Aa}(K(t))]N_{Aa}(t) + 2 \phi_A\phi_aT\\
+N_{aa}(t+1) &= s_{aa}[1-g_{aa}(K(t))]N_{aa}(t) + \phi_a^2T,
 \end{split}\end{align}
 but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{eqn:defineT}) and (\ref{eqn:definePhi}) . 
 
