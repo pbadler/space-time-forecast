@@ -152,9 +152,7 @@ The objective was to forecast the response of the system to the temperature incr
 
 We made forecasts based on two phenomenological models, each representing processes operating at different time scales. 
 The first phenomenological model represents the space-for-time substiution approach, which we call the ``spatial approach'' for brevity. 
-We correlated the mean environment with the mean of an ecological state or rate across many sites. The second model represents the time-series or ``temporal approach.'' We correlated interannual variation in an ecological response with interannual variation in the environment at just one site. 
-We compared forecasts from both models to the simulated dynamics to determine how well the two approaches perform at different forecast horizons. We also assessed the potential for combining the information available in both spatial and temporal patterns by using a weighted average of the forecasts from the spatial and temporal approaches optimized to best match the (simulated) observations. We then studied how the optimal model weights changed over time. These spatial, temporal and combined statistical
-models are described in Appendix \ref{models}. We expected the temporal model to best predict short-term dynamics, the spatial model to best predict long-term dynamics, and that a combination of the two approaches would provide the best forecasts at transitional, intermediate time scales.
+We correlated the mean environment with the mean of an ecological state or rate across many sites. The second model represents the time-series or ``temporal approach.'' We correlated interannual variation in an ecological response with interannual variation in the environment at just one site. We compared forecasts from both models to the simulated dynamics to determine how well the two approaches perform at different forecast horizons. We also assessed the potential for combining the information available in both spatial and temporal patterns by using a weighted average of the forecasts from the spatial and temporal approaches optimized to best match the (simulated) observations. We then studied how the optimal model weights changed over time. We expected the temporal model to best predict short-term dynamics, the spatial model to best predict long-term dynamics, and that a combination of the two approaches would provide the best forecasts at transitional, intermediate time scales. The spatial, temporal and combined statistical models are described in Appendix \ref{models} and all code for both case studies is available at Github (https://github.com/pbadler/space-time-forecast).
 
 \subsection*{Community turnover example}
 
@@ -255,6 +253,10 @@ Another potential approach for intermediate scale forecast horizons is to use mo
 
 Our results have important implications for the emerging field of ecological forecasting. First, they suggest that evaluating both near-term and long-term
 forecasts will be essential as research on forecasting methods accelerates. Second, while single approaches may perform reasonably well at either short or long forecast horizons, skillful predictions at intermediate time horizons may require a combination of information from spatial and temporal patterns. Intermediate time horizons pose challenges in other forecasting contexts as well. Weather forecasts based on regional-scale meteorological models are very effective for forecasting a week to ten days in advance, but then become largely uninformative. Forecasting these intermediate scales has been challenging in meteorology and will likely be challenging in ecology as well. While the recent emphasis on near-term iterative forecasting \citep{dietze_iterative_2018} is the logical and tractable starting point, we also need to build understanding and capacity for forecasting ecological dynamics across all temporal scales of interest.
+
+\subsubsection*{Acknowledgements}
+
+We thank Heather Lynch and Juan Manuel Morales for comments that improved early drafts of the paper. PBA was supported by NSF DEB-1927282 and the Utah Agriculture Experiment Station, EPW was supported by ??, and MHC was supported by ??.
 
 \newpage
 \renewcommand{\refname}{Literature cited}
