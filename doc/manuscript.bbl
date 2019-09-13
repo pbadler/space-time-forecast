@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
@@ -105,6 +105,12 @@ Levin, S.~A. 1992.
   award lecture.
 \newblock Ecology, {\bf 73}:1943--1967.
 
+\bibitem[{McDermott and Wikle(2017)}]{McDermott2017}
+McDermott, P.~L. and C.~K. Wikle. 2017.
+\newblock An ensemble quadratic echo state network for non-linear
+  spatio-temporal forecasting.
+\newblock Stat, {\bf 6}:315--330.
+
 \bibitem[{Mouquet et~al.(2015)Mouquet, Lagadeuc, Devictor, Doyen, Duputié,
   Eveillard, Faure, Garnier, Gimenez, Huneman, Jabot, Jarne, Joly, Julliard,
   Kéfi, Kergoat, Lavorel, Le~Gall, Meslin, Morand, Morin, Morlon, Pinay,
@@ -144,6 +150,14 @@ Sala, O.~E., W.~J. Parton, L.~A. Joyce, and W.~K. Lauenroth. 1988.
   {States}.
 \newblock Ecology, {\bf 69}:40--45.
 
+\bibitem[{Schliep et~al.(2018)Schliep, Lany, Zarnetske, Schaeffer, Orians,
+  Orwig, and Preisser}]{Schliep2018}
+Schliep, E.~M., N.~K. Lany, P.~L. Zarnetske, R.~N. Schaeffer, C.~M. Orians,
+  D.~A. Orwig, and E.~L. Preisser. 2018.
+\newblock Joint species distribution modelling for spatio-temporal occurrence
+  and ordinal abundance data.
+\newblock Global Ecology and Biogeography, {\bf 27}:142--155.
+
 \bibitem[{Silvertown et~al.(2006)Silvertown, Poulton, Johnston, Edwards, Heard,
   and Biss}]{Silvertown2006}
 Silvertown, J., P.~Poulton, E.~Johnston, G.~Edwards, M.~Heard, and P.~Biss.
@@ -166,10 +180,24 @@ Ward, E.~J., E.~E. Holmes, J.~T. Thorson, and B.~Collen. 2014.
   non-parametric methods for short-term population forecasting.
 \newblock Oikos, {\bf 123}:652--661.
 
+\bibitem[{Wikle(2003)}]{Wikle2003}
+Wikle, C.~K. 2003.
+\newblock Hierarchical {Bayesian} {Models} for {Predicting} the {Spread} of
+  {Ecological} {Processes}.
+\newblock Ecology, {\bf 84}:1382--1394.
+
 \bibitem[{Williams and Jackson(2007)}]{Williams2007}
 Williams, J.~W. and S.~T. Jackson. 2007.
 \newblock Novel climates, no-analog communities, and ecological surprises.
 \newblock Frontiers in Ecology and the Environment, {\bf 5}:475--482.
+
+\bibitem[{Williams et~al.(2017)Williams, Hooten, Womble, Esslinger, Bower, and
+  Hefley}]{Williams2017}
+Williams, P.~J., M.~B. Hooten, J.~N. Womble, G.~G. Esslinger, M.~R. Bower, and
+  T.~J. Hefley. 2017.
+\newblock An integrated data model to estimate spatiotemporal occupancy,
+  abundance, and colonization dynamics.
+\newblock Ecology, {\bf 98}:328--336.
 
 \bibitem[{Worth et~al.(2014)Worth, Williamson, Sakaguchi, Nevill, and
   Jordan}]{Worth2014}
