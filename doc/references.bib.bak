@@ -1,0 +1,1027 @@
+% Encoding: windows-1252
+
+@Article{Adler2012,
+  author     = {Adler, Peter B and Dalgleish, Harmony J and Ellner, Stephen P},
+  title      = {Forecasting plant community impacts of climate variability and change: when do competitive interactions matter?},
+  journal    = {Journal of Ecology},
+  year       = {2012},
+  volume     = {100},
+  number     = {2},
+  pages      = {478--487},
+  month      = mar,
+  issn       = {1365-2745},
+  abstract   = {1. A change in a climate variable may alter a species’ abundance
+	not only through a direct effect on that species’ vital rates,
+	but also through ‘indirect’ effects mediated by species interactions.
+	While recent work has highlighted cases in which indirect effects
+	overwhelm the direct effects of climate, we lack robust generalizations
+	to predict the strength of indirect effects. 2. For communities
+	dominated by non-trophic interactions, we propose that the potential
+	for indirect effects of climate change declines with the strength
+	of stabilizing niche differences. 3. We tested this hypothesis
+	by analysing an empirically parameterized four species population
+	model. We quantified negative frequency dependence in population
+	growth rates as a measure of stabilizing niche differences and projected
+	the sensitivity of each species to direct and indirect effects of
+	climate perturbations. 4. Consistent with our hypothesis, species’
+	sensitivities to indirect effects decreased rapidly with increasing
+	stabilization by niche differences. 5. Synthesis. Information about
+	niche differences can identify species sensitive to indirect effects
+	of climate change and determine when multispecies forecasting approaches
+	are necessary. However, practical application of this generalization
+	will require methods to predict niche differences from easily collected
+	data.},
+  copyright  = {© 2011 The Authors. Journal of Ecology © 2011 British Ecological Society},
+  doi        = {10.1111/j.1365-2745.2011.01930.x},
+  file       = {Full Text PDF:C\:\\Users\\adler\\Box\\zotero\\storage\\BCS7FRVC\\Adler et al. - 2012 - Forecasting plant community impacts of climate var.pdf:application/pdf;Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\7NV4UZTJ\\abstract.html:text/html},
+  keywords   = {competition, climate change, niche, plant population and community dynamics, demography, integral projection model, community ecology, sagebrush steppe},
+  language   = {en},
+  owner      = {adler},
+  shorttitle = {Forecasting plant community impacts of climate variability and change},
+  timestamp  = {2019.05.24},
+  url        = {http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2745.2011.01930.x/abstract},
+  urldate    = {2012-04-01},
+}
+
+@ARTICLE{alexander_lags_2018,
+  author = {Alexander, Jake M. and Chalmandrier, Loïc and Lenoir, Jonathan and
+	Burgess, Treena I. and Essl, Franz and Haider, Sylvia and Kueffer,
+	Christoph and McDougall, Keith and Milbau, Ann and Nuñez, Martin
+	A. and Pauchard, Aníbal and Rabitsch, Wolfgang and Rew, Lisa J.
+	and Sanders, Nathan J. and Pellissier, Loïc},
+  title = {Lags in the response of mountain plant communities to climate change},
+  journal = {Global Change Biology},
+  year = {2018},
+  volume = {24},
+  pages = {563--579},
+  number = {2},
+  month = feb,
+  abstract = {Rapid climatic changes and increasing human influence at high elevations
+	around the world will have profound impacts on mountain biodiversity.
+	However, forecasts from statistical models (e.g. species distribution
+	models) rarely consider that plant community changes could substantially
+	lag behind climatic changes, hindering our ability to make temporally
+	realistic projections for the coming century. Indeed, the magnitudes
+	of lags, and the relative importance of the different factors giving
+	rise to them, remain poorly understood. We review evidence for three
+	types of lag: “dispersal lags�? affecting plant species’ spread
+	along elevational gradients, “establishment lags�? following their
+	arrival in recipient communities, and “extinction lags�? of resident
+	species. Variation in lags is explained by variation among species
+	in physiological and demographic responses, by effects of altered
+	biotic interactions, and by aspects of the physical environment.
+	Of these, altered biotic interactions could contribute substantially
+	to establishment and extinction lags, yet impacts of biotic interactions
+	on range dynamics are poorly understood. We develop a mechanistic
+	community model to illustrate how species turnover in future communities
+	might lag behind simple expectations based on species’ range shifts
+	with unlimited dispersal. The model shows a combined contribution
+	of altered biotic interactions and dispersal lags to plant community
+	turnover along an elevational gradient following climate warming.
+	Our review and simulation support the view that accounting for disequilibrium
+	range dynamics will be essential for realistic forecasts of patterns
+	of biodiversity under climate change, with implications for the conservation
+	of mountain species and the ecosystem functions they provide.},
+  doi = {10.1111/gcb.13976},
+  issn = {1365-2486},
+  keywords = {climate change, range expansion, migration, biotic interactions, range
+	dynamics, climatic debt, alpine ecosystems, novel interactions},
+  language = {en},
+  url = {http://onlinelibrary.wiley.com/doi/10.1111/gcb.13976/abstract},
+  urldate = {2018-02-05}
+}
+
+@ARTICLE{clark_ecological_2001,
+  author = {Clark, JS and Carpenter, SR and Barber, M and Collins, S and Dobson,
+	A and Foley, JA and Lodge, DM and Pascual, M and Pielke, R and Pizer,
+	W and Pringle, C and Reid, WV and Rose, KA and Sala, O and Schlesinger,
+	WH and Wall, DH and Wear, D},
+  title = {Ecological forecasts: {An} emerging imperative},
+  journal = {Science},
+  year = {2001},
+  volume = {293},
+  pages = {657--660},
+  number = {5530},
+  abstract = {Planning and decision-making can be improved by access to reliable
+	forecasts of ecosystem state, ecosystem services, and natural capital.
+	Availability of new data sets, together with progress in computation
+	and statistics, will increase our ability to forecast ecosystem change.
+	An agenda that would lead toward a capacity to produce, evaluate,
+	and communicate forecasts of critical ecosystem services requires
+	a process that engages scientists and decision-makers. interdisciplinary
+	linkages are necessary because of the climate and societal controls
+	on ecosystems, the feedbacks involving social change, and the decision-making
+	relevance of forecasts}
+}
+
+@ARTICLE{dalgleish_climate_2011,
+  author = {Dalgleish, Harmony J. and Koons, David N. and Hooten, Mevin B. and
+	Moffet, Corey A. and Adler, Peter B.},
+  title = {Climate influences the demography of three dominant sagebrush steppe
+	plants},
+  journal = {Ecology},
+  year = {2011},
+  volume = {92},
+  pages = {75--85},
+  number = {1},
+  month = jan,
+  doi = {10.1890/10-0780.1},
+  file = {ESA Online Journals - Climate influences the demography of three dominant sagebrush steppe plants:C\:\\Users\\adler\\Box\\zotero\\storage\\S2S6B6ET\\10-0780.html:text/html},
+  issn = {0012-9658},
+  url = {http://www.esajournals.org/doi/abs/10.1890/10-0780.1},
+  urldate = {2011-06-30}
+}
+
+@BOOK{dietze_ecological_2017,
+  title = {Ecological {Forecasting}},
+  publisher = {Princeton University Press},
+  year = {2017},
+  author = {Dietze, Michael C.},
+  abstract = {An authoritative and accessible introduction to the concepts and tools
+	needed to make ecology a more predictive scienceEcologists are being
+	asked to respond to unprecedented environmental challenges. How can
+	they provide the best available scientific information about what
+	will happen in the future? Ecological Forecasting is the first book
+	to bring together the concepts and tools needed to make ecology a
+	more predictive science.Ecological Forecasting presents a new way
+	of doing ecology. A closer connection between data and models can
+	help us to project our current understanding of ecological processes
+	into new places and times. This accessible and comprehensive book
+	covers a wealth of topics, including Bayesian calibration and the
+	complexities of real-world data; uncertainty quantification, partitioning,
+	propagation, and analysis; feedbacks from models to measurements;
+	state-space models and data fusion; iterative forecasting and the
+	forecast cycle; and decision support.Features case studies that highlight
+	the advances and opportunities in forecasting across a range of ecological
+	subdisciplines, such as epidemiology, fisheries, endangered species,
+	biodiversity, and the carbon cycle Presents a probabilistic approach
+	to prediction and iteratively updating forecasts based on new dataDescribes
+	statistical and informatics tools for bringing models and data together,
+	with emphasis on:Quantifying and partitioning uncertaintiesDealing
+	with the complexities of real-world dataFeedbacks to identifying
+	data needs, improving models, and decision supportNumerous hands-on
+	activities in R available online},
+  file = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\J3UFDMDC\\11048.html:text/html},
+  language = {en},
+  url = {https://press.princeton.edu/titles/11048.html},
+  urldate = {2018-07-30}
+}
+
+@ARTICLE{dietze_prediction_2017,
+  author = {Dietze, Michael C.},
+  title = {Prediction in ecology: a first-principles framework},
+  journal = {Ecological Applications},
+  year = {2017},
+  volume = {27},
+  pages = {2048--2060},
+  number = {7},
+  abstract = {Quantitative predictions are ubiquitous in ecology, yet there is limited
+	discussion on the nature of prediction in this field. Herein I derive
+	a general quantitative framework for analyzing and partitioning the
+	sources of uncertainty that control predictability. The implications
+	of this framework are assessed conceptually and linked to classic
+	questions in ecology, such as the relative importance of endogenous
+	(density-dependent) vs. exogenous factors, stability vs. drift, and
+	the spatial scaling of processes. The framework is used to make a
+	number of novel predictions and reframe approaches to experimental
+	design, model selection, and hypothesis testing. Next, the quantitative
+	application of the framework to partitioning uncertainties is illustrated
+	using a short-term forecast of net ecosystem exchange. Finally, I
+	advocate for a new comparative approach to studying predictability
+	across different ecological systems and processes and lay out a number
+	of hypotheses about what limits predictability and how these limits
+	should scale in space and time.},
+  copyright = {© 2017 The Authors. Ecological Applications published by Wiley Periodicals,
+	Inc. on behalf of Ecological Society of America.},
+  doi = {10.1002/eap.1589},
+  issn = {1939-5582},
+  keywords = {scale, stability, uncertainty, ecological forecasting, net ecosystem
+	exchange, endogenous, exogenous, parameter, process error, random
+	effects},
+  language = {en},
+  shorttitle = {Prediction in ecology},
+  url = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.1589},
+  urldate = {2019-03-08}
+}
+
+@ARTICLE{dietze_iterative_2018,
+  author = {Dietze, Michael C. and Fox, Andrew and Beck-Johnson, Lindsay M. and
+	Betancourt, Julio L. and Hooten, Mevin B. and Jarnevich, Catherine
+	S. and Keitt, Timothy H. and Kenney, Melissa A. and Laney, Christine
+	M. and Larsen, Laurel G. and Loescher, Henry W. and Lunch, Claire
+	K. and Pijanowski, Bryan C. and Randerson, James T. and Read, Emily
+	K. and Tredennick, Andrew T. and Vargas, Rodrigo and Weathers, Kathleen
+	C. and White, Ethan P.},
+  title = {Iterative near-term ecological forecasting: {Needs}, opportunities,
+	and challenges},
+  journal = {Proceedings of the National Academy of Sciences},
+  year = {2018},
+  pages = {201710231},
+  month = jan,
+  abstract = {Two foundational questions about sustainability are “How are ecosystems
+	and the services they provide going to change in the future?�? and
+	“How do human decisions affect these trajectories?�? Answering
+	these questions requires an ability to forecast ecological processes.
+	Unfortunately, most ecological forecasts focus on centennial-scale
+	climate responses, therefore neither meeting the needs of near-term
+	(daily to decadal) environmental decision-making nor allowing comparison
+	of specific, quantitative predictions to new observational data,
+	one of the strongest tests of scientific theory. Near-term forecasts
+	provide the opportunity to iteratively cycle between performing analyses
+	and updating predictions in light of new evidence. This iterative
+	process of gaining feedback, building experience, and correcting
+	models and methods is critical for improving forecasts. Iterative,
+	near-term forecasting will accelerate ecological research, make it
+	more relevant to society, and inform sustainable decision-making
+	under high uncertainty and adaptive management. Here, we identify
+	the immediate scientific and societal needs, opportunities, and challenges
+	for iterative near-term ecological forecasting. Over the past decade,
+	data volume, variety, and accessibility have greatly increased, but
+	challenges remain in interoperability, latency, and uncertainty quantification.
+	Similarly, ecologists have made considerable advances in applying
+	computational, informatic, and statistical methods, but opportunities
+	exist for improving forecast-specific theory, methods, and cyberinfrastructure.
+	Effective forecasting will also require changes in scientific training,
+	culture, and institutions. The need to start forecasting is now;
+	the time for making ecology more predictive is here, and learning
+	by doing is the fastest route to drive the science forward.},
+  copyright = {© 2018 . Published under the PNAS license.},
+  doi = {10.1073/pnas.1710231115},
+  file = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\E4RV7YNR\\1710231115.html:text/html},
+  issn = {0027-8424, 1091-6490},
+  keywords = {prediction, forecast, ecology},
+  language = {en},
+  shorttitle = {Iterative near-term ecological forecasting},
+  url = {http://www.pnas.org/content/early/2018/01/29/1710231115},
+  urldate = {2018-01-30}
+}
+
+@ARTICLE{elith_species_2009,
+  author = {Elith, Jane and Leathwick, John R.},
+  title = {Species distribution models: ecological explanation and prediction
+	across space and time},
+  journal = {Annual Review of Ecology, Evolution, and Systematics},
+  year = {2009},
+  volume = {40},
+  pages = {677--697},
+  number = {1},
+  abstract = {Species distribution models (SDMs) are numerical tools that combine
+	observations of species occurrence or abundance with environmental
+	estimates. They are used to gain ecological and evolutionary insights
+	and to predict distributions across landscapes, sometimes requiring
+	extrapolation in space and time. SDMs are now widely used across
+	terrestrial, freshwater, and marine realms. Differences in methods
+	between disciplines reflect both differences in species mobility
+	and in “established use.�? Model realism and robustness is influenced
+	by selection of relevant predictors and modeling method, consideration
+	of scale, how the interplay between environmental and geographic
+	factors is handled, and the extent of extrapolation. Current linkages
+	between SDM practice and ecological theory are often weak, hindering
+	progress. Remaining challenges include: improvement of methods for
+	modeling presence-only data and for model selection and evaluation;
+	accounting for biotic interactions; and assessing model uncertainty.},
+  doi = {10.1146/annurev.ecolsys.110308.120159},
+  keywords = {climate change, niche, spatial, invasions, predict, presence-only},
+  shorttitle = {Species {Distribution} {Models}},
+  url = {http://www.annualreviews.org/doi/abs/10.1146/annurev.ecolsys.110308.120159},
+  urldate = {2013-05-06}
+}
+
+@Article{Fitzpatrick,
+  author     = {Fitzpatrick, Matthew C. and Blois, Jessica L. and Williams, John W. and Nieto-Lugilde, Diego and Maguire, Kaitlin C. and Lorenz, David J.},
+  title      = {How will climate novelty influence ecological forecasts? {Using} the {Quaternary} to assess future reliability},
+  journal    = {Global Change Biology},
+  year       = {2015},
+  volume     = {24},
+  number     = {8},
+  pages      = {3575--3586},
+  issn       = {1365-2486},
+  abstract   = {Future climates are projected to be highly novel relative to recent
+	climates. Climate novelty challenges models that correlate ecological
+	patterns to climate variables and then use these relationships to
+	forecast ecological responses to future climate change. Here, we
+	quantify the magnitude and ecological significance of future climate
+	novelty by comparing it to novel climates over the past 21,000 years
+	in North America. We then use relationships between model performance
+	and climate novelty derived from the fossil pollen record from eastern
+	North America to estimate the expected decrease in predictive skill
+	of ecological forecasting models as future climate novelty increases.
+	We show that, in the high emissions scenario (RCP 8.5) and by late
+	21st century, future climate novelty is similar to or higher than
+	peak levels of climate novelty over the last 21,000 years. The accuracy
+	of ecological forecasting models is projected to decline steadily
+	over the coming decades in response to increasing climate novelty,
+	although models that incorporate co-occurrences among species may
+	retain somewhat higher predictive skill. In addition to quantifying
+	future climate novelty in the context of late Quaternary climate
+	change, this work underscores the challenges of making reliable forecasts
+	to an increasingly novel future, while highlighting the need to assess
+	potential avenues for improvement, such as increased reliance on
+	geological analogs for future novel climates and improving existing
+	models by pooling data through time and incorporating assemblage-level
+	information.},
+  copyright  = {© 2018 John Wiley \& Sons Ltd},
+  doi        = {10.1111/gcb.14138},
+  file       = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\HVM993PS\\gcb.html:text/html},
+  keywords   = {climate change, species distribution modeling, ecological forecasting, climate novelty, community-level modeling, no-analog climate, Quaternary},
+  language   = {en},
+  owner      = {adler},
+  shorttitle = {How will climate novelty influence ecological forecasts?},
+  timestamp  = {2019.05.24},
+  url        = {https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14138},
+  urldate    = {2018-07-11},
+}
+
+@article{harris_forecasting_2018,
+  title={Forecasting biodiversity in breeding birds using best practices},
+  author={Harris, David J and Taylor, Shawn D and White, Ethan P},
+  journal={PeerJ},
+  volume={6},
+  pages={e4278},
+  year={2018},
+  publisher={PeerJ Inc.}
+}
+
+@ARTICLE{houlahan_priority_2017,
+  author = {Houlahan, Jeff E. and McKinney, Shawn T. and Anderson, T. Michael
+	and McGill, Brian J.},
+  title = {The priority of prediction in ecological understanding},
+  journal = {Oikos},
+  year = {2017},
+  volume = {126},
+  pages = {1--7},
+  number = {1},
+  month = jan,
+  abstract = {The objective of science is to understand the natural world; we argue
+	that prediction is the only way to demonstrate scientific understanding,
+	implying that prediction should be a fundamental aspect of all scientific
+	disciplines. Reproducibility is an essential requirement of good
+	science and arises from the ability to develop models that make accurate
+	predictions on new data. Ecology, however, with a few exceptions,
+	has abandoned prediction as a central focus and faces its own crisis
+	of reproducibility. Models are where ecological understanding is
+	stored and they are the source of all predictions – no prediction
+	is possible without a model of the world. Models can be improved
+	in three ways: model variables, functional relationships among dependent
+	and independent variables, and in parameter estimates. Ecologists
+	rarely test to assess whether new models have made advances by identifying
+	new and important variables, elucidating functional relationships,
+	or improving parameter estimates. Without these tests it is difficult
+	to know if we understand more today than we did yesterday. A new
+	commitment to prediction in ecology would lead to, among other things,
+	more mature (i.e. quantitative) hypotheses, prioritization of modeling
+	techniques that are more appropriate for prediction (e.g. using continuous
+	independent variables rather than categorical) and, ultimately, advancement
+	towards a more general understanding of the natural world. Synthesis
+	Ecology, with a few exceptions, has abandoned prediction and therefore
+	the ability to demonstrate understanding. Here we address how this
+	has inhibited progress in ecology and explore how a renewed focus
+	on prediction would benefit ecologists. The lack of emphasis on prediction
+	has resulted in a discipline that tests qualitative, imprecise hypotheses
+	with little concern for whether the results are generalizable beyond
+	where and when the data were collected. A renewed commitment to prediction
+	would allow ecologists to address critical questions about the generalizability
+	of our results and the progress we are making towards understanding
+	the natural world.},
+  doi = {10.1111/oik.03726},
+  file = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\TB9ZXXB2\\abstract.html:text/html},
+  issn = {1600-0706},
+  language = {en},
+  url = {http://onlinelibrary.wiley.com/doi/10.1111/oik.03726/abstract},
+  urldate = {2017-01-09}
+}
+
+@ARTICLE{kleinhesselink_response_2018,
+  author = {Kleinhesselink, Andrew R. and Adler, Peter B.},
+  title = {The response of big sagebrush ({Artemisia} tridentata) to interannual
+	climate variation changes across its range},
+  journal = {Ecology},
+  year = {2018},
+  volume = {99},
+  pages = {1139--1149},
+  number = {5},
+  month = may,
+  abstract = {Understanding how annual climate variation affects population growth
+	rates across a species' range may help us anticipate the effects
+	of climate change on species distribution and abundance. We predict
+	that populations in warmer or wetter parts of a species' range should
+	respond negatively to periods of above average temperature or precipitation,
+	respectively, whereas populations in colder or drier areas should
+	respond positively to periods of above average temperature or precipitation.
+	To test this, we estimated the population sensitivity of a common
+	shrub species, big sagebrush (Artemisia tridentata), to annual climate
+	variation across its range. Our analysis includes 8,175 observations
+	of year-to-year change in sagebrush cover or production from 131
+	monitoring sites in western North America. We coupled these observations
+	with seasonal weather data for each site and analyzed the effects
+	of spring through fall temperatures and fall through spring accumulated
+	precipitation on annual changes in sagebrush abundance. Sensitivity
+	to annual temperature variation supported our hypothesis: years with
+	above average temperatures were beneficial to sagebrush in colder
+	locations and detrimental to sagebrush in hotter locations. In contrast,
+	sensitivity to precipitation did not change significantly across
+	the distribution of sagebrush. This pattern of responses suggests
+	that regional abundance of this species may be more limited by temperature
+	than by precipitation. We also found important differences in how
+	the ecologically distinct subspecies of sagebrush responded to the
+	effects of precipitation and temperature. Our model predicts that
+	a short-term temperature increase could produce an increase in sagebrush
+	cover at the cold edge of its range and a decrease in cover at the
+	warm edge of its range. This prediction is qualitatively consistent
+	with predictions from species distribution models for sagebrush based
+	on spatial occurrence data, but it provides new mechanistic insight
+	and helps estimate how much and how fast sagebrush cover may change
+	within its range.},
+  copyright = {© 2018 by the Ecological Society of America},
+  doi = {10.1002/ecy.2191},
+  file = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\EELHJDST\\ecy.html:text/html},
+  issn = {1939-9170},
+  keywords = {climate change, Artemisia tridentata, sagebrush, climate variation,
+	long-term data, population growth},
+  language = {en},
+  url = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.2191},
+  urldate = {2018-08-12}
+}
+
+@ARTICLE{lauenroth_long-term_1992,
+  author = {Lauenroth, W K and Sala, O E},
+  title = {Long-term forage production of {North} {American} shortgrass steppe},
+  journal = {Ecological Applications},
+  year = {1992},
+  volume = {2},
+  pages = {397--403}
+}
+
+@article{levin_1992,
+  title={The problem of pattern and scale in ecology: the Robert H. MacArthur award lecture},
+  author={Levin, Simon A},
+  journal={Ecology},
+  volume={73},
+  number={6},
+  pages={1943--1967},
+  year={1992},
+  publisher={Wiley Online Library}
+}
+
+@Article{Maguire2015,
+  author    = {Maguire, Kaitlin C. and Nieto-Lugilde, Diego and Fitzpatrick, Matthew C. and Williams, John W. and Blois, Jessica L.},
+  title     = {Modeling species and community responses to past, present, and future episodes of climatic and ecological change},
+  journal   = {Annual Review of Ecology, Evolution, and Systematics},
+  year      = {2015},
+  volume    = {46},
+  number    = {1},
+  pages     = {343--368},
+  abstract  = {There is an urgent need to understand species and community responses
+	to climatic and ecological changes to predict biodiversity patterns
+	given anticipated global change. The current distribution of species
+	and the environment provide a limited perspective to study and predict
+	ecological responses; therefore, biodiversity responses to past environmental
+	changes must be examined. The rapid development of ecological niche
+	models (ENMs) and their use in reconstructing past species distributions
+	has facilitated inclusion of past observations into predictive models.
+	Paleodata offer an opportunity to test the predictive ability of
+	ENMs and their underlying assumptions. However, paleodata remain
+	underutilized despite the rapidly growing field of paleoinformatics.
+	New modeling methods that incorporate species associations, coupled
+	with paleodata, provide more robust approaches to studying species
+	and community responses, especially given the predicted emergence
+	of no-analog climates and communities in the future.},
+  doi       = {10.1146/annurev-ecolsys-112414-054441},
+  owner     = {adler},
+  timestamp = {2019.05.24},
+  url       = {https://doi.org/10.1146/annurev-ecolsys-112414-054441},
+  urldate   = {2019-05-24},
+}
+
+@ARTICLE{mouquet_review:_2015,
+  author = {Mouquet, Nicolas and Lagadeuc, Yvan and Devictor, Vincent and Doyen,
+	Luc and Duputié, Anne and Eveillard, Damien and Faure, Denis and
+	Garnier, Eric and Gimenez, Olivier and Huneman, Philippe and Jabot,
+	Franck and Jarne, Philippe and Joly, Dominique and Julliard, Romain
+	and Kéfi, Sonia and Kergoat, Gael J. and Lavorel, Sandra and Le
+	Gall, Line and Meslin, Laurence and Morand, Serge and Morin, Xavier
+	and Morlon, Hélène and Pinay, Gilles and Pradel, Roger and Schurr,
+	Frank M. and Thuiller, Wilfried and Loreau, Michel},
+  title = {{REVIEW}: {Predictive} ecology in a changing world},
+  journal = {Journal of Applied Ecology},
+  year = {2015},
+  volume = {52},
+  pages = {1293--1310},
+  number = {5},
+  month = oct,
+  abstract = {* In a rapidly changing world, ecology has the potential to move from
+	empirical and conceptual stages to application and management issues.
+	It is now possible to make large-scale predictions up to continental
+	or global scales, ranging from the future distribution of biological
+	diversity to changes in ecosystem functioning and services. With
+	these recent developments, ecology has a historical opportunity to
+	become a major actor in the development of a sustainable human society.
+	With this opportunity, however, also comes an important responsibility
+	in developing appropriate predictive models, correctly interpreting
+	their outcomes and communicating their limitations. There is also
+	a danger that predictions grow faster than our understanding of ecological
+	systems, resulting in a gap between the scientists generating the
+	predictions and stakeholders using them (conservation biologists,
+	environmental managers, journalists, policymakers).
+	
+	
+	* Here, we use the context provided by the current surge of ecological
+	predictions on the future of biodiversity to clarify what prediction
+	means, and to pinpoint the challenges that should be addressed in
+	order to improve predictive ecological models and the way they are
+	understood and used.
+	
+	
+	* Synthesis and applications. Ecologists face several challenges to
+	ensure the healthy development of an operational predictive ecological
+	science: (i) clarity on the distinction between explanatory and anticipatory
+	predictions; (ii) developing new theories at the interface between
+	explanatory and anticipatory predictions; (iii) open data to test
+	and validate predictions; (iv) making predictions operational; and
+	(v) developing a genuine ethics of prediction.},
+  copyright = {© 2015 The Authors. Journal of Applied Ecology © 2015 British Ecological
+	Society},
+  doi = {10.1111/1365-2664.12482},
+  issn = {1365-2664},
+  keywords = {global change, ecosystems, modelling, theory, big data, Anticipation,
+	ecological prediction, ethics, forecast, Biodiversity},
+  language = {en},
+  shorttitle = {{REVIEW}},
+  url = {http://onlinelibrary.wiley.com/doi/10.1111/1365-2664.12482/abstract},
+  urldate = {2015-09-14}
+}
+
+@ARTICLE{petchey_ecological_2015,
+  author = {Petchey, Owen L. and Pontarp, Mikael and Massie, Thomas M. and Kéfi,
+	Sonia and Ozgul, Arpat and Weilenmann, Maja and Palamara, Gian Marco
+	and Altermatt, Florian and Matthews, Blake and Levine, Jonathan M.
+	and Childs, Dylan Z. and McGill, Brian J. and Schaepman, Michael
+	E. and Schmid, Bernhard and Spaak, Piet and Beckerman, Andrew P.
+	and Pennekamp, Frank and Pearse, Ian S.},
+  title = {The ecological forecast horizon, and examples of its uses and determinants},
+  journal = {Ecology Letters},
+  year = {2015},
+  volume = {18},
+  pages = {597--611},
+  number = {7},
+  month = jul,
+  abstract = {Forecasts of ecological dynamics in changing environments are increasingly
+	important, and are available for a plethora of variables, such as
+	species abundance and distribution, community structure and ecosystem
+	processes. There is, however, a general absence of knowledge about
+	how far into the future, or other dimensions (space, temperature,
+	phylogenetic distance), useful ecological forecasts can be made,
+	and about how features of ecological systems relate to these distances.
+	The ecological forecast horizon is the dimensional distance for which
+	useful forecasts can be made. Five case studies illustrate the influence
+	of various sources of uncertainty (e.g. parameter uncertainty, environmental
+	variation, demographic stochasticity and evolution), level of ecological
+	organisation (e.g. population or community), and organismal properties
+	(e.g. body size or number of trophic links) on temporal, spatial
+	and phylogenetic forecast horizons. Insights from these case studies
+	demonstrate that the ecological forecast horizon is a flexible and
+	powerful tool for researching and communicating ecological predictability.
+	It also has potential for motivating and guiding agenda setting for
+	ecological forecasting research and development.},
+  copyright = {© 2015 The Authors Ecology Letters published by John Wiley \& Sons
+	Ltd and CNRS., This is an open access article under the terms of
+	the Creative Commons Attribution License, which permits use, distribution
+	and reproduction in any medium, provided the original work is properly
+	cited.},
+  doi = {10.1111/ele.12443},
+  issn = {1461-0248},
+  keywords = {prediction, ecosystems, forecasting, dynamics, environmental change,
+	futures, scenarios},
+  language = {en},
+  url = {http://onlinelibrary.wiley.com/doi/10.1111/ele.12443/abstract},
+  urldate = {2015-06-12}
+}
+
+@book{rosenzweig_1995,
+  title={Species diversity in space and time},
+  author={Rosenzweig, Michael L and others},
+  year={1995},
+  publisher={Cambridge University Press}
+}
+
+@Article{Sala1988,
+  author    = {Sala, O E and Parton, W J and Joyce, L A and Lauenroth, W K},
+  title     = {Primary production of the central grassland region of the {United} {States}},
+  journal   = {Ecology},
+  year      = {1988},
+  volume    = {69},
+  pages     = {40--45},
+  owner     = {adler},
+  timestamp = {2019.05.24},
+}
+
+@ARTICLE{tredennick_we_2017,
+  author = {Tredennick, Andrew T. and Hooten, Mevin B. and Adler, Peter B.},
+  title = {Do we need demographic data to forecast plant population dynamics?},
+  journal = {Methods in Ecology and Evolution},
+  year = {2017},
+  volume = {8},
+  pages = {541--551},
+  number = {5},
+  month = may,
+  abstract = {* Rapid environmental change has generated growing interest in forecasts
+	of future population trajectories. Traditional population models
+	built with detailed demographic observations from one study site
+	can address the impacts of environmental change at particular locations,
+	but are difficult to scale up to the landscape and regional scales
+	relevant to management decisions. An alternative is to build models
+	using population-level data that are much easier to collect over
+	broad spatial scales than individual-level data. However, it is unknown
+	whether models built using population-level data adequately capture
+	the effects of density-dependence and environmental forcing that
+	are necessary to generate skillful forecasts.
+	
+	
+	* Here, we test the consequences of aggregating individual responses
+	when forecasting the population states (percent cover) and trajectories
+	of four perennial grass species in a semi-arid grassland in Montana,
+	USA. We parameterized two population models for each species, one
+	based on individual-level data (survival, growth and recruitment)
+	and one on population-level data (percent cover), and compared their
+	forecasting accuracy and forecast horizons with and without the inclusion
+	of climate covariates. For both models, we used Bayesian ridge regression
+	to weight the influence of climate covariates for optimal prediction.
+	
+	
+	* In the absence of climate effects, we found no significant difference
+	between the forecast accuracy of models based on individual-level
+	data and models based on population-level data. Climate effects were
+	weak, but increased forecast accuracy for two species. Increases
+	in accuracy with climate covariates were similar between model types.
+	
+	
+	* In our case study, percent cover models generated forecasts as accurate
+	as those from a demographic model. For the goal of forecasting, models
+	based on aggregated individual-level data may offer a practical alternative
+	to data-intensive demographic models. Long time series of percent
+	cover data already exist for many plant species. Modelers should
+	exploit these data to predict the impacts of environmental change.},
+  doi = {10.1111/2041-210X.12686},
+  file = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\WBDU27KU\\abstract.html:text/html},
+  issn = {2041-210X},
+  keywords = {climate change, integral projection model, grassland, forecasting,
+	population model, ridge regression, statistical regularization},
+  language = {en},
+  url = {http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12686/abstract},
+  urldate = {2017-10-15}
+}
+
+@Article{Urban2012,
+  author     = {Urban, Mark C. and Tewksbury, Josh J. and Sheldon, Kimberly S.},
+  title      = {On a collision course: competition and dispersal differences create no-analogue communities and cause extinctions during climate change},
+  journal    = {Proceedings of the Royal Society of London B: Biological Sciences},
+  year       = {2012},
+  volume     = {279},
+  number     = {1735},
+  pages      = {2072--2080},
+  month      = may,
+  issn       = {0962-8452, 1471-2954},
+  abstract   = {{\textless}p{\textgreater}Most climate change predictions omit species
+	interactions and interspecific variation in dispersal. Here, we develop
+	a model of multiple competing species along a warming climatic gradient
+	that includes temperature-dependent competition, differences in niche
+	breadth and interspecific differences in dispersal ability. Competition
+	and dispersal differences decreased diversity and produced so-called
+	‘no-analogue’ communities, defined as a novel combination of
+	species that does not currently co-occur. Climate change altered
+	community richness the most when species had narrow niches, when
+	mean community-wide dispersal rates were low and when species differed
+	in dispersal abilities. With high interspecific dispersal variance,
+	the best dispersers tracked climate change, out-competed slower dispersers
+	and caused their extinction. Overall, competition slowed the advance
+	of colonists into newly suitable habitats, creating lags in climate
+	tracking. We predict that climate change will most threaten communities
+	of species that have narrow niches (e.g. tropics), vary in dispersal
+	(most communities) and compete strongly. Current forecasts probably
+	underestimate climate change impacts on biodiversity by neglecting
+	competition and dispersal differences.{\textless}/p{\textgreater}},
+  copyright  = {This journal is © 2012 The Royal Society},
+  doi        = {10.1098/rspb.2011.2367},
+  file       = {Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\RE5PNXS2\\2072.html:text/html},
+  language   = {en},
+  owner      = {adler},
+  pmid       = {22217718},
+  shorttitle = {On a collision course},
+  timestamp  = {2019.05.24},
+  url        = {http://rspb.royalsocietypublishing.org/content/279/1735/2072},
+  urldate    = {2018-06-01},
+}
+
+@Article{Veloz2012,
+  author     = {Veloz, Samuel D and Williams, John W and Blois, Jessica L and He, Feng and Otto�?Bliesner, Bette and Liu, Zhengyu},
+  title      = {No�?analog climates and shifting realized niches during the late quaternary: implications for 21st�?century predictions by species distribution models},
+  journal    = {Global Change Biology},
+  year       = {2012},
+  volume     = {18},
+  number     = {5},
+  pages      = {1698--1713},
+  month      = may,
+  issn       = {1365-2486},
+  abstract   = {Empirically derived species distributions models (SDMs) are increasingly
+	relied upon to forecast species vulnerabilities to future climate
+	change. However, many of the assumptions of SDMs may be violated
+	when they are used to project species distributions across significant
+	climate change events. In particular, SDM's in theory assume stable
+	fundamental niches, but in practice, they assume stable realized
+	niches. The assumption of a fixed realized niche relative to climate
+	variables remains unlikely for various reasons, particularly if novel
+	future climates open up currently unavailable portions of species’
+	fundamental niches. To demonstrate this effect, we compare the climate
+	distributions for fossil-pollen data from 21 to 15 ka bp (relying
+	on paleoclimate simulations) when communities and climates with no
+	modern analog were common across North America to observed modern
+	pollen assemblages. We test how well SDMs are able to project 20th
+	century pollen-based taxon distributions with models calibrated using
+	data from 21 to 15 ka. We find that taxa which were abundant in areas
+	with no-analog late glacial climates, such as Fraxinus, Ostrya/Carpinus
+	and Ulmus, substantially shifted their realized niches from the late
+	glacial period to present. SDMs for these taxa had low predictive
+	accuracy when projected to modern climates despite demonstrating
+	high predictive accuracy for late glacial pollen distributions. For
+	other taxa, e.g. Quercus, Picea, Pinus strobus, had relatively stable
+	realized niches and models for these taxa tended to have higher predictive
+	accuracy when projected to present. Our findings reinforce the point
+	that a realized niche at any one time often represents only a subset
+	of the climate conditions in which a taxon can persist. Projections
+	from SDMs into future climate conditions that are based solely on
+	contemporary realized distributions are potentially misleading for
+	assessing the vulnerability of species to future climate change.},
+  copyright  = {© 2011 Blackwell Publishing Ltd},
+  doi        = {10.1111/j.1365-2486.2011.02635.x},
+  file       = {Full Text PDF:C\:\\Users\\adler\\Box\\zotero\\storage\\SHDWJG3T\\Veloz et al. - 2012 - No�?analog climates and shifting realized niches du.pdf:application/pdf;Snapshot:C\:\\Users\\adler\\Box\\zotero\\storage\\8KANH4HN\\abstract.html:text/html},
+  keywords   = {climate change, hindcasting, niche shift, niche stability, no�?analog climate, North America, paleo�?climate, pollen, quaternary},
+  language   = {en},
+  owner      = {adler},
+  shorttitle = {No�?analog climates and shifting realized niches during the late quaternary},
+  timestamp  = {2019.05.24},
+  url        = {http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2011.02635.x/abstract},
+  urldate    = {2012-04-11},
+}
+
+@article{ward_complexity_2014,
+  title={Complexity is costly: a meta-analysis of parametric and non-parametric methods for short-term population forecasting},
+  author={Ward, Eric J and Holmes, Eli E and Thorson, James T and Collen, Ben},
+  journal={Oikos},
+  volume={123},
+  number={6},
+  pages={652--661},
+  year={2014},
+  publisher={Wiley Online Library}
+}
+
+@Book{Hyndman2018,
+  title      = {Forecasting: {Principles} and {Practice}},
+  publisher  = {OTexts},
+  year       = {2018},
+  author     = {Hyndman, R. and Athanasopoulos, G.},
+  abstract   = {2nd edition},
+  file       = {Snapshot:C\:\\Users\\adler\\Zotero\\storage\\THXTK4AQ\\fpp2.html:text/html},
+  shorttitle = {Forecasting},
+  url        = {https://Otexts.org/fpp2/},
+  urldate    = {2018-07-30},
+}
+
+@Article{Hefley2017,
+  author     = {Hefley, Trevor J. and Hooten, Mevin B. and Russell, Robin E. and Walsh, Daniel P. and Powell, James A.},
+  title      = {When mechanism matters: {Bayesian} forecasting using models of ecological diffusion},
+  journal    = {Ecology Letters},
+  year       = {2017},
+  volume     = {20},
+  number     = {5},
+  pages      = {640--650},
+  month      = may,
+  issn       = {1461-0248},
+  abstract   = {Ecological diffusion is a theory that can be used to understand and forecast spatio-temporal processes such as dispersal, invasion, and the spread of disease. Hierarchical Bayesian modelling provides a framework to make statistical inference and probabilistic forecasts, using mechanistic ecological models. To illustrate, we show how hierarchical Bayesian models of ecological diffusion can be implemented for large data sets that are distributed densely across space and time. The hierarchical Bayesian approach is used to understand and forecast the growth and geographic spread in the prevalence of chronic wasting disease in white-tailed deer (Odocoileus virginianus). We compare statistical inference and forecasts from our hierarchical Bayesian model to phenomenological regression-based methods that are commonly used to analyse spatial occurrence data. The mechanistic statistical model based on ecological diffusion led to important ecological insights, obviated a commonly ignored type of collinearity, and was the most accurate method for forecasting.},
+  doi        = {10.1111/ele.12763},
+  file       = {Snapshot:C\:\\Users\\adler\\Zotero\\storage\\SHTEK3X7\\abstract.html:text/html},
+  keywords   = {Agent-based model, bayesian analysis, boosted regression trees, dispersal, generalised additive model, invasion, partial differential equation, prediction, spatial confounding},
+  language   = {en},
+  shorttitle = {When mechanism matters},
+  url        = {http://onlinelibrary.wiley.com/doi/10.1111/ele.12763/abstract},
+  urldate    = {2017-04-19},
+}
+
+@Article{Renwick2018,
+  author   = {Renwick, Katherine M. and Curtis, Caroline and Kleinhesselink, Andrew R. and Schlaepfer, Daniel and Bradley, Bethany A. and Aldridge, Cameron L. and Poulter, Benjamin and Adler, Peter B.},
+  title    = {Multi-model comparison highlights consistency in predicted effect of warming on a semi-arid shrub},
+  journal  = {Global Change Biology},
+  year     = {2018},
+  volume   = {24},
+  number   = {1},
+  pages    = {424--438},
+  month    = jan,
+  issn     = {1365-2486},
+  abstract = {A number of modeling approaches have been developed to predict the impacts of climate change on species distributions, performance, and abundance. The stronger the agreement from models that represent different processes and are based on distinct and independent sources of information, the greater the confidence we can have in their predictions. Evaluating the level of confidence is particularly important when predictions are used to guide conservation or restoration decisions. We used a multi-model approach to predict climate change impacts on big sagebrush (Artemisia tridentata), the dominant plant species on roughly 43�million hectares in the western United States and a key resource for many endemic wildlife species. To evaluate the climate sensitivity of A. tridentata, we developed four predictive models, two based on empirically derived spatial and temporal relationships, and two that applied mechanistic approaches to simulate sagebrush recruitment and growth. This approach enabled us to produce an aggregate index of climate change vulnerability and uncertainty based on the level of agreement between models. Despite large differences in model structure, predictions of sagebrush response to climate change were largely consistent. Performance, as measured by change in cover, growth, or recruitment, was predicted to decrease at the warmest sites, but increase throughout the cooler portions of sagebrush's range. A sensitivity analysis indicated that sagebrush performance responds more strongly to changes in temperature than precipitation. Most of the uncertainty in model predictions reflected variation among the ecological models, raising questions about the reliability of forecasts based on a single modeling approach. Our results highlight the value of a multi-model approach in forecasting climate change impacts and uncertainties and should help land managers to maximize the value of conservation investments.},
+  doi      = {10.1111/gcb.13900},
+  file     = {Snapshot:C\:\\Users\\adler\\Zotero\\storage\\2VMZ8QIH\\abstract.html:text/html},
+  keywords = {Artemisia, climate change, correlative models, model comparison, process-based models, sagebrush, vegetation change},
+  language = {en},
+  url      = {http://onlinelibrary.wiley.com/doi/10.1111/gcb.13900/abstract},
+  urldate  = {2017-12-28},
+}
+
+@Article{Silvertown2006,
+  author  = {Silvertown, J and Poulton, P and Johnston, E and Edwards, G and Heard, M and Biss, PM},
+  title   = {The {Park} {Grass} {Experiment} 1856-2006: {Its} contribution to ecology},
+  journal = {Journal of Ecology},
+  year    = {2006},
+  volume  = {94},
+  number  = {4},
+  pages   = {814},
+}
+
+@Article{Worth2014,
+  author     = {Worth, James R. P. and Williamson, Grant J. and Sakaguchi, Shota and Nevill, Paul G. and Jordan, Greg J.},
+  title      = {Environmental niche modelling fails to predict {Last} {Glacial} {Maximum} refugia: niche shifts, microrefugia or incorrect palaeoclimate estimates?},
+  journal    = {Global Ecology and Biogeography},
+  year       = {2014},
+  volume     = {23},
+  number     = {11},
+  pages      = {1186--1197},
+  month      = nov,
+  issn       = {1466-8238},
+  abstract   = {Aim
+
+Many predictions of responses to future climate change utilize ecological niche models (ENMs). We assess the capacity of these models to predict species distributions under conditions that differ from the current environment by testing whether they can predict past distributions of species.
+
+
+Location
+
+From 43�?S to 31�?S in south-eastern Australia (including Tasmania).
+
+
+Methods
+
+We studied three dominant tree species of temperate Australian mesic forests, Atherosperma moschatum, Eucalyptus regnans and Nothofagus cunninghamii. Phylogeographic evidence indicates that these species each survived the Last Glacial Maximum (LGM) in multiple refugia. We modelled the current distribution of each species and projected those models onto LGM climates under six palaeoclimatic scenarios. The support for phylogeographic-based glacial refugia was estimated under each scenario using three different thresholds for inferring species presence/absence.
+
+
+Results
+
+The LGM models under scenarios that allowed for a realistic level of rainfall failed to predict survival of the study species in refugia identified from genetic evidence, apart from those in perhumid western Tasmania.
+
+
+Main conclusions
+
+Correct prediction of nearly all modern occurrences of the species suggests that this failure of ENMs to predict refugial survival was not methodological. Rather we conclude that the existing realized niches of these species may have changed since the LGM. Such niche changes may have involved the occurrence of non-analogue climates in the LGM and some significant alteration of fundamental niche (for at least E.?regnans). Our results emphasize that predictions of future impacts of climate change on biodiversity will benefit from awareness of the limitations of ENMs in predicting the extinction of populations/species. Greater knowledge of how niches have changed through time and how this relates to the characteristics of species is needed to improve the reliability of ENMs. Niche changes in plants may also affect palaeoclimatic estimates based on fossil pollen.},
+  copyright  = {� 2014 John Wiley \& Sons Ltd},
+  doi        = {10.1111/geb.12239},
+  keywords   = {climate change, climatic niche, ecological niche models, existing niche, General circulation model, Last Glacial Maximum, non-analogue climates, phylogeography},
+  language   = {en},
+  shorttitle = {Environmental niche modelling fails to predict {Last} {Glacial} {Maximum} refugia},
+  url        = {http://onlinelibrary.wiley.com/doi/10.1111/geb.12239/abstract},
+  urldate    = {2014-10-09},
+}
+
+@Article{Nice2019,
+  author    = {Nice, Chris C. and Forister, Matthew L. and Harrison, Joshua G. and Gompert, Zachariah and Fordyce, James A. and Thorne, James H. and Waetjen, David P. and Shapiro, Arthur M.},
+  title     = {Extreme heterogeneity of population response to climatic variation and the limits of prediction},
+  journal   = {Global Change Biology},
+  year      = {2019},
+  volume    = {25},
+  number    = {6},
+  pages     = {2127--2136},
+  issn      = {1365-2486},
+  abstract  = {Certain general facets of biotic response to climate change, such as shifts in phenology and geographic distribution, are well characterized; however, it is not clear whether the observed similarity of responses across taxa will extend to variation in other population-level processes. We examined population response to climatic variation using long-term incidence data (collected over 42 years) encompassing 149 butterfly species and considerable habitat diversity (10 sites along an elevational gradient from sea level to over 2,700 m in California). Population responses were characterized by extreme heterogeneity that was not attributable to differences in species composition among sites. These results indicate that habitat heterogeneity might be a buffer against climate change and highlight important questions about mechanisms maintaining interpopulation differences in responses to weather. Despite overall heterogeneity of response, population dynamics were accurately predicted by our model for many species at each site. However, the overall correlation between observed and predicted incidence in a cross validation analysis was moderate (Pearson's r = 0.23, SE 0.01), and 97\% of observed data fell within the predicted 95\% credible intervals. Prediction was most successful for more abundant species as well as for sites with lower annual turnover. Population-level heterogeneity in response to climate variation and the limits of our predictive power highlight the challenges for a future of increasing climatic variability.},
+  copyright = {� 2019 John Wiley \& Sons Ltd},
+  doi       = {10.1111/gcb.14593},
+  keywords  = {Bayesian hierarchical model, climate change, long-term data, monitoring, weather},
+  language  = {en},
+  url       = {https://onlinelibrary.wiley.com/doi/abs/10.1111/gcb.14593},
+  urldate   = {2019-05-13},
+}
+
+@Article{Williams2007,
+  author    = {Williams, John W. and Jackson, Stephen T.},
+  title     = {Novel climates, no-analog communities, and ecological surprises},
+  journal   = {Frontiers in Ecology and the Environment},
+  year      = {2007},
+  volume    = {5},
+  number    = {9},
+  pages     = {475--482},
+  issn      = {1540-9309},
+  abstract  = {No-analog communities (communities that are compositionally unlike any found today) occurred frequently in the past and will develop in the greenhouse world of the future. The well documented no-analog plant communities of late-glacial North America are closely linked to �novel� climates also lacking modern analogs, characterized by high seasonality of temperature. In climate simulations for the Intergovernmental Panel on Climate Change A2 and B1 emission scenarios, novel climates arise by 2100 AD, primarily in tropical and subtropical regions. These future novel climates are warmer than any present climates globally, with spatially variable shifts in precipitation, and increase the risk of species reshuffling into future no-analog communities and other ecological surprises. Most ecological models are at least partially parameterized from modern observations and so may fail to accurately predict ecological responses to these novel climates. There is an urgent need to test the robustness of ecological models to climate conditions outside modern experience.},
+  copyright = {� The Ecological Society of America},
+  doi       = {10.1890/070037},
+  language  = {en},
+  url       = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/070037},
+  urldate   = {2019-09-06},
+}
+
+@Article{Good2017,
+  author   = {Good, Benjamin H. and McDonald, Michael J. and Barrick, Jeffrey E. and Lenski, Richard E. and Desai, Michael M.},
+  title    = {The dynamics of molecular evolution over 60,000 generations},
+  journal  = {Nature},
+  year     = {2017},
+  volume   = {551},
+  number   = {7678},
+  pages    = {45},
+  month    = nov,
+  abstract = {The outcomes of evolution are determined by a stochastic dynamical process that governs how mutations arise and spread through a population. Here, we analyze the dynamics of molecular evolution in twelve experimental populations of Escherichia coli, using ...},
+  doi      = {10.1038/nature24287},
+  language = {en},
+  pmid     = {29045390},
+  url      = {https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5788700/},
+  urldate  = {2019-09-06},
+}
+
+@Article{Hoffmann2011,
+  author        = {Hoffmann, Ary A. and Sgro, Carla M.},
+  title         = {Climate change and evolutionary adaptation},
+  journal       = {Nature},
+  year          = {2011},
+  volume        = {470},
+  number        = {7335},
+  pages         = {479--485},
+  month         = feb,
+  issn          = {1476-4687},
+  __markedentry = {[adler:]},
+  abstract      = {Evolutionary adaptation can be rapid and potentially help species counter stressful conditions or realize ecological opportunities arising from climate change. The challenges are to understand when evolution will occur and to identify potential evolutionary winners as well as losers, such as species lacking adaptive capacity living near physiological limits. Evolutionary processes also need to be incorporated into management programmes designed to minimize biodiversity loss under rapid climate change. These challenges can be met through realistic models of evolutionary change linked to experimental data across a range of taxa.},
+  copyright     = {2011 Nature Publishing Group},
+  doi           = {10.1038/nature09670},
+  language      = {en},
+  url           = {https://www.nature.com/articles/nature09670},
+  urldate       = {2019-09-06},
+}
+
+@Article{Williams2017,
+  author        = {Williams, Perry J. and Hooten, Mevin B. and Womble, Jamie N. and Esslinger, George G. and Bower, Michael R. and Hefley, Trevor J.},
+  title         = {An integrated data model to estimate spatiotemporal occupancy, abundance, and colonization dynamics},
+  journal       = {Ecology},
+  year          = {2017},
+  volume        = {98},
+  number        = {2},
+  pages         = {328--336},
+  issn          = {1939-9170},
+  __markedentry = {[adler:6]},
+  abstract      = {Ecological invasions and colonizations occur dynamically through space and time. Estimating the distribution and abundance of colonizing species is critical for efficient management or conservation. We describe a statistical framework for simultaneously estimating spatiotemporal occupancy and abundance dynamics of a colonizing species. Our method accounts for several issues that are common when modeling spatiotemporal ecological data including multiple levels of detection probability, multiple data sources, and computational limitations that occur when making fine-scale inference over a large spatiotemporal domain. We apply the model to estimate the colonization dynamics of sea otters (Enhydra lutris) in Glacier Bay, in southeastern Alaska.},
+  copyright     = {� 2016 by the Ecological Society of America},
+  doi           = {10.1002/ecy.1643},
+  keywords      = {ecological diffusion, homogenization, hurdle model, integrated population model, partial differential equation, sea otters, state-space model, zero-inflated model},
+  language      = {en},
+  url           = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecy.1643},
+  urldate       = {2019-09-13},
+}
+
+@Article{Wikle2003,
+  author        = {Wikle, Christopher K.},
+  title         = {Hierarchical {Bayesian} {Models} for {Predicting} the {Spread} of {Ecological} {Processes}},
+  journal       = {Ecology},
+  year          = {2003},
+  volume        = {84},
+  number        = {6},
+  pages         = {1382--1394},
+  issn          = {1939-9170},
+  __markedentry = {[adler:6]},
+  abstract      = {There is increasing interest in predicting ecological processes. Methods to accomplish such predictions must account for uncertainties in observation, sampling, models, and parameters. Statistical methods for spatiotemporal processes are powerful, yet difficult to implement in complicated high-dimensional settings. However, recent advances in hierarchical formulations for such processes can be utilized for ecological prediction. These formulations are able to account for the various sources of uncertainty and can incorporate scientific judgment in a probabilistically consistent manner. In particular, analytical diffusion models can serve as motivation for the hierarchical model for invasive species. We demonstrate by example that such a framework can be utilized to predict, spatially and temporally, the relative population abundance of House Finches over the eastern United States. Corresponding Editor (ad hoc): J. S. Clark.},
+  copyright     = {� 2003 by the Ecological Society of America},
+  doi           = {10.1890/0012-9658(2003)084[1382:HBMFPT]2.0.CO;2},
+  keywords      = {Bayesian models, Carpodacus mexicanus, diffusion, forecast, hierarchical models, House Finch, invasive species, state space, uncertainty},
+  language      = {en},
+  url           = {https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/0012-9658%282003%29084%5B1382%3AHBMFPT%5D2.0.CO%3B2},
+  urldate       = {2019-09-13},
+}
+
+@Article{Schliep2018,
+  author        = {Schliep, Erin M. and Lany, Nina K. and Zarnetske, Phoebe L. and Schaeffer, Robert N. and Orians, Colin M. and Orwig, David A. and Preisser, Evan L.},
+  title         = {Joint species distribution modelling for spatio-temporal occurrence and ordinal abundance data},
+  journal       = {Global Ecology and Biogeography},
+  year          = {2018},
+  volume        = {27},
+  number        = {1},
+  pages         = {142--155},
+  issn          = {1466-8238},
+  __markedentry = {[adler:6]},
+  abstract      = {Aim Species distribution models are important tools used to study the distribution and abundance of organisms relative to abiotic variables. Dynamic local interactions among species in a community can affect abundance. The abundance of a single species may not be at equilibrium with the environment for spreading invasive species and species that are range shifting because of climate change. Innovation: We develop methods for incorporating temporal processes into a spatial joint species distribution model for presence/absence and ordinal abundance data. We model non-equilibrium conditions via a temporal random effect and temporal dynamics with a vector-autoregressive process allowing for intra- and interspecific dependence between co-occurring species. The autoregressive term captures how the abundance of each species can enhance or inhibit its own subsequent abundance or the subsequent abundance of other species in the community and is well suited for a �community modules� approach of strongly interacting species within a food web. R code is provided for fitting multispecies models within a Bayesian framework for ordinal data with any number of locations, time points, covariates and ordinal categories. Main conclusions We model ordinal abundance data of two invasive insects (hemlock woolly adelgid and elongate hemlock scale) that share a host tree and were undergoing northwards range expansion in the eastern U.S.A. during the period 1997�2011. Accounting for range expansion and high inter-annual variability in abundance led to improved estimation of the species�environment relationships. We would have erroneously concluded that winter temperatures did not affect scale abundance had we not accounted for the range expansion of scale. The autoregressive component revealed weak evidence for commensalism, in which adelgid may have predisposed hemlock stands for subsequent infestation by scale. Residual spatial dependence indicated that an unmeasured variable additionally affected scale abundance. Our robust modelling approach could provide similar insights for other community modules of co-occurring species.},
+  copyright     = {� 2017 John Wiley \& Sons Ltd},
+  doi           = {10.1111/geb.12666},
+  keywords      = {biotic interactions, coregionalization, invasive species, Markov chain Monte Carlo, rank probability scores, vector autoregression},
+  language      = {en},
+  url           = {https://onlinelibrary.wiley.com/doi/abs/10.1111/geb.12666},
+  urldate       = {2019-09-13},
+}
+
+@Article{McDermott2017,
+  author        = {McDermott, Patrick L. and Wikle, Christopher K.},
+  title         = {An ensemble quadratic echo state network for non-linear spatio-temporal forecasting},
+  journal       = {Stat},
+  year          = {2017},
+  volume        = {6},
+  number        = {1},
+  pages         = {315--330},
+  issn          = {2049-1573},
+  __markedentry = {[adler:6]},
+  abstract      = {Spatio-temporal data and processes are prevalent across a wide variety of scientific disciplines. These processes are often characterized by non-linear time dynamics that include interactions across multiple scales of spatial and temporal variability. The datasets associated with many of these processes are increasing in size because of advances in automated data measurement, management and numerical simulator output. Non-linear spatio-temporal models have only recently seen interest in statistics, but there are many classes of such models in the engineering and geophysical sciences. Traditionally, these models are more heuristic than those that have been presented in the statistics literature but are often intuitive and quite efficient computationally. We show here that with fairly simple, but important, enhancements, the echo state network machine learning approach can be used to generate long-lead forecasts of non-linear spatio-temporal processes, with reasonable uncertainty quantification, and at a fraction of the computational expense of a traditional parametric non-linear spatio-temporal models. Copyright � 2017 John Wiley \& Sons, Ltd.},
+  copyright     = {Copyright � 2017 John Wiley \& Sons, Ltd.},
+  doi           = {10.1002/sta4.160},
+  keywords      = {general quadratic non-linearity, long-lead forecasting, recurrent neural network, reservoir computing, sea surface temperature},
+  language      = {en},
+  url           = {https://onlinelibrary.wiley.com/doi/abs/10.1002/sta4.160},
+  urldate       = {2019-09-13},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
