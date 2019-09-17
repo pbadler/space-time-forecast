@@ -34,4 +34,5 @@ for(iT in 1:length(Tmean)){
 simN_mix[is.na(simN_mix)] <- 0 # replace missing values with zero
 
 # fit a "spatial" model describing mean abundance as a function of mean temperature
-spatial_model <- lm(N_Pop~Tmean + I(Tmean^2),data=simN_mix)
+Tmean2 <- simN_mix$Tmean^2
+spatial_model <- lm(N_Pop~Tmean + Tmean2,data=simN_mix)
