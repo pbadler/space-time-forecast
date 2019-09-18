@@ -7,6 +7,9 @@ forecast_Tmean <-  Tmean[(tmp+1):length(Tmean)]
 
 # make predictions from spatial model
 spatial_forecast <- coef(spatial_model)[1] + coef(spatial_model)[2]*forecast_Tmean + coef(spatial_model)[3]*forecast_Tmean^2
+# next line to make predictions with uncertainty
+# spatial_forecast <- predict(spatial_model,newdata=data.frame(Tmean =forecast_Tmean,Tmean2 = forecast_Tmean^2),
+#                             interval="prediction")
 
 # make predictions from temporal model
 temporal_forecast <- rep(NA,length(forecast_Tmean)+1)
@@ -17,6 +20,21 @@ for(iTime in 1:length(forecast_Tmean)){
   temporal_forecast[iTime+1] <- exp(r_iTime)*temporal_forecast[iTime]
 }
 temporal_forecast <- temporal_forecast[2:length(temporal_forecast)]  # drop first ("observed") year
+
+# make predictions from temporal model with uncertainty (Monte Carlo approach)
+# ndraws <- 100
+# pars <- rmvnorm(ndraws,coef(temporal_model),vcov(temporal_model))
+# temporal_forecast <- matrix(NA,length(forecast_Tmean)+1,ndraws)
+# temporal_forecast[1,] <- N[baseline_yrs] # initialize at N from last baseline year
+# for(iPar in 1:ndraws){
+#   for(iTime in 1:length(forecast_Tmean)){
+#     r_iTime <- pars[iPar,1] +pars[iPar,2]*log(temporal_forecast[iTime,iPar]) + 
+#       pars[iPar,3]*forecast_Tmean[iTime] + pars[iPar,4]*forecast_Tmean[iTime]^2
+#     temporal_forecast[iTime+1,iPar] <- exp(r_iTime)*temporal_forecast[iTime,iPar]
+#   }
+# }
+# temporal_forecast <- temporal_forecast[2:dim(temporal_forecast)[1],]  # drop first ("observed") year
+
 
 # fit combined model
 y <- N[(baseline_yrs+1):sim_yrs]

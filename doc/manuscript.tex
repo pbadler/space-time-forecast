@@ -319,6 +319,8 @@ Again, we suppress the spatial subscript ($x$) here because we are focused on de
 
 We used the \texttt{optim} function to estimate the $\beta^C$s that minimize the sum of squared errors, $(\hat{N}(t+1) - N(t+1))^2$.
 
+In the main text, we show the point forecasts but not the uncertainty around the forecasts. After exploring that uncertainty, we decided that presenting it would be misleading. For the spatial and, especially, the temporal statistical models, the uncertainty is unrealistically low, because the models are estimated with very large samples sizes from the simulations. Furthermore, the simulations do not include noise; the only reason there is any uncertainty is because the statistical models are slightly mis-specified with respect to the process models. Showing uncertainty for the combined model would be even less meaningful, because it is not a true, out-of-sample forecast (parameters are fit directly to the observations for which we make predictions). The R code to compute uncertainties for the spatial and temporal forecasts is available on our Github repository (https://github.com/pbadler/space-time-forecast), but is commented out.
+
 \section{Description of the meta-community model}\label{metacomm}
 
 \cite{alexander_lags_2018} developed a meta-community model to represent dynamics of local communities arrayed along a one-dimensional elevation gradient, as influenced by three main processes: temperature-dependent growth, competition, and dispersal. Here we adapt their notation to be consistent our own.

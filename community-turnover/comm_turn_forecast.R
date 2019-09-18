@@ -23,6 +23,9 @@ forecast_Tmean <- Tmean[site] + c(seq(deltaT/warming_yrs,deltaT,deltaT/warming_y
 
 # make predictions from spatial model
 spatial_forecast <- coef(spatial_model)[1] + coef(spatial_model)[2]*forecast_Tmean 
+# make predictions from spatial model with uncertainty
+# spatial_forecast_spp <- predict(spatial_model_spp,newdata=data.frame(x_spatial=forecast_Tmean),
+#                                 interval="predict")
 
 # make predictions from temporal model
 temporal_forecast <- rep(NA,length(forecast_Tmean)+1)
@@ -33,6 +36,18 @@ for(iTime in 1:length(forecast_Tmean)){
 }
 temporal_forecast <- temporal_forecast[2:length(temporal_forecast)]  # drop first ("observed") year
 
+# make predictions from temporal model using a Monte Carlo approach for uncertainty
+# ndraws <- 100
+# pars <- rmvnorm(ndraws,coef(temporal_model_spp),vcov(temporal_model_spp))
+# temporal_forecast_spp <- matrix(NA,length(forecast_Tmean)+1,ndraws)
+# temporal_forecast_spp[1,] <- y_temporal_spp[length(y_temporal)] # initialize at biomass from last baseline year
+# for(iPar in 1:ndraws){
+#   for(iTime in 1:length(forecast_Tmean)){
+#     temporal_forecast_spp[iTime+1,iPar] <- pars[iPar,1] +pars[iPar,2]*temporal_forecast_spp[iTime,iPar] + 
+#       pars[iPar,3]*forecast_Tmean[iTime]
+#   }
+# }
+# temporal_forecast_spp <- temporal_forecast_spp[2:dim(temporal_forecast_spp)[1],]  # drop first ("observed") year
 
 # fit combined model
 y <- rowSums(spxp[(burnin_yrs+baseline_yrs+1):sim_yrs,site,])
