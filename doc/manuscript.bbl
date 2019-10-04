@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
@@ -19,6 +19,12 @@ Blois, J.~L., J.~W. Williams, M.~C. Fitzpatrick, S.~T. Jackson, and S.~Ferrier.
 \newblock Proceedings of the National Academy of Sciences, {\bf
   110}:9374--9379.
 
+\bibitem[{Brun et~al.(2016)Brun, Kiørboe, Licandro, and Payne}]{Brun2016}
+Brun, P., T.~Kiørboe, P.~Licandro, and M.~R. Payne. 2016.
+\newblock The predictive skill of species distribution models for plankton in a
+  changing climate.
+\newblock Global Change Biology, {\bf 22}:3170--3181.
+
 \bibitem[{Clark et~al.(2001)Clark, Carpenter, Barber, Collins, Dobson, Foley,
   Lodge, Pascual, Pielke, Pizer, Pringle, Reid, Rose, Sala, Schlesinger, Wall,
   and Wear}]{clark_ecological_2001}
@@ -35,6 +41,12 @@ Dalgleish, H.~J., D.~N. Koons, M.~B. Hooten, C.~A. Moffet, and P.~B. Adler.
 \newblock Climate influences the demography of three dominant sagebrush steppe
   plants.
 \newblock Ecology, {\bf 92}:75--85.
+
+\bibitem[{Davis et~al.(2014)Davis, McGuire, and Orcutt}]{Davis2014}
+Davis, E.~B., J.~L. McGuire, and J.~D. Orcutt. 2014.
+\newblock Ecological niche models of mammalian glacial refugia show consistent
+  bias.
+\newblock Ecography, {\bf 37}:1133--1138.
 
 \bibitem[{Dietze(2017)}]{dietze_prediction_2017}
 Dietze, M.~C. 2017.
@@ -97,6 +109,14 @@ Hyndman, R. and G.~Athanasopoulos. 2018.
 \newblock Forecasting: {Principles} and {Practice}.
 \newblock OTexts.
 
+\bibitem[{Illán et~al.(2014)Illán, Thomas, Jones, Wong, Shirley, and
+  Betts}]{Illan2014}
+Illán, J.~G., C.~D. Thomas, J.~A. Jones, W.-K. Wong, S.~M. Shirley, and M.~G.
+  Betts. 2014.
+\newblock Precipitation and winter temperature predict long-term range-scale
+  abundance changes in {Western} {North} {American} birds.
+\newblock Global Change Biology, {\bf 20}:3351--3364.
+
 \bibitem[{Kleinhesselink and Adler(2018)}]{kleinhesselink_response_2018}
 Kleinhesselink, A.~R. and P.~B. Adler. 2018.
 \newblock The response of big sagebrush ({Artemisia} tridentata) to interannual
@@ -120,13 +140,13 @@ McDermott, P.~L. and C.~K. Wikle. 2017.
   spatio-temporal forecasting.
 \newblock Stat, {\bf 6}:315--330.
 
-\bibitem[{Mouquet et~al.(2015)Mouquet, Lagadeuc, Devictor, Doyen, Duputié,
+\bibitem[{Mouquet et~al.(2015)Mouquet, Lagadeuc, Devictor, Doyen, DuputiÃ©,
   Eveillard, Faure, Garnier, Gimenez, Huneman, Jabot, Jarne, Joly, Julliard,
-  Kéfi, Kergoat, Lavorel, Le~Gall, Meslin, Morand, Morin, Morlon, Pinay,
+  KÃ©fi, Kergoat, Lavorel, Le~Gall, Meslin, Morand, Morin, Morlon, Pinay,
   Pradel, Schurr, Thuiller, and Loreau}]{mouquet_review:_2015}
-Mouquet, N., Y.~Lagadeuc, V.~Devictor, L.~Doyen, A.~Duputié, D.~Eveillard,
+Mouquet, N., Y.~Lagadeuc, V.~Devictor, L.~Doyen, A.~DuputiÃ©, D.~Eveillard,
   D.~Faure, E.~Garnier, O.~Gimenez, P.~Huneman, F.~Jabot, P.~Jarne, D.~Joly,
-  R.~Julliard, S.~Kéfi, G.~J. Kergoat, S.~Lavorel, L.~Le~Gall, L.~Meslin,
+  R.~Julliard, S.~KÃ©fi, G.~J. Kergoat, S.~Lavorel, L.~Le~Gall, L.~Meslin,
   S.~Morand, X.~Morin, H.~Morlon, G.~Pinay, R.~Pradel, F.~M. Schurr,
   W.~Thuiller, and M.~Loreau. 2015.
 \newblock {REVIEW}: {Predictive} ecology in a changing world.
@@ -139,6 +159,21 @@ Nice, C.~C., M.~L. Forister, J.~G. Harrison, Z.~Gompert, J.~A. Fordyce, J.~H.
 \newblock Extreme heterogeneity of population response to climatic variation
   and the limits of prediction.
 \newblock Global Change Biology, {\bf 25}:2127--2136.
+
+\bibitem[{Norberg et~al.(2019)Norberg, Abrego, Blanchet, Adler, Anderson,
+  Anttila, Araújo, Dallas, Dunson, Elith, Foster, Fox, Franklin, Godsoe,
+  Guisan, O'Hara, Hill, Holt, Hui, Husby, Kålås, Lehikoinen, Luoto, Mod,
+  Newell, Renner, Roslin, Soininen, Thuiller, Vanhatalo, Warton, White,
+  Zimmermann, Gravel, and Ovaskainen}]{Norberg2019}
+Norberg, A., N.~Abrego, F.~G. Blanchet, F.~R. Adler, B.~J. Anderson,
+  J.~Anttila, M.~B. Araújo, T.~Dallas, D.~Dunson, J.~Elith, S.~D. Foster,
+  R.~Fox, J.~Franklin, W.~Godsoe, A.~Guisan, B.~O'Hara, N.~A. Hill, R.~D. Holt,
+  F.~K.~C. Hui, M.~Husby, J.~A. Kålås, A.~Lehikoinen, M.~Luoto, H.~K. Mod,
+  G.~Newell, I.~Renner, T.~Roslin, J.~Soininen, W.~Thuiller, J.~Vanhatalo,
+  D.~Warton, M.~White, N.~E. Zimmermann, D.~Gravel, and O.~Ovaskainen. 2019.
+\newblock A comprehensive evaluation of predictive performance of 33 species
+  distribution models at species and community levels.
+\newblock Ecological Monographs, {\bf 89}:e01370.
 
 \bibitem[{Renwick et~al.(2018)Renwick, Curtis, Kleinhesselink, Schlaepfer,
   Bradley, Aldridge, Poulter, and Adler}]{Renwick2018}
@@ -181,6 +216,15 @@ Urban, M.~C., J.~J. Tewksbury, and K.~S. Sheldon. 2012.
   no-analogue communities and cause extinctions during climate change.
 \newblock Proceedings of the Royal Society of London B: Biological Sciences,
   {\bf 279}:2072--2080.
+
+\bibitem[{Veloz et~al.(2012)Veloz, Williams, Blois, He, Ottoï-Bliesner, and
+  Liu}]{Veloz2012}
+Veloz, S.~D., J.~W. Williams, J.~L. Blois, F.~He, B.~Ottoï-Bliesner, and
+  Z.~Liu. 2012.
+\newblock No-analog climates and shifting realized niches during the late
+  quaternary: implications for 21st-century predictions by species distribution
+  models.
+\newblock Global Change Biology, {\bf 18}:1698--1713.
 
 \bibitem[{Ward et~al.(2014)Ward, Holmes, Thorson, and
   Collen}]{ward_complexity_2014}
