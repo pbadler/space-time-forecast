@@ -31,7 +31,7 @@ png("figures/spatial&temporal_model.png",height=10,width=4,res=400,units="in")
   # first make colors based on N0 density
   rr <- range(N_t0_baseline)
   svals <- (N_t0_baseline-rr[1])/diff(rr)
-  f <- colorRamp(c("red", "blue"), 0.4)
+  f <- colorRamp(c("green4", "tan2"), 1)
   density_colors <- rgb(f(svals)/255, alpha=0.6)
   # now plot
   plot(temperature_t1_baseline,r_baseline,xlab="Annual temperature",ylab="log Population growth rate",
