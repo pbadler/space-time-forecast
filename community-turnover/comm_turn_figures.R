@@ -90,7 +90,7 @@ png("figures/community_forecast_species.png",height=7.5,width=4.5,res=400,units=
   lines(1:length(my_biomass_spp),combined_forecast_spp,col="purple",lwd=2,lty=2)
   mtext(side=3," B",line=-1.1,adj=0,cex=0.8)
   
-  legend("right",c("Observed","Spatial forecast","Temporal forecast","Combined forecast"),
+  legend("right",c("Observed","Spatial forecast","Temporal forecast","Weighted forecast"),
          col=c("darkgrey","red","blue","purple"),lwd=c(1,2,2,2),lty=c(1,1,1,2),bty="n",cex=0.8)
   
   # bottom panel: weights and species
@@ -131,7 +131,7 @@ png("figures/community_forecast_total.png",height=7.5,width=4.5,res=400,units="i
   lines(1:length(my_biomass),temporal_forecast,col="blue",lwd=2)
   lines(1:length(my_biomass),combined_forecast,col="purple",lwd=2,lty=2)
   mtext(side=3," B",line=-1.1,adj=0,cex=0.8)
-  legend("right",c("Observed","Spatial forecast","Temporal forecast","Combined forecast"),
+  legend("right",c("Observed","Spatial forecast","Temporal forecast","Weighted forecast"),
          col=c("darkgrey","red","blue","purple"),lwd=c(1,2,2,2),lty=c(1,1,1,2),bty="n",cex=0.8)
   
   # weights

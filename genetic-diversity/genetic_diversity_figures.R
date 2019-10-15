@@ -57,7 +57,7 @@ png("figures/forecast.png",height=5,width=5,res=400,units="in")
   lines(1:length(N),spatial_forecast,col="red",lwd=2)
   lines(1:length(N),temporal_forecast,col="blue",lwd=2)
   lines(1:length(N),combined_forecast,col="purple",lwd=2,lty=2)
-  legend("bottomleft",c("Observed","Spatial forecast","Temporal forecast","Combined forecast"),
+  legend("bottomleft",c("Observed","Spatial forecast","Temporal forecast","Weighted forecast"),
          col=c("darkgrey","red","blue","purple"),lwd=c(1,2,2,2),lty=c(1,1,1,2),bty="n")
 
 dev.off()
