@@ -135,6 +135,14 @@ For example, meteorological models for short-term weather forecasts differ subst
 and temporal resolution and extent from the global circulation models used to predict long-term changes
 in climate.
 
+Why not simply use process-based models to avoid the difficulties posed by these phenomenological models?
+If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate predictions at all forecast horizons. Process-based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important for making predictions in a future with increasingly novel combinations of environment and species interactions \citep{Williams2007}. Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models was known, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well studied systems. Furthermore, the high complexity and corresponding parameter uncertainty of such models can increase predictive errors; simpler  time-series models may actually perform better \citep{ward_complexity_2014a}, though spatial replication can reduce the cost of complexity (ADD Chevalier).
+-very difficult to parameterize 
+-complexity is costly
+-spatiotemporal stats models more realistic
+-but seldom used for forecasting
+-for now, models that rely in some way on phenomenological, statistical relationships will play an important role
+
 Here we use two simulated case studies to 1) demonstrate that the best model-building approaches for ecological forecasting 
 depend on the time horizon of the forecast, and 2) explore how time-series and space-for-time approaches might be 
 combined via weighted averaging to make better forecasts at intermediate time scales. The first case study
@@ -150,9 +158,9 @@ an eco-evolutionary scenario. Our analyses show that:
 
 In each case study, we simulated the effects of an increase in temperature on simple systems with known dynamics.
 The truth is represented by a simulation model that is mechanistic for at least one important process, 
-but we treat the model as unknown when analyzing the data and we assumed that perfectly recovering the mechanisms
-contained in the simulation would not be possible in practice. We began each simulation
-under a stationary distribution of annual temperature, allowing the system to equilibrate; we call this the baseline phase. 
+but we treat the data-generating model as unknown when analyzing the data and we assumed that perfectly recovering the mechanisms
+it contains would not be possible in practice. We began each simulation
+under a stationary distribution of annual temperatures, allowing the system to equilibrate; we call this the baseline phase. 
 We then increased temperature progressively over a period of time, followed by a second period of stationary, now elevated, temperature. 
 The objective was to forecast the response of the system to the temperature increase based on spatial and/or temporal data 
 ``sampled" from the simulation during the baseline period. 
@@ -207,7 +215,7 @@ Theory could explore the influence of different parameters on the rate at which 
 
 Empirical research could inform model weights by accumulating enough case studies to infer patterns in the weighting functions and guide applications in new systems. Developing  rules of thumb would require testing many forecasts from both time-series and spatial models across a range of time-horizons. This effort may require a novel integration of typically disparate approaches, such as analyses of paleoecological data (e.g., \citealt{Worth2014}), long-term observational (e.g., \citealt{Nice2019}) or experimental data (e.g., \citealt{Silvertown2006}), and model systems with short-generation times (e.g., \citealt{Good2017}).
 
-An alternative to a weighted combination of predictions from time-series and space-for-time models is to rely on fully process-based models. If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate predictions at all time-horizons. For example, rather than fitting phenomenological models to our simulated time-series, we could have fit the exact process-based models that we used to generate those time-series. Assuming reasonable estimates of the parameter, those models would have accurately predicted the dynamics at all forecast horizons. Process-based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important for making predictions in a future with increasingly novel combinations of environment and species interactions \citep{Williams2007}. Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models was known, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well studied systems. 
+An alternative to a weighted combination of predictions from time-series and space-for-time models is to rely on fully process-based models. 
 % mention difficulty of dealing with error propogation?
 As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that phenomenological forecast models do not benefit from process-based understanding. The message from our simulations is that different processes should be considered for different forecast time-scales, and this can be done by fitting models to different kinds of datasets. Even when process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models.
 
