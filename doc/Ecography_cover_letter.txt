@@ -1,0 +1,19 @@
+December 12, 2019
+
+Dear Editors,
+
+Please consider our submission, “Matching the forecast horizon with the relevant spatial and temporal processes and data sources,” for publication in Ecography as an Original Research paper. Our paper has the potential to influence empirical applications and theoretical research in the rapidly growing field of ecological forecasting, and it will advance your journal’s mission of publising “exciting, novel, and important articles that significantly advance understanding of ecological or biodiversity patterns in space or time.”
+
+Ecologists are building a variety of models to generate forecasts. These modeling approaches are based on different kinds of datasets and reflect different kinds of processes. We use simulation studies to demonstrate that the choice of modeling approach should be tailored to the forecast horizon of interest. 
+
+We focus on two common forecasting approaches. The time-series approach, used in population models, effectively captures fast ecological processes such as birth, deaths, and short-term responses to rapidly varying environmental conditions. The space-for-time approach, exemplified by species distribution models, is based on patterns across spatial environmental gradients and captures the outcome of interactions between fast processes and slower processes operating over long time periods, such as immigration and extinction, and responses to prolonged environmental changes. 
+
+We show that the time-series approach makes better predictions over short time scales while the space-for-time approach makes better predictions over long time scales. These results hold for two simulation case studies, one involving metacommunity dynamics and the second featuring eco-evolutionary dynamics. However, both approaches fail at intermediate time scales. We propose a novel combined forecast, based on a dynamic weighted average of the time-series and space-for-time forecasts. The combined forecast can dramatically improve predictions at intermediate forecast horizons, but making it operational will require new research to determine the rate at which slow ecological processes begin to influence dynamics. 
+
+Please note that we have not followed the traditional “Introduction, Methods, Results, Discussion” structure. Rather, after the Introduction, we present each simulation case study in turn, combining methods and results, before continuing on to the Discussion. We believe this organization makes the material more accessible to readers, but we can restructure the paper if you require.
+
+Thank you for considering our manuscript,
+
+Peter Adler 
+Ethan White
+Mike Cortez
