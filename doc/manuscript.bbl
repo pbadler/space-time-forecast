@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
@@ -24,6 +24,13 @@ Brun, P., T.~Kiørboe, P.~Licandro, and M.~R. Payne. 2016.
 \newblock The predictive skill of species distribution models for plankton in a
   changing climate.
 \newblock Global Change Biology, {\bf 22}:3170--3181.
+
+\bibitem[{Chevalier and Knape()}]{Chevalier}
+Chevalier, M. and J.~Knape. ????
+\newblock The cost of complexity in forecasts of population abundances is
+  reduced but not eliminated by borrowing information across space using a
+  hierarchical approach.
+\newblock Oikos, {\bf 0}.
 
 \bibitem[{Clark et~al.(2001)Clark, Carpenter, Barber, Collins, Dobson, Foley,
   Lodge, Pascual, Pielke, Pizer, Pringle, Reid, Rose, Sala, Schlesinger, Wall,

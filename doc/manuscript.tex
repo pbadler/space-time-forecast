@@ -55,7 +55,7 @@
 \floatstyle{boxed}
 \newfloat{Box}{tbph}{box}
 
-\title{\textbf{ Matching the forecast horizon with the relevant spatial and temporal processes and data sources }}
+\title{\textbf{Matching the forecast horizon with the relevant spatial and temporal processes and data sources}}
 
 \author[1]{Peter B. Adler}  
 \author[2,3,4]{Ethan P. White}
@@ -68,7 +68,7 @@
 
 \renewcommand\Authands{ and }
 
-% \date{Last compile: \today} 
+\date{}
 
 \sloppy
 
@@ -81,21 +81,31 @@
 \linenumbers
 
 % rest of title page
+
+\vspace{-1cm}
+
 \noindent \emph{Statement of authorship:} PBA and EPW designed the study, PBA and MHC built the models, and PBA analyzed the models. PBA wrote the first draft of the manuscript, and all authors contributed substantially to revisions. 
 
 \noindent \emph{Acknowledgements:} We thank Heather Lynch and Juan Manuel Morales for comments that improved early drafts of the paper. PBA was supported by the National Science Foundation (DEB-1927282) and the Utah Agriculture Experiment Station (grant 1322). EPW was supported by the Gordon and Betty Moore Foundation’s Data-Driven Discovery Initiative (GBMF4563). 
 
-\noindent \emph{Running title:} Forecast horizon and ecological process
+%\noindent \emph{Running title:} Forecast horizon and ecological process
+
+\vspace{0.25cm}
+
+\noindent \textbf{Abstract:}   Most phenomenological, statistical models used to generate ecological forecasts take either a time-series approach, based on long-term data from one location, or a space-for-time approach, based on data describing spatial patterns across environmental gradients. Here we consider how the forecast horizon determines whether more accurate predictions come from the time-series approach, the space-for-time approach, or a combination of the two. We use two simulated case studies to show that forecasts for short and long forecast horizons need to focus on different ecological processes, which are reflected in different kinds of data. In the short-term, dynamics reflect initial conditions and fast processes such as birth and death, and the time-series approach makes the best predictions. In the long-term, dynamics reflect the additional influence of slower processes such as evolutionary and ecological selection, colonization and extinction, which the space-for-time approach can effectively capture. At intermediate time-scales, a weighted average of the two approaches shows promise. However, making this weighted model operational will require new research to predict the rate at which slow processes begin to influence dynamics.
+
+\vspace{0.25cm}
 
 \noindent \emph{Keywords:} dispersal, ecological forecasting, eco-evolutionary dynamics, global change, selection
 
-\noindent \emph{Corresponding author:} Peter Adler, Department of Wildland Resources and the Ecology Center, Utah State University, Logan, Utah, 84322, USA; email: peter.adler@usu.edu; tel: 435-797-1021
+\newpage 
 
-\section*{Abstract}
-
+\section*{Abstract} 
 Most phenomenological, statistical models used to generate ecological forecasts take either a time-series approach, based on long-term data from one location, or a space-for-time approach, based on data describing spatial patterns across environmental gradients. Here we consider how the forecast horizon determines whether more accurate predictions come from the time-series approach, the space-for-time approach, or a combination of the two. We use two simulated case studies to show that forecasts for short and long forecast horizons need to focus on different ecological processes, which are reflected in different kinds of data. In the short-term, dynamics reflect initial conditions and fast processes such as birth and death, and the time-series approach makes the best predictions. In the long-term, dynamics reflect the additional influence of slower processes such as evolutionary and ecological selection, colonization and extinction, which the space-for-time approach can effectively capture. At intermediate time-scales, a weighted average of the two approaches shows promise. However, making this weighted model operational will require new research to predict the rate at which slow processes begin to influence dynamics.
 
-\newpage
+\vspace{0.25cm}
+
+\noindent \emph{Keywords:} dispersal, ecological forecasting, eco-evolutionary dynamics, global change, selection
 
 \section*{Introduction}
 
@@ -135,7 +145,7 @@ For example, meteorological models for short-term weather forecasts differ subst
 and temporal resolution and extent from the global circulation models used to predict long-term changes
 in climate.
 
-Why not simply use process-based models to avoid the difficulties posed by phenomenological time-series and space-for-time modeling approaches? If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate predictions at all forecast horizons. Process-based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important in a future with increasingly novel combinations of environment and species interactions \citep{Williams2007}. Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models were known, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well-studied systems. Furthermore, the high complexity and corresponding parameter uncertainty of such models can increase predictive errors; simpler  time-series models may actually perform better \citep{ward_complexity_2014a}, though spatial replication can reduce the cost of complexity (ADD Chevalier). As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that phenomenological forecast models cannot benefit from process-based understanding. Even if process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models. Our hypothesis is that different processes may be relevant for different forecast horizons, and that we can act on this knowledge by fitting models to different kinds of datasets. 
+Why not simply use process-based models to avoid the difficulties posed by phenomenological time-series and space-for-time modeling approaches? If we could accurately characterize all of the processes governing a system, then a model based on that understanding should make accurate predictions at all forecast horizons. Process-based models should also be more robust for making predictions outside of historically observed conditions and even beyond the conditions observed across spatial gradients, which will be especially important in a future with increasingly novel combinations of environment and species interactions \citep{Williams2007}. Unfortunately, in most cases this approach is not currently feasible because we lack a detailed knowledge of all the complex and interacting processes influencing the dynamics of real ecological systems. Even if the general form of the models were known, estimating the high number of parameters and quantifying how they vary across ecosystems typically requires more data than is currently available even for well-studied systems. Furthermore, the high complexity and corresponding parameter uncertainty of such models can increase predictive errors; simpler  time-series models may actually perform better \citep{ward_complexity_2014}, though spatial replication can reduce the cost of complexity \citep{Chevalier}. As a result, models used for ecological forecasting will include at least some phenomenological components. But that does not mean that phenomenological forecast models cannot benefit from process-based understanding. Even if process-level understanding does not enable a fully mechanistic model, it can improve the specification of phenomenological models. Our hypothesis is that different processes may be relevant for different forecast horizons, and that we can act on this knowledge by fitting models to different kinds of datasets. 
 
 Here we use two simulated case studies to 1) demonstrate that the best model-building approaches for ecological forecasting 
 depend on the time horizon of the forecast, and 2) explore how time-series and space-for-time approaches might be 
