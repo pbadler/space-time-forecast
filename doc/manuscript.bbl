@@ -1,271 +1,212 @@
 \begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 
-\bibitem[{Alexander et~al.(2018)Alexander, Chalmandrier, Lenoir, Burgess, Essl,
-  Haider, Kueffer, McDougall, Milbau, Nuñez, Pauchard, Rabitsch, Rew, Sanders,
-  and Pellissier}]{alexander_lags_2018}
-Alexander, J.~M., L.~Chalmandrier, J.~Lenoir, T.~I. Burgess, F.~Essl,
-  S.~Haider, C.~Kueffer, K.~McDougall, A.~Milbau, M.~A. Nuñez, A.~Pauchard,
-  W.~Rabitsch, L.~J. Rew, N.~J. Sanders, and L.~Pellissier. 2018.
+\bibitem[{Alexander et~al.(2018)}]{alexander_lags_2018}
+Alexander, J.~M. et~al. 2018.
 \newblock Lags in the response of mountain plant communities to climate change.
-\newblock Global Change Biology, {\bf 24}:563--579.
+\newblock -- Global Change Biology 24: 563--579.
 
-\bibitem[{Blois et~al.(2013)Blois, Williams, Fitzpatrick, Jackson, and
-  Ferrier}]{Blois2013}
-Blois, J.~L., J.~W. Williams, M.~C. Fitzpatrick, S.~T. Jackson, and S.~Ferrier.
-  2013.
+\bibitem[{Blois et~al.(2013)}]{Blois2013}
+Blois, J.~L. et~al. 2013.
 \newblock Space can substitute for time in predicting climate-change effects on
   biodiversity.
-\newblock Proceedings of the National Academy of Sciences, {\bf
-  110}:9374--9379.
+\newblock -- Proceedings of the National Academy of Sciences 110: 9374--9379.
 
-\bibitem[{Brun et~al.(2016)Brun, Kiørboe, Licandro, and Payne}]{Brun2016}
-Brun, P., T.~Kiørboe, P.~Licandro, and M.~R. Payne. 2016.
+\bibitem[{Brun et~al.(2016)}]{Brun2016}
+Brun, P. et~al. 2016.
 \newblock The predictive skill of species distribution models for plankton in a
   changing climate.
-\newblock Global Change Biology, {\bf 22}:3170--3181.
+\newblock -- Global Change Biology 22: 3170--3181.
 
-\bibitem[{Chevalier and Knape()}]{Chevalier}
-Chevalier, M. and J.~Knape. ????
+\bibitem[{Chevalier and Knape(2020)}]{Chevalier}
+Chevalier, M. and Knape, J. 2020.
 \newblock The cost of complexity in forecasts of population abundances is
   reduced but not eliminated by borrowing information across space using a
   hierarchical approach.
-\newblock Oikos, {\bf 0}.
+\newblock -- Oikos in press.
 
-\bibitem[{Clark et~al.(2001)Clark, Carpenter, Barber, Collins, Dobson, Foley,
-  Lodge, Pascual, Pielke, Pizer, Pringle, Reid, Rose, Sala, Schlesinger, Wall,
-  and Wear}]{clark_ecological_2001}
-Clark, J., S.~Carpenter, M.~Barber, S.~Collins, A.~Dobson, J.~Foley, D.~Lodge,
-  M.~Pascual, R.~Pielke, W.~Pizer, C.~Pringle, W.~Reid, K.~Rose, O.~Sala,
-  W.~Schlesinger, D.~Wall, and D.~Wear. 2001.
+\bibitem[{Clark et~al.(2001)}]{clark_ecological_2001}
+Clark, J. et~al. 2001.
 \newblock Ecological forecasts: {An} emerging imperative.
-\newblock Science, {\bf 293}:657--660.
+\newblock -- Science 293: 657--660.
 
-\bibitem[{Dalgleish et~al.(2011)Dalgleish, Koons, Hooten, Moffet, and
-  Adler}]{dalgleish_climate_2011}
-Dalgleish, H.~J., D.~N. Koons, M.~B. Hooten, C.~A. Moffet, and P.~B. Adler.
-  2011.
+\bibitem[{Dalgleish et~al.(2011)}]{dalgleish_climate_2011}
+Dalgleish, H.~J. et~al. 2011.
 \newblock Climate influences the demography of three dominant sagebrush steppe
   plants.
-\newblock Ecology, {\bf 92}:75--85.
+\newblock -- Ecology 92: 75--85.
 
-\bibitem[{Davis et~al.(2014)Davis, McGuire, and Orcutt}]{Davis2014}
-Davis, E.~B., J.~L. McGuire, and J.~D. Orcutt. 2014.
+\bibitem[{Davis et~al.(2014)}]{Davis2014}
+Davis, E.~B. et~al. 2014.
 \newblock Ecological niche models of mammalian glacial refugia show consistent
   bias.
-\newblock Ecography, {\bf 37}:1133--1138.
+\newblock -- Ecography 37: 1133--1138.
 
 \bibitem[{Dietze(2017)}]{dietze_prediction_2017}
 Dietze, M.~C. 2017.
 \newblock Prediction in ecology: a first-principles framework.
-\newblock Ecological Applications, {\bf 27}:2048--2060.
+\newblock -- Ecological Applications 27: 2048--2060.
 
-\bibitem[{Dietze et~al.(2018)Dietze, Fox, Beck-Johnson, Betancourt, Hooten,
-  Jarnevich, Keitt, Kenney, Laney, Larsen, Loescher, Lunch, Pijanowski,
-  Randerson, Read, Tredennick, Vargas, Weathers, and
-  White}]{dietze_iterative_2018}
-Dietze, M.~C., A.~Fox, L.~M. Beck-Johnson, J.~L. Betancourt, M.~B. Hooten,
-  C.~S. Jarnevich, T.~H. Keitt, M.~A. Kenney, C.~M. Laney, L.~G. Larsen, H.~W.
-  Loescher, C.~K. Lunch, B.~C. Pijanowski, J.~T. Randerson, E.~K. Read, A.~T.
-  Tredennick, R.~Vargas, K.~C. Weathers, and E.~P. White. 2018.
+\bibitem[{Dietze et~al.(2018)}]{dietze_iterative_2018}
+Dietze, M.~C. et~al. 2018.
 \newblock Iterative near-term ecological forecasting: {Needs}, opportunities,
   and challenges.
-\newblock Proceedings of the National Academy of Sciences, page 201710231.
+\newblock -- Proceedings of the National Academy of Sciences 115: 1424--1432.
 
 \bibitem[{Elith and Leathwick(2009)}]{elith_species_2009}
-Elith, J. and J.~R. Leathwick. 2009.
+Elith, J. and Leathwick, J.~R. 2009.
 \newblock Species distribution models: ecological explanation and prediction
   across space and time.
-\newblock Annual Review of Ecology, Evolution, and Systematics, {\bf
-  40}:677--697.
+\newblock -- Annual Review of Ecology, Evolution, and Systematics 40: 677--697.
 
-\bibitem[{Good et~al.(2017)Good, McDonald, Barrick, Lenski, and
-  Desai}]{Good2017}
-Good, B.~H., M.~J. McDonald, J.~E. Barrick, R.~E. Lenski, and M.~M. Desai.
-  2017.
+\bibitem[{Good et~al.(2017)}]{Good2017}
+Good, B.~H. et~al. 2017.
 \newblock The dynamics of molecular evolution over 60,000 generations.
-\newblock Nature, {\bf 551}:45.
+\newblock -- Nature 551: 45.
 
-\bibitem[{Harris et~al.(2018)Harris, Taylor, and
-  White}]{harris_forecasting_2018}
-Harris, D.~J., S.~D. Taylor, and E.~P. White. 2018.
+\bibitem[{Harris et~al.(2018)}]{harris_forecasting_2018}
+Harris, D.~J. et~al. 2018.
 \newblock Forecasting biodiversity in breeding birds using best practices.
-\newblock PeerJ, {\bf 6}:e4278.
+\newblock -- PeerJ 6: e4278.
 
-\bibitem[{Hefley et~al.(2017)Hefley, Hooten, Russell, Walsh, and
-  Powell}]{Hefley2017}
-Hefley, T.~J., M.~B. Hooten, R.~E. Russell, D.~P. Walsh, and J.~A. Powell.
-  2017.
+\bibitem[{Hefley et~al.(2017)}]{Hefley2017}
+Hefley, T.~J. et~al. 2017.
 \newblock When mechanism matters: {Bayesian} forecasting using models of
   ecological diffusion.
-\newblock Ecology Letters, {\bf 20}:640--650.
+\newblock -- Ecology Letters 20: 640--650.
 
 \bibitem[{Hoffmann and Sgro(2011)}]{Hoffmann2011}
-Hoffmann, A.~A. and C.~M. Sgro. 2011.
+Hoffmann, A.~A. and Sgro, C.~M. 2011.
 \newblock Climate change and evolutionary adaptation.
-\newblock Nature, {\bf 470}:479--485.
+\newblock -- Nature 470: 479--485.
 
-\bibitem[{Houlahan et~al.(2017)Houlahan, McKinney, Anderson, and
-  McGill}]{houlahan_priority_2017}
-Houlahan, J.~E., S.~T. McKinney, T.~M. Anderson, and B.~J. McGill. 2017.
+\bibitem[{Houlahan et~al.(2017)}]{houlahan_priority_2017}
+Houlahan, J.~E. et~al. 2017.
 \newblock The priority of prediction in ecological understanding.
-\newblock Oikos, {\bf 126}:1--7.
+\newblock -- Oikos 126: 1--7.
 
 \bibitem[{Hyndman and Athanasopoulos(2018)}]{Hyndman2018}
-Hyndman, R. and G.~Athanasopoulos. 2018.
+Hyndman, R. and Athanasopoulos, G. 2018.
 \newblock Forecasting: {Principles} and {Practice}.
-\newblock OTexts.
+\newblock -- OTexts.
 
-\bibitem[{Illán et~al.(2014)Illán, Thomas, Jones, Wong, Shirley, and
-  Betts}]{Illan2014}
-Illán, J.~G., C.~D. Thomas, J.~A. Jones, W.-K. Wong, S.~M. Shirley, and M.~G.
-  Betts. 2014.
+\bibitem[{Illán et~al.(2014)}]{Illan2014}
+Illán, J.~G. et~al. 2014.
 \newblock Precipitation and winter temperature predict long-term range-scale
   abundance changes in {Western} {North} {American} birds.
-\newblock Global Change Biology, {\bf 20}:3351--3364.
+\newblock -- Global Change Biology 20: 3351--3364.
 
 \bibitem[{Kleinhesselink and Adler(2018)}]{kleinhesselink_response_2018}
-Kleinhesselink, A.~R. and P.~B. Adler. 2018.
+Kleinhesselink, A.~R. and Adler, P.~B. 2018.
 \newblock The response of big sagebrush ({Artemisia} tridentata) to interannual
   climate variation changes across its range.
-\newblock Ecology, {\bf 99}:1139--1149.
+\newblock -- Ecology 99: 1139--1149.
 
 \bibitem[{Lauenroth and Sala(1992)}]{lauenroth_long-term_1992}
-Lauenroth, W.~K. and O.~E. Sala. 1992.
+Lauenroth, W.~K. and Sala, O.~E. 1992.
 \newblock Long-term forage production of {North} {American} shortgrass steppe.
-\newblock Ecological Applications, {\bf 2}:397--403.
+\newblock -- Ecological Applications 2: 397--403.
 
 \bibitem[{Levin(1992)}]{levin_1992}
 Levin, S.~A. 1992.
 \newblock The problem of pattern and scale in ecology: the robert h. macarthur
   award lecture.
-\newblock Ecology, {\bf 73}:1943--1967.
+\newblock -- Ecology 73: 1943--1967.
 
 \bibitem[{McDermott and Wikle(2017)}]{McDermott2017}
-McDermott, P.~L. and C.~K. Wikle. 2017.
+McDermott, P.~L. and Wikle, C.~K. 2017.
 \newblock An ensemble quadratic echo state network for non-linear
   spatio-temporal forecasting.
-\newblock Stat, {\bf 6}:315--330.
+\newblock -- Stat 6: 315--330.
 
-\bibitem[{Mouquet et~al.(2015)Mouquet, Lagadeuc, Devictor, Doyen, DuputiÃ©,
-  Eveillard, Faure, Garnier, Gimenez, Huneman, Jabot, Jarne, Joly, Julliard,
-  KÃ©fi, Kergoat, Lavorel, Le~Gall, Meslin, Morand, Morin, Morlon, Pinay,
-  Pradel, Schurr, Thuiller, and Loreau}]{mouquet_review:_2015}
-Mouquet, N., Y.~Lagadeuc, V.~Devictor, L.~Doyen, A.~DuputiÃ©, D.~Eveillard,
-  D.~Faure, E.~Garnier, O.~Gimenez, P.~Huneman, F.~Jabot, P.~Jarne, D.~Joly,
-  R.~Julliard, S.~KÃ©fi, G.~J. Kergoat, S.~Lavorel, L.~Le~Gall, L.~Meslin,
-  S.~Morand, X.~Morin, H.~Morlon, G.~Pinay, R.~Pradel, F.~M. Schurr,
-  W.~Thuiller, and M.~Loreau. 2015.
+\bibitem[{Mouquet et~al.(2015)}]{mouquet_review:_2015}
+Mouquet, N. et~al. 2015.
 \newblock {REVIEW}: {Predictive} ecology in a changing world.
-\newblock Journal of Applied Ecology, {\bf 52}:1293--1310.
+\newblock -- Journal of Applied Ecology 52: 1293--1310.
 
-\bibitem[{Nice et~al.(2019)Nice, Forister, Harrison, Gompert, Fordyce, Thorne,
-  Waetjen, and Shapiro}]{Nice2019}
-Nice, C.~C., M.~L. Forister, J.~G. Harrison, Z.~Gompert, J.~A. Fordyce, J.~H.
-  Thorne, D.~P. Waetjen, and A.~M. Shapiro. 2019.
+\bibitem[{Nice et~al.(2019)}]{Nice2019}
+Nice, C.~C. et~al. 2019.
 \newblock Extreme heterogeneity of population response to climatic variation
   and the limits of prediction.
-\newblock Global Change Biology, {\bf 25}:2127--2136.
+\newblock -- Global Change Biology 25: 2127--2136.
 
-\bibitem[{Norberg et~al.(2019)Norberg, Abrego, Blanchet, Adler, Anderson,
-  Anttila, Araújo, Dallas, Dunson, Elith, Foster, Fox, Franklin, Godsoe,
-  Guisan, O'Hara, Hill, Holt, Hui, Husby, Kålås, Lehikoinen, Luoto, Mod,
-  Newell, Renner, Roslin, Soininen, Thuiller, Vanhatalo, Warton, White,
-  Zimmermann, Gravel, and Ovaskainen}]{Norberg2019}
-Norberg, A., N.~Abrego, F.~G. Blanchet, F.~R. Adler, B.~J. Anderson,
-  J.~Anttila, M.~B. Araújo, T.~Dallas, D.~Dunson, J.~Elith, S.~D. Foster,
-  R.~Fox, J.~Franklin, W.~Godsoe, A.~Guisan, B.~O'Hara, N.~A. Hill, R.~D. Holt,
-  F.~K.~C. Hui, M.~Husby, J.~A. Kålås, A.~Lehikoinen, M.~Luoto, H.~K. Mod,
-  G.~Newell, I.~Renner, T.~Roslin, J.~Soininen, W.~Thuiller, J.~Vanhatalo,
-  D.~Warton, M.~White, N.~E. Zimmermann, D.~Gravel, and O.~Ovaskainen. 2019.
+\bibitem[{Norberg et~al.(2019)}]{Norberg2019}
+Norberg, A. et~al. 2019.
 \newblock A comprehensive evaluation of predictive performance of 33 species
   distribution models at species and community levels.
-\newblock Ecological Monographs, {\bf 89}:e01370.
+\newblock -- Ecological Monographs 89: e01370.
 
-\bibitem[{Renwick et~al.(2018)Renwick, Curtis, Kleinhesselink, Schlaepfer,
-  Bradley, Aldridge, Poulter, and Adler}]{Renwick2018}
-Renwick, K.~M., C.~Curtis, A.~R. Kleinhesselink, D.~Schlaepfer, B.~A. Bradley,
-  C.~L. Aldridge, B.~Poulter, and P.~B. Adler. 2018.
+\bibitem[{Renwick et~al.(2018)}]{Renwick2018}
+Renwick, K.~M. et~al. 2018.
 \newblock Multi-model comparison highlights consistency in predicted effect of
   warming on a semi-arid shrub.
-\newblock Global Change Biology, {\bf 24}:424--438.
+\newblock -- Global Change Biology 24: 424--438.
 
 \bibitem[{Rosenzweig et~al.(1995)}]{rosenzweig_1995}
 Rosenzweig, M.~L. et~al. 1995.
 \newblock Species diversity in space and time.
-\newblock Cambridge University Press.
+\newblock -- Cambridge University Press.
 
-\bibitem[{Sala et~al.(1988)Sala, Parton, Joyce, and Lauenroth}]{Sala1988}
-Sala, O.~E., W.~J. Parton, L.~A. Joyce, and W.~K. Lauenroth. 1988.
+\bibitem[{Sala et~al.(1988)}]{Sala1988}
+Sala, O.~E. et~al. 1988.
 \newblock Primary production of the central grassland region of the {United}
   {States}.
-\newblock Ecology, {\bf 69}:40--45.
+\newblock -- Ecology 69: 40--45.
 
-\bibitem[{Schliep et~al.(2018)Schliep, Lany, Zarnetske, Schaeffer, Orians,
-  Orwig, and Preisser}]{Schliep2018}
-Schliep, E.~M., N.~K. Lany, P.~L. Zarnetske, R.~N. Schaeffer, C.~M. Orians,
-  D.~A. Orwig, and E.~L. Preisser. 2018.
+\bibitem[{Schliep et~al.(2018)}]{Schliep2018}
+Schliep, E.~M. et~al. 2018.
 \newblock Joint species distribution modelling for spatio-temporal occurrence
   and ordinal abundance data.
-\newblock Global Ecology and Biogeography, {\bf 27}:142--155.
+\newblock -- Global Ecology and Biogeography 27: 142--155.
 
-\bibitem[{Silvertown et~al.(2006)Silvertown, Poulton, Johnston, Edwards, Heard,
-  and Biss}]{Silvertown2006}
-Silvertown, J., P.~Poulton, E.~Johnston, G.~Edwards, M.~Heard, and P.~Biss.
-  2006.
+\bibitem[{Silvertown et~al.(2006)}]{Silvertown2006}
+Silvertown, J. et~al. 2006.
 \newblock The {Park} {Grass} {Experiment} 1856-2006: {Its} contribution to
   ecology.
-\newblock Journal of Ecology, {\bf 94}:814.
+\newblock -- Journal of Ecology 94: 814.
 
-\bibitem[{Urban et~al.(2012)Urban, Tewksbury, and Sheldon}]{Urban2012}
-Urban, M.~C., J.~J. Tewksbury, and K.~S. Sheldon. 2012.
+\bibitem[{Urban et~al.(2012)}]{Urban2012}
+Urban, M.~C. et~al. 2012.
 \newblock On a collision course: competition and dispersal differences create
   no-analogue communities and cause extinctions during climate change.
-\newblock Proceedings of the Royal Society of London B: Biological Sciences,
-  {\bf 279}:2072--2080.
+\newblock -- Proceedings of the Royal Society of London B: Biological Sciences
+  279: 2072--2080.
 
-\bibitem[{Veloz et~al.(2012)Veloz, Williams, Blois, He, Ottoï-Bliesner, and
-  Liu}]{Veloz2012}
-Veloz, S.~D., J.~W. Williams, J.~L. Blois, F.~He, B.~Ottoï-Bliesner, and
-  Z.~Liu. 2012.
+\bibitem[{Veloz et~al.(2012)}]{Veloz2012}
+Veloz, S.~D. et~al. 2012.
 \newblock No-analog climates and shifting realized niches during the late
   quaternary: implications for 21st-century predictions by species distribution
   models.
-\newblock Global Change Biology, {\bf 18}:1698--1713.
+\newblock -- Global Change Biology 18: 1698--1713.
 
-\bibitem[{Ward et~al.(2014)Ward, Holmes, Thorson, and
-  Collen}]{ward_complexity_2014}
-Ward, E.~J., E.~E. Holmes, J.~T. Thorson, and B.~Collen. 2014.
+\bibitem[{Ward et~al.(2014)}]{ward_complexity_2014}
+Ward, E.~J. et~al. 2014.
 \newblock Complexity is costly: a meta-analysis of parametric and
   non-parametric methods for short-term population forecasting.
-\newblock Oikos, {\bf 123}:652--661.
+\newblock -- Oikos 123: 652--661.
 
 \bibitem[{Wikle(2003)}]{Wikle2003}
 Wikle, C.~K. 2003.
 \newblock Hierarchical {Bayesian} {Models} for {Predicting} the {Spread} of
   {Ecological} {Processes}.
-\newblock Ecology, {\bf 84}:1382--1394.
+\newblock -- Ecology 84: 1382--1394.
 
 \bibitem[{Williams and Jackson(2007)}]{Williams2007}
-Williams, J.~W. and S.~T. Jackson. 2007.
+Williams, J.~W. and Jackson, S.~T. 2007.
 \newblock Novel climates, no-analog communities, and ecological surprises.
-\newblock Frontiers in Ecology and the Environment, {\bf 5}:475--482.
+\newblock -- Frontiers in Ecology and the Environment 5: 475--482.
 
-\bibitem[{Williams et~al.(2017)Williams, Hooten, Womble, Esslinger, Bower, and
-  Hefley}]{Williams2017}
-Williams, P.~J., M.~B. Hooten, J.~N. Womble, G.~G. Esslinger, M.~R. Bower, and
-  T.~J. Hefley. 2017.
+\bibitem[{Williams et~al.(2017)}]{Williams2017}
+Williams, P.~J. et~al. 2017.
 \newblock An integrated data model to estimate spatiotemporal occupancy,
   abundance, and colonization dynamics.
-\newblock Ecology, {\bf 98}:328--336.
+\newblock -- Ecology 98: 328--336.
 
-\bibitem[{Worth et~al.(2014)Worth, Williamson, Sakaguchi, Nevill, and
-  Jordan}]{Worth2014}
-Worth, J. R.~P., G.~J. Williamson, S.~Sakaguchi, P.~G. Nevill, and G.~J.
-  Jordan. 2014.
+\bibitem[{Worth et~al.(2014)}]{Worth2014}
+Worth, J. R.~P. et~al. 2014.
 \newblock Environmental niche modelling fails to predict {Last} {Glacial}
   {Maximum} refugia: niche shifts, microrefugia or incorrect palaeoclimate
   estimates?
-\newblock Global Ecology and Biogeography, {\bf 23}:1186--1197.
+\newblock -- Global Ecology and Biogeography 23: 1186--1197.
 
 \end{thebibliography}
