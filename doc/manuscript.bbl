@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 
 \bibitem[{Alexander et~al.(2018)}]{alexander_lags_2018}
@@ -135,6 +135,12 @@ Norberg, A. et~al. 2019.
 \newblock A comprehensive evaluation of predictive performance of 33 species
   distribution models at species and community levels.
 \newblock -- Ecological Monographs 89: e01370.
+
+\bibitem[{Oedekoven et~al.(2017)}]{Oedekoven2017}
+Oedekoven, C.~S. et~al. 2017.
+\newblock Attributing changes in the distribution of species abundance to
+  weather variables using the example of {British} breeding birds.
+\newblock -- Methods in Ecology and Evolution 8: 1690--1702.
 
 \bibitem[{Renwick et~al.(2018)}]{Renwick2018}
 Renwick, K.~M. et~al. 2018.
