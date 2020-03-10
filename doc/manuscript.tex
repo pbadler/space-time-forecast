@@ -199,7 +199,7 @@ The compositional turnover affecting our focal species also influences total bio
 
 Evolutionary adaptation is a key uncertainty in predicting how environmental change will impact a focal population at a given location \citep{Hoffmann2011}. Like the shifts in species composition illustrated in the previous example, shifts in genotype frequencies can also influence dynamics and forecasts at different time scales. Although shifts in genotype frequencies at the population level are analogous to changes in species composition at the community level, the mechanisms are distinct: heterozygosity and genetic recombination have no analogue at the community level. We demonstrate how these processes influence short and long-term forecasts with a standard eco-evolutionary simulation model for a hypothetical annual plant population in which fecundity is temperature dependent, and different genotypes have different temperature optima (Fig. \ref{fig:evo_evo_spatial_temporal_models}A). 
 
-Our model describes how the local density of each genotype changes between years, which depends on temperature and genotype densities in the previous year. Transient temporal dynamics are computed directly from the model; these dynamics are the basis for the temporal statistical model. To create a spatial gradient, we simulated the equilibrium density of each genotype in a series of local populations experiencing different mean temperatures. The pattern of equilibrium densities across the mean annual temperature gradient is the basis for our spatial statistical model: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:evo_evo_spatial_temporal_models}B). The full description of the eco-evolutionary simulation model is provided in SI Appendix \ref{eco-evo}. 
+Our model describes how the local density of each genotype changes between years, which depends on temperature and genotype densities in the previous year. Transient temporal dynamics are computed directly from the model; these dynamics are the basis for the temporal statistical model. To create a spatial gradient, we simulated the equilibrium density of each genotype in a series of local populations experiencing different mean temperatures. The pattern of equilibrium densities across the mean annual temperature gradient is the basis for our spatial statistical model: cold sites will be dominated by the cold-adapted homozygous genotype, warm sites will be dominated by the heat-adapted homozygous genotype, and intermediate sites will be dominated by the heterozygous genotype (Fig. \ref{fig:evo_evo_spatial_temporal_models}B). The full description of the eco-evolutionary simulation model is provided in SI Appendix \ref{eco-evo}, and \new{parameter values for simulations described here are shown in Table \ref{tab:eco-evo-pars}.}
 
 The spatial pattern shown in Fig. \ref{fig:evo_evo_spatial_temporal_models}B is the outcome of steady-state conditions. But at any one site, the population's short-term response to temperature will be determined by the dominant genotype's reaction norm (Fig. \ref{fig:evo_evo_spatial_temporal_models}A). For example, at a cold site dominated by the cold-adapted homozygous genotype, a warmer than average year would cause a decrease in population size due to decreases in fecundity (blue line in Fig. \ref{fig:evo_evo_spatial_temporal_models}A), even though the heat-adapted homozygote might perform optimally at that temperature. However, if warmer than normal conditions persist for many years, then genotype frequencies should shift, and the heat-adapted homozygote will compensate for the decreases of the cold-adapted genotype. 
 
@@ -432,7 +432,7 @@ but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{
 		match the symbols shown in the equations in Appendix \ref{metacomm}; rather, the species-specific values of those parameters are calculated in the computer code based on the values in this table.  }
 	\centering
 	\smallskip 
-	\begin{tabular}{llrl}
+	\begin{tabular}{lrl}
 		\hline
 		Name & Value & Definition \\
 		\hline
@@ -444,7 +444,7 @@ but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{
 		burnin\_yrs & 2000 & Number of years to initialize simulation \\
 		baseline\_yrs & 1000  & Number of years at baseline temperature used to fit statistical models \\
 		warming\_yrs  & 200 & Number of years over which temperature increases \\
-		final\_yrs & 2000  & Number of yrs at steady-state, elevated temperature \\
+		final\_yrs & 2000  & Number of years at steady-state, elevated temperature \\
 		\hline
 		N & 40 & Number of species \\
 		Gmax & 0.5 & Maximum population growth rate \\
@@ -461,21 +461,26 @@ but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{
 
 \begin{table}[htp]
 	\caption{\label{tab:eco-evo-pars}Parameters and parameter values for the eco-evolutionary case study. Values are assigned at
-		at the start of \texttt{genetic\_diversity\_master.R}. ``Name" refers to the variable declared in the computer code.  }
+		at the start of \texttt{genetic\_diversity\_master.R}. ``Name" refers to the variable declared in the computer code. Where appropriate, the corresponding symbols from equations in Appendix \ref{eco-evo} are shown in parentheses. }
 	\centering
 	\smallskip 
-	\begin{tabular}{llrl}
+	\begin{tabular}{lrl}
 		\hline
 		Name & Values & Definition \\
 		\hline
-		
+		Tstdev & 1 & Standard deviation of temperature (interannual variation) \\
+		baseT & -1 & Baseline temperature \\
+		deltaT & 5 & Total change in temperature \\
+		baseline\_yrs & 500 & Number of years at baseline temperature used to fit statistical models \\
+		warming\_yrs & 100  & Number of years over which temperature increases \\
+		final\_yrs & 300  & Number of years at steady-state, elevated temperature \\
 		\hline
-		fec\_Tmu & -1,0,1  & Optimal temperature for genotypes AA, Aa, and aa \\
-		fec\_Tsigma & 8  & Standard deviation in temperature niche for all genotypes \\
+		fec\_Tmu & -1,0,1  & Optimal temperature for genotypes AA, Aa, and aa, respectively \\
+		fec\_Tsigma & 8  & Standard deviation in fecundity for all genotypes \\
 		fec\_max & 100 &  Maximum fecundity for all genotypes \\
-		G & 1 & Germination rate for all genotypes \\
-		seedSurv &  0.5  & Survival rate for ungerminated seeds of all genotypes \\
-		alpha & 1  &  All competition coefficients (intra- and inter-) for all genotypes \\
+		G ($g$) & 1 & Germination rate for all genotypes \\
+		seedSurv ($s$)  &  0.5  & Survival rate for ungerminated seeds of all genotypes \\
+		alpha ($\alpha$) & 1  &  All competition coefficients for all genotypes \\
 		\hline
 	
 	\end{tabular}
@@ -487,6 +492,8 @@ but the definitions of $T$, $\phi_A$, and $\phi_a$ are given by equations (\ref{
 \section*{Supplementary Figures}
 
 \renewcommand{\thefigure}{S-\arabic{figure}}
+
+\clearpage
 
 \begin{figure}[tbp]
 	\centering
