@@ -26,7 +26,8 @@ RESPONSE:
 Both reviewers raised concerns about the lack of sensitivity analyses and the robustness of our results. We take these concerns seriously and have responded in a number of ways. 	1) We added new material and references to the Introduction to emphasize that our simulations are motivated by empirical examples in which spatial and temporal models detect different relationships between an environmental driver and an ecological response. Any difference in magnitude or sign in these relationships will lead to contrasting forecasts. This situation appears quite frequently in the empirical literature; it is not a theoretical curiosity. The purpose of our simulations is not to convince readers that this situation might possibly occur (we already know it does), but rather to demonstrate how this situation may arise and the challenges and opportunities it presents for ecological forecasting. Given the generality of the motivating empirical pattern, and the fact that we designed our case study to reproduce that pattern, and that the signal to noise ratio in our simulation is high, we do not believe that a detailed sensitivity analysis is necessary. However, we do agree with the reviewer that understanding how different parameters influence the rate of the shift in model weights is an important goal for future research. Fig. 6 seeks to make that point, but a more rigorous analysis is beyond the scope of this study.
 	2) We have added supplementary tables showing parameter values for both case studies. 
 	3) We now clarify that the results are based on one simulation run, but qualitative results were consistent.
-	4) We addressed Reviewer 2's question about nonstationarity (see below). 
+	4) We have added more detail to the meta-community model description in Appendix B. We believe the description of the evo-evo model is quite complete (Appendix C), but would be happy to add more detail in response to specific questions. 
+	5) We addressed Reviewer 2's question about nonstationarity (see below). 
 
 
 Reviewer: 2
@@ -34,7 +35,7 @@ Reviewer: 2
 Comments to the Author
 The manuscript asks an interesting question - is it better to use (short) time series or space-for-time substitutions. The results make intuitive sense, but they are difficult to judge because the manuscript does not give enough details about the work. There are no details about the simulations - how many years were simulated? What spatial extent? What parameter values were used? How was the (simulated) data collected? How many replicate simulations were run (if one, why were you unable to run more than one? How are we meant to know if the results replicate?)? etc. etc. Basically, it is impossible to re-create these analyses from the description. I would strongly suggest having separate Methods and Results sections, as this makes it easier to follow the description of the work (and also helps you focus on describing the methods, and the results).
 
-RESPONSE: Our response to Reviewer 1's similar concerns addresses many of these points. We originally considered separate Methods and Results sections, but found that structure awkward given our two case studies. We could add Methods and Results subheaders within each of the case studies if the editor and reviewers think that would be helpful. 
+RESPONSE: Our response to Reviewer 1's similar concerns addresses many of these points. We originally considered separate Methods and Results sections, but found that structure awkward given our two case studies. We could add Methods and Results subheaders within each of the case study sections if the editor and reviewers think that would be helpful. 
 
 Beyond the writing, I think one important issue is the assumption of stationarity. My guess (and I have to guess, because we're not given this information) the spatial data is taken after the simulation has run to equilibrium. But what happens if the spatial data is taken when the climate is changing? I think that would be the important question for researchers using space-for-time with contemporary data.
 
@@ -42,5 +43,5 @@ RESPONSE: Interesting question! We modified our code for the community turnover 
 
 I also had a quick look at the code. Unfortunately, it's written so as not to be usable by anyone other then the authors, or someone working on a Windows computer who wants to set up the same directory structure. Please, make the code portable. I would suggest making an R package, as this will give you a consistent structure, means you don't need to use setwd() and rm(list=ls()) (both abominations in portable code), and you can write vignettes which are human readable to demonstrate how the code was used to run the simulations.
 
-RESPONSE: Ethan?
+RESPONSE: Ethan? Would it be rude to point out that the code uses relative paths, so you don't need to "create" a directory structure? You just download, read the readme, and set one path?
 
