@@ -1,7 +1,7 @@
 #
 #
 #	Help function to run community dynamics
-#	Main script author: Loïc Chalmandrier - lchalman@uwyo.edu, https://github.com/LoicChr
+#	Main script author: Loic Chalmandrier - lchalman@uwyo.edu, https://github.com/LoicChr
 #	Co-authors (and project leaders): J. Alexander - jake.alexander@unil.ch & L. Pellissier - loic.pellissier@usys.ethz.ch
 
 # Translated from Matlab to R by Peter Adler - peter.adler@usu.edu
@@ -26,3 +26,18 @@ CommunityTempDis <- function(spxp_ini, tr, seed_rain,temp,dt){
   
 }
 
+generateTemps <- function(meanT,changeT,stationary=T){
+  
+  if(stationary==T){
+    
+    out <- meanT + c(rep(0,burnin_yrs+baseline_yrs),seq(changeT/warming_yrs,changeT,changeT/warming_yrs),
+                        rep(changeT,final_yrs))
+  }else{
+    
+    out <- meanT + seq(changeT/sim_yrs,changeT,changeT/sim_yrs)
+    
+  }
+  
+  return(out)
+  
+}

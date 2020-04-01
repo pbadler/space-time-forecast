@@ -18,11 +18,12 @@ y_lag <- rowSums(spxp[(burnin_yrs-1):(burnin_yrs+baseline_yrs-1),site,])
 temporal_model <- lm(y_temporal ~ y_lag + x_temporal)
 
 # get mean temperatures for forecast period (after baseline_yrs)
-forecast_Tmean <- Tmean[site] + c(seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
-                          rep(deltaT,final_yrs))
+forecast_Tmean <- generateTemps(meanT=Tmean[site],changeT=deltaT,stationary=stationary_periods)
+forecast_Tmean <- forecast_Tmean[(burnin_yrs+baseline_yrs+1):sim_yrs] 
 
 # make predictions from spatial model
 spatial_forecast <- coef(spatial_model)[1] + coef(spatial_model)[2]*forecast_Tmean 
+
 # make predictions from spatial model with uncertainty
 # spatial_forecast_spp <- predict(spatial_model_spp,newdata=data.frame(x_spatial=forecast_Tmean),
 #                                 interval="predict")

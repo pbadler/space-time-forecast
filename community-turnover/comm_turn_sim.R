@@ -3,8 +3,9 @@
 # generate one set of temperature time series to use in all simulations
 temperature<-matrix(NA,sim_yrs,length(Tmean))
 for(iT in 1:length(Tmean)){
-  tmp_mean <- Tmean[iT] + c(rep(0,burnin_yrs+baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
-                            rep(deltaT,final_yrs))
+  
+  tmp_mean <- generateTemps(meanT=Tmean[iT],changeT=deltaT,stationary=stationary_periods)
+  
   temperature[,iT] = rnorm(sim_yrs,tmp_mean,Tstdev)  # generate temperature time series
 }
 
@@ -14,7 +15,7 @@ landscape <- cbind(1:L_land , rep(1 ,L_land),Tmean)
 # 1st step: initialisation of the metacommunity
 spxp <- array(NA, dim=c(sim_yrs,L_land,N ))
 spxp[1,,] <- 2/N
-dt <- 0.025   # ????
+dt <- 0.025   
 d <- d/dt
 
 # Generation of the species pool
@@ -28,7 +29,7 @@ diag(seed_rain) <- 1-d*dt
 seed_rain[1,1] = 1-dt*d/2  
 seed_rain[L_land,L_land] = 1-dt*d/2
 
-# Run of the initialisation of community
+# Loop through time
 for(t in 2:sim_yrs){
   yr_temp <- temperature[t,]
   spxp[t,,] <- CommunityTempDis(spxp[t-1,,], tr, seed_rain, yr_temp, dt)

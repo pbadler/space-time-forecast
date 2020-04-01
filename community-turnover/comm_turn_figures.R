@@ -64,8 +64,11 @@ png("figures/community_models_total.png",height=3.5,width=4,res=400,units="in")
 dev.off()
 
 # plot forecast for focal species biomass and then total biomass
-my_expected_temp <- Tmean[site] + c(rep(0,baseline_yrs),seq(deltaT/warming_yrs,deltaT,deltaT/warming_yrs),
-                          rep(deltaT,final_yrs))
+my_expected_temp <- generateTemps(meanT=Tmean[site],changeT=deltaT, stationary=stationary_periods)
+
+# chop off burn in years
+my_expected_temp <- my_expected_temp[(burnin_yrs+1):sim_yrs]
+
 my_obs_temp <- temperature[(burnin_yrs+1):sim_yrs,site]
 my_biomass <- rowSums(spxp[(burnin_yrs+1):sim_yrs,site,])
 my_biomass_spp <- spxp[(burnin_yrs+1):sim_yrs,site,my_species]
@@ -83,7 +86,9 @@ png("figures/community_forecast_species.png",height=7.5,width=4.5,res=400,units=
   mtext(side=3," A",line=-1.1,adj=0,cex=0.8)
   
   # middle panel: focal species and forecasts
-  plot(my_biomass_spp,xlab="",ylab="Focal species biomass",type="l",col="darkgrey")
+  my_ylims <- c(0.9*min(c(my_biomass_spp,spatial_forecast_spp,temporal_forecast_spp),na.rm=T),
+                  1.05*max(c(my_biomass_spp,spatial_forecast_spp,temporal_forecast_spp),na.rm = T))
+  plot(my_biomass_spp,xlab="",ylab="Focal species biomass",type="l",col="darkgrey",ylim=my_ylims)
   abline(v=baseline_yrs,col="black",lty=3)
   lines(1:length(my_biomass_spp),spatial_forecast_spp,col="red",lwd=2)
   lines(1:length(my_biomass_spp),temporal_forecast_spp,col="blue",lwd=2)
@@ -125,13 +130,15 @@ png("figures/community_forecast_total.png",height=7.5,width=4.5,res=400,units="i
   mtext(side=3," A",line=-1.1,adj=0,cex=0.8)
   
   # total biomass
-  plot(my_biomass,xlab="",ylab="Total biomass",type="l",col="darkgrey")
+  my_ylims <- c(0.9*min(c(my_biomass,spatial_forecast,temporal_forecast),na.rm=T),
+                1.05*max(c(my_biomass,spatial_forecast,temporal_forecast),na.rm = T))
+  plot(my_biomass,xlab="",ylab="Total biomass",type="l",col="darkgrey",ylim = my_ylims)
   abline(v=baseline_yrs,col="black",lty=3)
   lines(1:length(my_biomass),spatial_forecast,col="red",lwd=2)
   lines(1:length(my_biomass),temporal_forecast,col="blue",lwd=2)
   lines(1:length(my_biomass),combined_forecast,col="purple",lwd=2,lty=2)
   mtext(side=3," B",line=-1.1,adj=0,cex=0.8)
-  legend("right",c("Observed","Spatial forecast","Temporal forecast","Weighted forecast"),
+  legend("bottomright",c("Observed","Spatial forecast","Temporal forecast","Weighted forecast"),
          col=c("darkgrey","red","blue","purple"),lwd=c(1,2,2,2),lty=c(1,1,1,2),bty="n",cex=0.8)
   
   # weights

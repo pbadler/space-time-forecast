@@ -24,6 +24,7 @@ Tmin <- 0; Tmax <- 15  # baseline temperature range
 Tmean <-seq(Tmin,Tmax,length=L_land)   # baseline mean temperatures across the landscape
 Tstdev <- 2   # st dev of temperature (interannual variation, stationary)
 deltaT <- 4  # total change in mean temperature
+stationary_periods <- F # F gives continuous temperature increase; T gives stationary baseline and final periods
 
 # length of simulation
 burnin_yrs <- 2000
