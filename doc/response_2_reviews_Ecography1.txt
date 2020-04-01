@@ -1,0 +1,46 @@
+Recommendation by the Subject Editor (anonymous):
+
+Both reviewers consider the work interesting and potentially highly valuable. I fully agree with them. The reason why your manuscript is rejected (with possibility to resubmit) was the the reviewers considered that the present version does not include sufficient information to truly evaluate the scientific contents (the analyses are basically not reproducible due to lacking information). Thus I urge you to pay specific attention to describe the methods in sufficient detail so that the results can be critically evaluated by the reviewers. Naturally, please address also all other comments provided by the two reviewers.
+
+Reviewer(s)' Comments to Author:
+Reviewer: 1
+
+Comments to the Author
+The manuscript compares time series and a "space-for-time" approach for predicting species abundance and distribution in the future under two theoretical scenarios: meta-community dynamics and eco-evolutionary dynamics. The paper tackles an interesting and relevant question related to species distribution modeling and population assessment and provides some useful insight to it. The paper is well and clearly written.
+
+My main concern with the paper is that it seems to exaggerate the importance and generality of its results. The abstract and introduction give impression that ecological forecast is tackled in very general manner. However, at the end authors study only two very simplistic (even though relavant) descriptions of ecological processes. Moreover, the set of statistical models compared is very narrow. Hence, the generality of their results is limited as well. This is not a weakness as such since with this simple example authors are able to show interesting results which are rather easily understandable. However, in my opinion the tone of the paper should be much more modest and authors should give relevant information about their simulation set up already in the abstract. 
+
+RESPONSE: Ethan and Michael, I am not sure what to say here...the approaches we study are very common and, in a sense, very general. And I can't believe that the details of our statistical models matter, especially since we are analyzing simulated data with a very high signal to noise ratio. Go back to the point that the key difference is in the shape/sign of environment-response relationships in space vs time? Also, I re-read with an eye on tone, and we have caveats throughout. Not sure what I can do.
+
+I don't like the term "space-for-time". I have not encountered such term before and for me it is not informative. Why not use species distribution model or something similar that has already an established meaning.
+
+RESPONSE: In our experience, "space-for-time" is a common approach. A quick search on Google Scholar shows many papers with "space-for-time" in the title or abstract, including papers in high impact journals. "Species distribution model" is a narrower term, which does not suit our purpose as well. 
+
+In lines 150 and 152 authors use term "correlate". I know that statistical models are often called correlative models in ecology but it is typically wrong and at least impresice. Hence, I would describe in more detail how the model inference was done - maximum likelihood, Bayesian inference or least squares or what.
+
+RESPONSE: We replaced "correlated" with regressed. Details on the regression models are provided in Appendix A.
+
+The description of the simulation study should include the specific values used for the simulator. Authors should also tell more clearly are their results from single simulation or from several simulations. Moreover, it would be good to know how sensitive the results are to the chosen simulator parameters. That is, if the simulated dynamics was made faster/slower and the interspecific interactions and dispersal made stronger/weaker how would the results change. This kind of "sensitivity" test would provide information about the generality of the results and insight on for which kind of real systems they might apply.
+
+RESPONSE:
+Both reviewers raised concerns about the lack of sensitivity analyses and the robustness of our results. We take these concerns seriously and have responded in a number of ways. 	1) We added new material and references to the Introduction to emphasize that our simulations are motivated by empirical examples in which spatial and temporal models detect different relationships between an environmental driver and an ecological response. Any difference in magnitude or sign in these relationships will lead to contrasting forecasts. This situation appears quite frequently in the empirical literature; it is not a theoretical curiosity. The purpose of our simulations is not to convince readers that this situation might possibly occur (we already know it does), but rather to demonstrate how this situation may arise and the challenges and opportunities it presents for ecological forecasting. Given the generality of the motivating empirical pattern, and the fact that we designed our case study to reproduce that pattern, and that the signal to noise ratio in our simulation is high, we do not believe that a detailed sensitivity analysis is necessary. However, we do agree with the reviewer that understanding how different parameters influence the rate of the shift in model weights is an important goal for future research. Fig. 6 seeks to make that point, but a more rigorous analysis is beyond the scope of this study.
+	2) We have added supplementary tables showing parameter values for both case studies. 
+	3) We now clarify that the results are based on one simulation run, but qualitative results were consistent.
+	4) We addressed Reviewer 2's question about nonstationarity (see below). 
+
+
+Reviewer: 2
+
+Comments to the Author
+The manuscript asks an interesting question - is it better to use (short) time series or space-for-time substitutions. The results make intuitive sense, but they are difficult to judge because the manuscript does not give enough details about the work. There are no details about the simulations - how many years were simulated? What spatial extent? What parameter values were used? How was the (simulated) data collected? How many replicate simulations were run (if one, why were you unable to run more than one? How are we meant to know if the results replicate?)? etc. etc. Basically, it is impossible to re-create these analyses from the description. I would strongly suggest having separate Methods and Results sections, as this makes it easier to follow the description of the work (and also helps you focus on describing the methods, and the results).
+
+RESPONSE: Our response to Reviewer 1's similar concerns addresses many of these points. We originally considered separate Methods and Results sections, but found that structure awkward given our two case studies. We could add Methods and Results subheaders within each of the case studies if the editor and reviewers think that would be helpful. 
+
+Beyond the writing, I think one important issue is the assumption of stationarity. My guess (and I have to guess, because we're not given this information) the spatial data is taken after the simulation has run to equilibrium. But what happens if the spatial data is taken when the climate is changing? I think that would be the important question for researchers using space-for-time with contemporary data.
+
+RESPONSE: Interesting question! We modified our code for the community turnover example to study the situation in which temperature increases through the entire simulation, with no stationary period for model fitting. The key result is shown in SI Fig. 1. Qualitatively, the result is consistent: at short forecast horizons the temporal statistical model makes a better forecast while at longer forecast horizons the spatial model does better. However, as we explain in the main text (LINES), the forecast from the temporal model is not as accurate, even at short forecast horizons, as in the original simulation with a stationary period for model fitting. We believe this reflects that fact that the temporal statistical model does not account for the long-term trend. Doing so might recover the same kind of information about slow processes contained in the spatial statistical model. 
+
+I also had a quick look at the code. Unfortunately, it's written so as not to be usable by anyone other then the authors, or someone working on a Windows computer who wants to set up the same directory structure. Please, make the code portable. I would suggest making an R package, as this will give you a consistent structure, means you don't need to use setwd() and rm(list=ls()) (both abominations in portable code), and you can write vignettes which are human readable to demonstrate how the code was used to run the simulations.
+
+RESPONSE: Ethan?
+
