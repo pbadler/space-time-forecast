@@ -1,16 +1,14 @@
 
-# clean up
-rm(list=ls())
+# install R packages (if necessary) and load them
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(boot, scales, here)
 
 # set working directory
-setwd("C:/repos/space-time-forecast/community-turnover")
+here()
 
-# load packages and functions
+# load custom functions
 source("lib/CommunityTempDis.R")
 source("lib/SpeciesPoolGen.R")
-library("boot")
-library("scales")
-#library("latticeExtra")
 
 ###
 ### 1. Simulate a metacommunity: first stationary conditions, then temperature increase, then stationary again

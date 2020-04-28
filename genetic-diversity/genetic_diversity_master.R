@@ -1,14 +1,13 @@
 
-# clean up
-rm(list=ls())
+# install R packages (if necessary) and load them
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(boot, latticeExtra, here)
 
 # set working directory
-setwd("C:/Repos/space-time-forecast/genetic-diversity")
+here()
 
-# load packages and functions
+# load custom functions
 source("genetic_diversity_functions.R")
-library("boot")
-library("latticeExtra")
 
 ###
 ### 1. Simulate and describe spatial pattern in abundances at sites across a range of mean temperatures
@@ -33,8 +32,6 @@ seedSurv = 0.5  # survival of ungerminated seeds (same for both genotypes)
 alpha = matrix(1,3,3)      # all competition coefficients (intra- and inter-) are equal for both genotypes
 
 source("genetic_diversity_sim_spatial.R")
-
-#CHECK: why zeros for least fit genotype's mean abundances at lowest temps but not highest?
 
 ###
 ### 2. Simulate and describe temporal pattern in abundances at one site experiencing warming
