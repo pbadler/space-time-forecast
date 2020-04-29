@@ -15,9 +15,9 @@ for(iT in 1:length(Tmean)){
   lambdas = getLambdas(temperature[,iT],fec_Tmu,fec_Tsigma,fec_max)
   
   for(iYr in 2:(sim_yrs)){
-    seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha,G)
+    seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha)
     phi <- getPhi(seeds)
-    out <- diploid(N[iYr-1,],seedSurv,G,seeds,phi)
+    out <- diploid(N[iYr-1,],seeds,phi)
     N[iYr,] <- out$SB
     Plants[iYr,] <- out$Plants
     Fec[iYr,] <- out$SP

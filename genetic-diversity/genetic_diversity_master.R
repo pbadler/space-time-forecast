@@ -28,7 +28,7 @@ fec_Tmu = c(-1,0,1)  # optimal temperature for genotypes AA, Aa, and aa
 fec_Tsigma = rep(8,3)     # standard deviation in temperature response for genotypes AA, Aa, and aa
 fec_max = c(100,100,100)  # fecundity for genotypes AA, Aa, and aa
 G <- 1
-seedSurv = 0.5  # survival of ungerminated seeds (same for both genotypes)
+seedSurv = 0  # survival of ungerminated seeds (same for both genotypes)
 alpha = matrix(1,3,3)      # all competition coefficients (intra- and inter-) are equal for both genotypes
 
 source("genetic_diversity_sim_spatial.R")
@@ -55,7 +55,6 @@ temperature = rnorm(sim_yrs,Tmean,Tstdev)  # generate temperature time series
 # use same parameters from diploid model above 
 
 source("genetic_diversity_sim_temporal.R")
-
 
 ###
 ### 3. Generate forecasts for the temporal simulation (part 2)

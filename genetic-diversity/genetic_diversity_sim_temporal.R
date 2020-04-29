@@ -11,9 +11,9 @@ N[1,] = fec_max[1]/3
 lambdas = getLambdas(temperature,fec_Tmu,fec_Tsigma,fec_max)
 
 for(iYr in 2:(sim_yrs)){
-  seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha,G)
+  seeds<-newSeeds(N[iYr-1,],lambdas[iYr,],alpha)
   phi <- getPhi(seeds)
-  out <- diploid(N[iYr-1,],seedSurv,G,seeds,phi)
+  out <- diploid(N[iYr-1,],seeds,phi)
   N[iYr,] <- out$SB  # total seedbank
   Plants[iYr,] <- out$Plants  # germinated plants
   Fec[iYr,] <- out$SP # seed production

@@ -24,9 +24,9 @@ newSeeds = function(N,lambda,alpha,G){
   	# G = vector of length 3 of each genotype's germination rate
   	# output = vector (3) giving # seeds produced by each genotype at time t+1
     
-    AA = lambda[1]*N[1]*G/(1+alpha[1,1]*N[1]*G+alpha[1,2]*N[2]*G+alpha[1,3]*N[3]*G)
-  	Aa = lambda[2]*N[2]*G/(1+alpha[2,1]*N[1]*G+alpha[2,2]*N[2]*G+alpha[2,3]*N[3]*G)
-    aa = lambda[3]*N[3]*G/(1+alpha[3,1]*N[1]*G+alpha[3,2]*N[2]*G+alpha[3,3]*N[3]*G)
+    AA = lambda[1]*N[1]/(1+alpha[1,1]*N[1]+alpha[1,2]*N[2]+alpha[1,3]*N[3])
+  	Aa = lambda[2]*N[2]/(1+alpha[2,1]*N[1]+alpha[2,2]*N[2]+alpha[2,3]*N[3])
+    aa = lambda[3]*N[3]/(1+alpha[3,1]*N[1]+alpha[3,2]*N[2]+alpha[3,3]*N[3])
   	return(c(AA,Aa,aa))
 
 }
@@ -40,7 +40,7 @@ getPhi<-function(seeds){
   return(phi)
 }
 
-diploid = function(N,seedSurv,G,seeds,phi){
+diploid = function(N,seeds,phi){
     # This is an annual plant model, so it tracks
     # populations as numbers of seeds
 
@@ -51,12 +51,12 @@ diploid = function(N,seedSurv,G,seeds,phi){
     # phi = vector (2) giving frequency of homozygotes
   	# output = vector (3) giving density of each genotype at time t+1
     
-    Plants = G*N
+    Plants = N
     bigT = sum(seeds)  # total seed production
     Fec=c(phi[1]^2*bigT, 2*phi[1]*phi[2]*bigT, phi[2]^2*bigT)
-  	AA = seedSurv*(1-G)*N[1]+Fec[1]
-  	Aa = seedSurv*(1-G)*N[2]+Fec[2]
-    aa = seedSurv*(1-G)*N[3]+Fec[3]
+  	AA = Fec[1]
+  	Aa = Fec[2]
+    aa = Fec[3]
   	SB = c(AA,Aa,aa)
   	return(list(SB=SB,Plants=Plants,SP=Fec))
 }
