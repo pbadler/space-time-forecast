@@ -4,7 +4,8 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(boot, latticeExtra, here)
 
 # set working directory
-here()
+setwd(here()) # set root directory
+setwd("./genetic-diversity")  # move to subdirectory
 
 # load custom functions
 source("genetic_diversity_functions.R")

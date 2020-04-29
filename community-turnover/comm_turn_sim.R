@@ -38,7 +38,7 @@ for(t in 2:sim_yrs){
 spxp_mean_baseline <- apply(spxp[burnin_yrs:(burnin_yrs+baseline_yrs),,],MARGIN = c(2,3),FUN=mean)
 
 # save the initial metacommunity
-dir.create("simulations/run_1")
+if(file.exists("simulations/run_1")==F) dir.create("simulations/run_1")
 write.csv(spxp_mean_baseline,"simulations/run_1/spxp.csv",row.names = F)
 write.csv(landscape,"simulations/run_1/landscape.csv",row.names = F)
 write.csv(tr,"simulations/run_1/tr.csv",row.names = F)

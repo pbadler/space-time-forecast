@@ -11,7 +11,7 @@ png("figures/spatial&temporal_model.png",height=10,width=4,res=400,units="in")
   # plot fecundity as function of temperature for all genotypes
   temp=seq(-7,7,0.01)
   react_norms=getLambdas(temp,fec_Tmu,fec_Tsigma,fec_max)
-  matplot(temp,react_norms,type="l",xlab="Temperature",ylab="Germination rate",col=myCols,lty="solid")
+  matplot(temp,react_norms,type="l",xlab="Temperature",ylab="Fecundity",col=myCols,lty="solid")
   text(fec_Tmu[1]-0.4,0.95*fec_max[1],"AA",col=myCols[1])
   text(fec_Tmu[2],0.95*fec_max[2],"Aa",col=myCols[2])
   text(fec_Tmu[3]+0.4,0.95*fec_max[3],"aa",col=myCols[3])

@@ -49,16 +49,16 @@ png("figures/community_models_total.png",height=3.5,width=4,res=400,units="in")
   
   # temporal
   xx <- seq(min(x_temporal),max(x_temporal),0.1)
-  points(x_temporal,y_temporal,pch=1,col=myCols[2])
+  points(x_temporal,y_temporal,pch=1,col=myCols[1])
   y_hat <- coef(temporal_model)[1] + coef(temporal_model)[2]*mean(y_temporal) + coef(temporal_model)[3]*xx
-  lines(xx,y_hat, col=myCols[2], lwd=2, lty="solid" ) # plot marginal effect of temperature for temporal model
+  lines(xx,y_hat, col=myCols[1], lwd=2, lty="solid" ) # plot marginal effect of temperature for temporal model
   
   # total biomass spatial
-  points(x_spatial,y_spatial,pch=16,col=myCols[1])
-  abline(spatial_model,col=myCols[1],lwd=1)
+  points(x_spatial,y_spatial,pch=16,col=myCols[2])
+  abline(spatial_model,col=myCols[2],lwd=1)
   
-  legend("topleft",c("Spatial","Temporal"),
-         lty=c("solid","solid"),pch=c(16,1),lwd=c(1,1),
+  legend("topleft",c("Temporal","Spatial"),
+         lty=c("solid","solid"),pch=c(1,16),lwd=c(1,1),
          col=myCols,bty="n",cex=0.8)
 
 dev.off()

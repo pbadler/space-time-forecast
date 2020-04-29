@@ -4,7 +4,8 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(boot, scales, here)
 
 # set working directory
-here()
+setwd(here()) # set root directory
+setwd("./community-turnover")  # move to subdirectory
 
 # load custom functions
 source("lib/CommunityTempDis.R")
