@@ -2,7 +2,7 @@
 # call this script from genetic_diversity_master.R
 
 
-# read in weights from commuynity turnover example
+# read in weights from community turnover example
 saved_weights_comm <- read.csv("./../community-turnover/simulations/saved_weights.csv",header=T)
 d_vals <- colnames(saved_weights_comm)
 d_vals <- gsub("X","",d_vals)
