@@ -12,16 +12,14 @@ The manuscript has improved since its previous round. The work is interesting an
 
 RESPONSE: We re-read the Discussion to make sure we are not over-selling our results. We believe it is clear that our results are based only on simulations of a couple theoretical models, and that empirical tests are still required. Furthermore, the text is littered with qualifying words such as "may", "likely", and "suggest."
 
-ADD CAVEATS?
-
 Few specific points:
 - space-for-time model. I don't understand the motivation behind this term. Moreover, I don't think this is a commonly used term in ecology. I would encourage revising it.
 
-RESPONSE: We responded to this comment in our first revision, pointing out that "a quick search on Google Scholar shows many papers with "space-for-time" in the title or abstract, including papers cited hundreds of times. Stuart Pickett's 1989 book chapter in the Long-term Studies in Ecology, titled, "Space-for-Time Substitution as an Alternative to Long-Term Studies," has been cited almost 1300 times (Google Scholar
+RESPONSE: We responded to this comment in our first revision, pointing out that "a quick search on Google Scholar shows many papers with "space-for-time" in the title or abstract, including papers cited hundreds of times. Stuart Pickett's 1989 book chapter in the Long-term Studies in Ecology, titled, "Space-for-Time Substitution as an Alternative to Long-Term Studies," has been cited almost 1300 times (Google Scholar)."
 
 - On line 254, figures and elsewhere. Please provide units (year?) for time
 
-RESPONSE: We added text to this line, and to most figure legends, to clarify that time is measured in years.
+RESPONSE: We added revised this line, and most figure legends, to clarify that time is measured in years.
 
 Reviewer: 2
 
